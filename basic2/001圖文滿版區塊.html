@@ -1,0 +1,82 @@
+<html lang="zh-tw">
+
+<head>
+	<meta>
+	<meta>
+	<meta charset="utf-8">
+	<title>001圖文滿版區塊</title>
+</head>
+<!--Google Font Link 套用在P段落 -->
+<!-- 一般字體若偏細 也可用 font-weight:500; -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&display=swap" rel="stylesheet">
+
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.banner{
+		width:100%;
+		height:500px;
+		background-color:red;
+		background:linear-gradient(154deg, #7bf 50%, 
+		transparent 50%) center center / 100% 100%,
+		url("https://picsum.photos/1200/600?random=10")right center / auto 100%;
+	}
+	.container{
+		width: 100%;
+		max-width:1440px;
+		height:100%;
+		margin:auto;
+	}
+	.banner-txt{
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:flex-start;
+	}
+	.banner-txt h1{
+		font-size:80px;
+		border-bottom:1px solid #333;
+	}
+	.banner-txt h1 small{
+		display:block;
+		font-size:50px;
+	}
+	.banner-txt h2{
+		font-size:40px;
+	}
+	.banner-txt p{
+		font-size:20px;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+</style>
+
+<body>
+	
+	<div class="banner">
+		<div class="container">
+			<div class="banner-txt">
+				<h1>
+					努力都能懂的
+					<small>
+						這個網頁畫面怎麼切
+					</small>
+				</h1>
+				<h2>圖文滿版區塊</h2>
+				<p>
+					這畫面實在常見，<br>
+					在各種樣版網站可說是設計常客，<br>
+					努力切不出來實在說不過去啊！
+				</p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>

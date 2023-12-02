@@ -1,0 +1,117 @@
+<html lang="zh-tw">
+
+<head>
+	<meta>
+	<meta>
+	<meta charset="utf-8">
+	<title>002互動圖文卡片</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		.wrap{
+			width:100%;
+			display:flex;
+		}
+		.item{
+			width:25%;
+			position:relative;
+		}
+		.item img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.item .txt{
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			padding:20px;
+			background-color: rgba(0,0,0,.5);
+			display:flex;
+			justify-content:center;
+			flex-direction:column;
+			opacity:0;
+			transition: opacity .6s;
+		}
+		.item:hover .txt{
+			background-color: rgba(20,40,60,.5);
+			width:30vw;
+			height:10vw;
+			margin-top:75px;
+			opacity:1;
+			
+		}
+		.item h2{
+			font-size:28px;
+			color:gold;
+			font-weight:500;
+		}
+		.item h2:after{
+			content:'';
+			display:block;
+			width:0%;
+			height:2px;
+			margin:10px 0;
+			background-color:skyblue;
+			transition: width .5s .3s;
+		}
+		.item:hover h2:after{
+			width:100%;
+		}
+		.item p{
+			font-size:18px;
+			color:#ff00ff;
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+	<!-- 區域1 -->
+	<div class="item"> <!-- images/screenshot.png -->
+		<img src="https://picsum.photos/500/400?random=10">
+		<div class="txt">
+			<h2>努力都能懂這網頁畫面到底怎麼切？</h2>
+			<p>互動圖文卡片是我們在網頁中經常見到的另一種稀飯版，不會切你就遜掉了</p>
+		</div>
+	</div>
+	
+	<!-- 區域2 -->
+	<div class="item"> <!-- images/screenshot.png -->
+		<img src="https://picsum.photos/500/400?random=20">
+		<div class="txt">
+			<h2>稀飯版不會切怎麼轉職，邊痛邊學會</h2>
+			<p>互動圖文卡片是我們在網頁中經常見到的另一種稀飯版，不會切你就遜掉了</p>
+		</div>
+	</div>
+	
+	<!-- 區域3 -->
+	<div class="item"> <!-- images/screenshot.png -->
+		<img src="https://picsum.photos/500/400?random=30">
+		<div class="txt">
+			<h2>努力是最基礎也是最核心的網頁應用</h2>
+			<p>互動圖文卡片是我們在網頁中經常見到的另一種稀飯版，不會切你就遜掉了</p>
+		</div>
+	</div>
+	
+	<!-- 區域4 -->
+	<div class="item"> <!-- images/screenshot.png -->
+		<img src="https://picsum.photos/500/400?random=40">
+		<div class="txt">
+			<h2>努力邊看邊學習只要不放棄會有進步</h2>
+			<p>互動圖文卡片是我們在網頁中經常見到的另一種稀飯版，不會切你就遜掉了</p>
+		</div>
+	</div>
+	
+</div>
+	
+</body>
+
+</html>
+

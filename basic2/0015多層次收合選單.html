@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<!-- 從0014收合式側邊選單 延伸功能 -->
+<head>
+	<meta charset="utf-8">
+	<title>0015多層次收合選單</title>
+	<link rel="stylesheet" href="
+	https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/
+	font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		html,body{
+			height: 100%;
+		}
+		body{
+			background-image:linear-gradient(90deg,#3d5894,#08c7a5);
+		}
+		.side-menu{
+			position:relative;
+			width:300px;
+			height:100%;
+			background-image:linear-gradient(0deg,#9ed8f6,#2ba8e1);
+			display:flex;
+			flex-direction:column;
+			box-shadow:5px 0px 10px hsla(240,40%,15%,.6);
+			/*三之2.以下這段會讓表單收合+動畫延遲*/
+			transform:translateX(-100%);
+			transition:.3s;
+		}
+		.side-menu form{
+			display:flex;
+			margin:20px 10px 20px;
+			border-radius:100px;
+			border:1px solid white;
+		}
+		.side-menu form input,
+		.side-menu form button{
+			border:none;
+			padding:5px 10px;
+			width:230px;
+			background-color:transparent;
+			color:white;
+		}
+		.side-menu form input{
+			width:230px;
+		}
+		.side-menu form button{
+			width:50px;
+		}
+		.side-menu form input:focus,
+		.side-menu form button:focus{
+			outline:none;
+		}
+		/*三之1.最後加上外觀與功能 點箭頭 核取方塊會打勾*/
+		.side-menu label{
+			position:absolute;
+			width:20px;
+			height:40px;
+			background-color:rgba(255,255,255,.5);
+			color:skyblue;
+			right:-20px;
+			top:0;
+			bottom:0;
+			margin:auto;
+			line-height:40px;
+			text-align:center;
+			font-size:30px;
+			border-radius: 0 7.5px 7.5px 0;
+		}
+		
+		/*三之3.當核取方塊被打勾 side-menu就會出現*/
+		#side-menu-switch:checked + .side-menu{
+			transform:translateX(0);
+		}
+		/*三之4.讓核取方塊消失在畫面中*/
+		#side-menu-switch{
+			position:absolute;
+			opacity:0;
+		}
+		/*三之5.選單彈出時 箭頭轉向*/
+		#side-menu-switch:checked + .side-menu label .fa{
+			transform:scaleX(-1);
+		}
+		
+		.nav a{
+			/*display:flex;*/
+			display:block;
+			padding:10px;
+			color:white;
+			text-decoration:none;
+			border-bottom:1px solid white;
+		}
+		/*===下面兩段拿掉 icon會恢復正常 沒有動畫效果===*/
+		.nav a .fa{
+			margin-right:-1.1em;
+			transform:scale(0);
+			transition:.3s;
+		}
+		.nav li:hover .fa{
+			margin-right:0em;
+			transform:scale(1);
+		}
+		/*從這改變結構 讓子層跑出去到右側 滑鼠摸到該區會變色*/
+		.nav li:hover > a{
+			background-color:rgba(0,0,0,.5);
+		}
+		.nav li{
+			position:relative;
+		}
+		.nav ul{
+			position:absolute;
+			left:100%;
+			width:300px;
+			margin-top:-42px;
+			background-color:rgba(255,255,255,.3);
+			box-shadow:5px 0px 10px hsla(240,40%,15%,.6);
+			display:none;
+		}
+		/*當li被摸到就顯示ul*/
+		/*如果沒有 > li被摸到就顯示全部ul 那就全亂掉了*/
+		.nav li:hover > ul{
+			display:block;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<!-- 一.用input type=checkbox建立核取方塊 -->
+	<input type="checkbox" name="" id="side-menu-switch">
+	
+	<div class="side-menu">
+		<form>
+			<input type="search" placeholder="請輸入關鍵字">
+			<button><i class="fa fa-search"></i></button>
+		</form>
+		
+		<!-- 從這結構改變nav 改成ul class="nav" -->
+		<!-- 所有a標籤外圍加上li 再新增ul li a  -->
+		<ul class="nav">
+		
+			<li><!-- 1 -->
+				<a href="#">
+					<i class="fa fa-users" aria-hidden="true"></i>
+				PHOTOSHOP
+				</a>
+				
+				<ul>
+					<li>
+						<a href="#">去背方法-範例</a>
+						<ul>
+							<li><a href="#">一般去背</a></li>
+							<li><a href="#">反向去背</a></li>
+							<li><a href="#">髮絲去背</a></li>
+							<li><a href="#">冰塊去背</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">商品合成-範例</a>
+						<ul>
+							<li><a href="#">文創手機架</a></li>
+							<li><a href="#">化妝品</a></li>
+							<li><a href="#">名片</a></li>
+							<li><a href="#">書冊</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">創意合成-範例</a>
+						<ul>
+							<li><a href="#">峭壁老人</a></li>
+							<li><a href="#">田中翻車</a></li>
+							<li><a href="#">鼻孔叼菸</a></li>
+							<li><a href="#">萬佛朝宗</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">實用特效-範例</a>
+						<ul>
+							<li><a href="#">街道光線</a></li>
+							<li><a href="#">玩具模型</a></li>
+							<li><a href="#">改變姿勢</a></li>
+							<li><a href="#">淡化皺紋</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			
+			<li><!-- 2 -->
+				<a href="#">
+					<i class="fa fa-gavel" aria-hidden="true"></i>
+				ILLUSTRATOR
+				</a>
+			</li>
+			
+			<li><!-- 3 -->
+				<a href="#">
+					<i class="fa fa-object-group" aria-hidden="true"></i>
+				UI＆UX
+				</a>
+			</li>
+			
+			<li><!-- 4 -->
+				<a href="#">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+				HTML＆CSS3切版
+				</a>
+			</li>
+			
+			<li><!-- 5 -->
+				<a href="#">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+				RWD響應式網頁
+				</a>
+			</li>
+			
+			<li><!-- 6 -->
+				<a href="#">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+				PYTHON
+				</a>
+			</li>
+			
+			<li><!-- 7 -->	
+				<a href="#">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+				MYSQL
+				</a>
+			</li>
+			
+			<li><!-- 8 -->
+				<a href="https://github.com/" target="_blank">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+				雲端架設
+				</a>
+			</li>
+			
+		</ul>
+		
+		<!-- 二.控制上方input核取方塊 -->
+		<label for="side-menu-switch">
+			<i class="fa fa-angle-right"></i>
+		</label>
+	</div>
+</body>
+
+</html>

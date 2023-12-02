@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<title>007導覽列</title>
+	
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		.main-header{
+			background-color:#ccc;
+			background:linear-gradient(-20deg,#3f5494,#08c7a5);
+		}
+		.main-header .container{
+			display:flex;
+			align-items:center;
+			padding:0;
+			max-width:1200px;
+			margin:auto;
+		}
+		.main-header .logo{
+			width:150px;
+		}
+		.main-header .logo img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.main-header .main-nav{
+			margin:auto;
+		}
+		.main-header .main-nav a{
+			text-decoration:none;
+			color:#fff;
+			padding:5px 1em;
+			font-size:20px;
+		}
+		.main-header .main-nav a:hover{
+			color:#fa0;
+		}
+		.main-header .header-search{
+			display:flex;
+		}
+		.main-header .header-search input[type="search"],
+		.main-header .header-search input[type="submit"]{
+			border:none;
+			background-color:#fff;
+			padding:5px 10px;
+		}
+		.main-header .header-search input[type="search"]{
+			border-radius:200px 0 0 200px;
+		}
+		.main-header .header-search input[type="submit"]{
+			border-radius:0 200px 200px 0;
+		}
+	</style>
+</head>
+
+<body>
+
+<header class="main-header">
+
+	<div class="container">
+		<a href="#" class="logo">
+			<img src="images/logo/wywbnm-1.png" alt="Adobe Express Designer Myself">
+		</a>
+		<nav class="main-nav">
+			<a href="#">Photoshop</a>
+			<a href="#">Illustrator</a>
+			<a href="#">Python</a>
+			<a href="#">Mysql</a>
+			<a href="#">HTML</a>
+		</nav>
+		<form class="header-search">
+			<input type="search" name="" id="">
+			<input type="submit" value="搜尋">
+		</form>
+	</div>
+	
+</header>
+
+</body>
+
+</html>

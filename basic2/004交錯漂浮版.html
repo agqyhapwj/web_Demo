@@ -1,0 +1,126 @@
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<title>004交錯漂浮版</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		body{
+			padding:100px 0;
+			background:linear-gradient(20deg,#3d5493,#1aa2a0)fixed center 
+			center / 100% 100%;
+			/*fixed位置固定 x y width height*/
+		}
+		.wrap{
+			width:1200px;
+			margin:auto;
+		}
+		.item{
+			display:flex;
+			align-items:center;
+			margin-bottom:70px;
+			/*background-color:silver;*/
+		}
+		.item .pic{
+			width:55%;
+			flex-shrink:0;
+		}
+		.item .pic img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.item .txt{
+			width:55%;
+			flex-shrink:0;
+			padding:50px 30px;
+			box-sizing:border-box;
+			position:relative;
+			z-index:1;
+		}
+		.item > :first-child{
+			margin-right:-10%;
+		}
+		.item:nth-child(1) .txt{
+			background-color:rgba(240,174,193,.7);
+		}
+		.item:nth-child(2) .txt{
+			background-color:rgba(42,253,208,.7);
+		}
+		.item:nth-child(3) .txt{
+			background-color:rgba(254,201,121,.7);
+		}
+		.item:nth-child(4) .txt{
+			background-color:rgba(149,219,214,.7);
+		}
+	</style>
+</head>
+
+
+<body>
+	<!-- 再item2和item4圖片順序是對調的 -->
+	<div class="wrap">
+	
+		<!-- item1 -->
+		<div class="item">
+			<div class="pic">
+				<img src="https://picsum.photos/600/300?random=100">
+			</div>
+			<div class="txt">
+				<h2>努力都懂的切版</h2>
+				<p>金魚號稱只有七秒的記憶，但其實這是錯誤的，
+				科普一下你就會知道金魚的記憶力其實不只有七秒，
+				所以，你有幾秒的記憶？
+				</p>
+			</div>
+		</div>
+		
+		<!-- item2 -->
+		<div class="item">
+			<div class="txt">
+				<h2>我的記憶只有三秒</h2>
+				<p>金魚號稱只有七秒的記憶，但其實這是錯誤的，
+				科普一下你就會知道金魚的記憶力其實不只有七秒，
+				所以，你有幾秒的記憶？
+				</p>
+			</div>
+			<div class="pic">
+				<img src="https://picsum.photos/600/300?random=200">
+			</div>
+		</div>
+		
+		<!-- item3 -->
+		<div class="item">
+			<div class="pic">
+				<img src="https://picsum.photos/600/300?random=300">
+			</div>
+			<div class="txt">
+				<h2>切版就是要暴力</h2>
+				<p>金魚號稱只有七秒的記憶，但其實這是錯誤的，
+				科普一下你就會知道金魚的記憶力其實不只有七秒，
+				所以，你有幾秒的記憶？
+				</p>
+			</div>
+		</div>
+		
+		<!-- item4 -->
+		<div class="item">
+			<div class="txt">
+				<h2>切得出來有錢賺</h2>
+				<p>金魚號稱只有七秒的記憶，但其實這是錯誤的，
+				科普一下你就會知道金魚的記憶力其實不只有七秒，
+				所以，你有幾秒的記憶？
+				</p>
+			</div>
+			<div class="pic">
+				<img src="https://picsum.photos/600/300?random=40">
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<title>005超通用橫式版面</title>
+</head>
+
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.wrap{
+		height:100vh;
+		display:flex;
+		align-items:center;
+		background:linear-gradient(-30deg,#3d5894,#08c7a5);
+	}
+	.container{
+		width:1200px;
+		margin:auto;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.item{
+		/*這裡的尺寸加總後就是400px*/
+		width:368px;
+		margin: 7.5px 7.5px;
+		display:flex;
+		background-color:white;
+		border:1px solid black;
+		box-shadow:0 10px 30px rgba(0, 0, 0, .5)
+	}
+	.item .pic{
+		width:40%;
+	}
+	.item .pic img{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+	}
+	.item .txt{
+		width:60%;
+		padding:20px;
+		box-sizing:border-box;
+		display:flex;
+		flex-direction:column;
+		/*justify-content:center;*/
+		background-color:rgba(0,0,0,.1);
+	}
+	.item .txt h2{
+		margin-bottom:.3em;
+		font-weight:1000;
+	}
+	.item .txt p{
+		font-weight:500;
+	}
+	.item .txt .btn{
+		line-height:1.5em;
+		border:1px solid black;
+		padding:0 1em;
+		align-self:flex-end;
+		text-decoration:none;
+		border-radius:50px;
+		margin-top:auto;
+		color:skyblue;
+	}
+	.item .txt .btn:hover{
+		background-color:gold;
+		color:lightpink;
+	}
+	
+</style>
+
+<body>
+	
+	<div class="wrap">
+		<!-- 父層1:掌管以下三個子區域 -->
+		<div class="container">
+		
+			<!-- 子區域1 -->
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/400/400?random=10">
+				</div>
+				<div class="txt">
+					<h2>努力就能懂的切版入門</h2>
+					<p>1:年度<span style="color:red;"><s>最佳網頁入門</s></span>教學影片，
+					輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+					</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			
+			<!-- 子區域2 -->
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/400/400?random=20">
+				</div>
+				<div class="txt">
+					<h2>努力就能懂的切版入門</h2>
+					<p>2:年度最佳網頁入門教學影片，
+					輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+					</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			
+			<!-- 子區域3 -->
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/400/400?random=30">
+				</div>
+				<div class="txt">
+					<h2>努力就能懂的切版入門</h2>
+					<p>3:年度最佳網頁入門教學影片，
+					輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+					</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			
+			<!-- 子區域4 -->
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/400/400?random=40">
+				</div>
+				<div class="txt">
+					<h2>努力就能懂的切版入門</h2>
+					<p>3:年度最佳網頁入門教學影片，
+					輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+					</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			
+			<!-- 子區域5 -->
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/400/400?random=50">
+				</div>
+				<div class="txt">
+					<h2>努力就能懂的切版入門</h2>
+					<p>3:年度最佳網頁入門教學影片，
+					輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+					</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			
+			<!-- 子區域6 -->
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/400/400?random=60">
+				</div>
+				<div class="txt">
+					<h2>努力就能懂的切版入門</h2>
+					<p>3:年度最佳網頁入門教學影片，
+					輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+					</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+		
+		</div>
+	
+	</div>
+</body>
+</html>

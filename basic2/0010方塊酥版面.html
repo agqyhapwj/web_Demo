@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<title>0010方塊酥版面</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		body{
+			/* background-color:#000; */
+		}
+		.wrap{
+			width:1200px;
+			margin:auto;
+			overflow:hidden;
+		}
+		.item{
+			float:left;
+			position:relative;
+		}
+		.item img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.item:first-child{
+			width:50%;
+		}
+		.item:first-child ~ .item{
+			width:25%;
+		}
+		.item .txt{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			padding:15px;
+			box-sizing:border-box;
+			text-align:center;
+			color:#fff;
+			background-color:rgba(0,0,0,.5);
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;
+			opacity:0;
+			transition:.5s;
+			transform:scale(0);
+		}
+		.item:hover .txt{
+			opacity:1;
+			transform:scale(1);
+		}
+		.item h3{
+			margin-bottom:.8em;
+		}
+		.item p{
+			line-height:1.5;
+		}
+	</style>
+</head>
+
+<body>
+<!-- overflow:hidden;讓父層抓到子層的高度 -->
+<!-- 應用float特性切版 -->
+<!-- .item:first-child{} -->
+<!-- .item:last-child{} -->
+<!-- .item:nth-child(2){} -->
+<!-- .item:first-child ~ .item -->
+
+	<div class="wrap">
+		<!-- 1 -->
+		<div class="item">
+			<img src="https://picsum.photos/500/500?random=10">
+			<div class="txt">
+				<h3>主題一</h3>
+				<p>網頁切版沒有想像中的困難，
+				   但也絕對沒有想像中的容易，
+				   下苦功才能有收獲。
+				   chatGPT再怎麼強，終究也是
+				   需要人工調校細節部分。
+				</p>
+			</div>
+		</div>
+		<!-- 2 -->
+		<div class="item">
+			<img src="https://picsum.photos/500/500?random=20">
+			<div class="txt">
+				<h3>主題二</h3>
+				<p>網頁切版沒有想像中的困難，
+				   但也絕對沒有想像中的容易，
+				   下苦功才能有收獲。
+				   chatGPT再怎麼強，終究也是
+				   需要人工調校細節部分。
+				</p>
+			</div>
+		</div>
+		<!-- 3 -->
+		<div class="item">
+			<img src="https://picsum.photos/500/500?random=30">
+			<div class="txt">
+				<h3>主題三</h3>
+				<p>網頁切版沒有想像中的困難，
+				   但也絕對沒有想像中的容易，
+				   下苦功才能有收獲。
+				   chatGPT再怎麼強，終究也是
+				   需要人工調校細節部分。
+				</p>
+			</div>
+		</div>
+		<!-- 4 -->
+		<div class="item">
+			<img src="https://picsum.photos/500/500?random=40">
+			<div class="txt">
+				<h3>主題四</h3>
+				<p>網頁切版沒有想像中的困難，
+				   但也絕對沒有想像中的容易，
+				   下苦功才能有收獲。
+				   chatGPT再怎麼強，終究也是
+				   需要人工調校細節部分。
+				</p>
+			</div>
+		</div>
+		<!-- 5 -->
+		<div class="item">
+			<img src="https://picsum.photos/500/500?random=50">
+			<div class="txt">
+				<h3>主題五</h3>
+				<p>網頁切版沒有想像中的困難，
+				   但也絕對沒有想像中的容易，
+				   下苦功才能有收獲。
+				   chatGPT再怎麼強，終究也是
+				   需要人工調校細節部分。
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	
+
+</body>
+</html>

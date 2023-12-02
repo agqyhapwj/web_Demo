@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0023快速版面拼拼樂</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&display=swap");
+        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        body{
+            background:linear-gradient(-20deg,#001725c0,#ffffff,#001725c0);
+        }
+        /* 文字排版0022-10 */
+        .main-title{
+            margin: 0 0 50px 0;
+        }
+        .main-title .container{
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .main-title  .container .title{
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 50px;
+            color: #333333;
+            margin-bottom: .5em;
+            /*↓最後最後將上下邊框線 放到左右兩側↓*/
+            display: flex;
+            border-bottom: 3px solid #bbb;
+            margin-bottom: 60px;
+        }
+        .main-title .container .title::before{
+            content: '';
+            display: block;
+            height: 3px;
+            /* width: 3em; */
+            flex-grow: 1;/*自動填滿寬度 width就可以拿掉了*/
+            background-color: #aaa;
+            margin: auto;
+            transform: rotate(15deg);
+            margin-right: .5em;
+        }
+        .main-title  .container .title::after{/*邊框線*/
+            content: '';
+            display: block;
+            height: 3px;
+            /* width: 3em; */
+            flex-grow: 1;/*自動填滿寬度 width就可以拿掉了*/
+            background-color: #aaa;
+            margin: auto;
+            transform: rotate(-15deg);
+            margin-left: .5em;
+        }
+        .main-title .container .txt{
+            flex-shrink: 0;
+            box-sizing: border-box;
+            color: #000;
+        }
+        .main-title .container .paragraph{
+            margin-bottom: 3em;
+
+        }
+        /*超通用橫式版面005*/
+        .studen-msg{
+            width: 100%;
+            display:flex;
+            align-items:center;
+            /* background:linear-gradient(-30deg,#3d5894,#08c7a5);         */
+        }
+        .studen-msg .container{
+            width:1200px;
+            /* margin:auto; */
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+        .studen-msg .item{
+            /*這裡的尺寸加總後就是400px*/
+            width:368px;
+            margin: 7.5px 7.5px;
+            display:flex;
+            background-color:white;
+            border:1px solid black;
+            box-shadow:0 10px 30px rgba(0, 0, 0, .3);
+        }
+        .studen-msg .item .pic{
+            width:40%;
+        }
+        .studen-msg .item .pic img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .studen-msg .item .txt{
+            width:60%;
+            padding:20px;
+            box-sizing:border-box;
+            display:flex;
+            flex-direction:column;
+            /*justify-content:center;*/
+            background-color:rgba(0,0,0,.1);
+        }
+        .studen-msg .item .txt h2{
+            margin-bottom:.3em;
+            font-weight:1000;
+        }
+        .studen-msg .item .txt p{
+            font-weight:500;
+        }
+        .studen-msg .item .txt .btn{
+            line-height:1.5em;
+            border:1px solid black;
+            padding:0 1em;
+            align-self:flex-end;
+            text-decoration:none;
+            border-radius:50px;
+            margin-top:auto;
+            color:skyblue;
+        }
+        .studen-msg .item .txt .btn:hover{
+            background-color:gold;
+            color:lightpink;
+        }
+        /* 頁尾版塊006 */
+        .main-footer{
+            padding:150px 0 0 ;
+            margin-top: 10px;
+            /* background:linear-gradient(-20deg,#3f5494,#08c7a5); */
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+        }
+        .main-footer .container{
+            display:flex;
+            width:1200px;
+            margin:auto;
+        }
+        .footer-item{
+            width:0;
+            flex-grow:1;
+            margin:0 20px;
+        }
+        .footer-item h4{
+            font-size:25px;
+            color:#fff;
+            border-bottom:1px dotted #fff;
+            margin-bottom:.5em;
+            padding-bottom:.5em;
+        }
+        .footer-item nav{
+            display:flex;
+            flex-direction:column;
+        }
+        .footer-item nav a{
+            color:#fff;
+            line-height:1.5;
+            text-decoration:none;
+            padding:5px 0;
+        }
+        .footer-item nav a:hover{
+            color:#fa0;
+        }
+        .footer-subs{
+            display:flex;
+            flex-direction:column;
+        }
+        .footer-subs form{
+            display:flex;
+            width:100%;
+            margin:auto 0px;
+        }
+        .footer-subs input[type="text"],
+        .footer-subs input[type="submit"]{
+            border:none;
+            padding:5px 10px;
+        }
+        .footer-subs input[type="text"]{
+            width:0;
+            flex-grow:1;
+        }
+        .footer-subs input[type="submit"]{
+            color:#70f6df;
+            background-color:#3e5293;
+        }
+        .copyright{
+            width:100%;
+            text-align:center;
+            margin:150px 0 0;
+            padding:10px 0;
+            /* background:#000; */
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            color:#ccc;
+        }
+        .section-group{
+            padding: 100px;
+        }
+        /* .subject1-group{
+            background-color: #eee;
+        } */
+    </style>
+</head>
+<!-- 導覽列007 圖文滿版001 文字排版0022-10 破格式設計0011 -->
+<!-- 人員介紹卡003 超通用橫式版面005 網頁頁尾版塊006 -->
+
+
+
+
+
+
+
+
+
+
+<body>
+    <!-- 導覽列007 -->
+    <style>
+		.main-header{
+			background-color:#ccc;
+			background:linear-gradient(-20deg,#ffffff,#001725c0);
+		}
+		.main-header .container{
+			display:flex;
+			align-items:center;
+			padding:0;
+			max-width:1200px;
+			margin:auto;
+		}
+		.main-header .logo{
+			width:150px;
+		}
+		.main-header .logo img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.main-header .main-nav{
+			margin:auto;
+		}
+		.main-header .main-nav a{
+			text-decoration:none;
+			color:#fff;
+			padding:5px 1em;
+			font-size:20px;
+		}
+		.main-header .main-nav a:hover{
+			color:#fa0;
+		}
+		.main-header .header-search{
+			display:flex;
+		}
+		.main-header .header-search input[type="search"],
+		.main-header .header-search input[type="submit"]{
+			border:none;
+			background-color:#fff;
+			padding:5px 10px;
+		}
+		.main-header .header-search input[type="search"]{
+			border-radius:200px 0 0 200px;
+		}
+		.main-header .header-search input[type="submit"]{
+			border-radius:0 200px 200px 0;
+		}
+	</style>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="../images/logo/wywbnm-1.png" alt="Adobe Express Designer Myself">
+            </a>
+            <nav class="main-nav">
+                <a href="#">Photoshop</a>
+                <a href="#">Illustrator</a>
+                <a href="#">Python</a>
+                <a href="#">Mysql</a>
+                <a href="#">HTML</a>
+            </nav>
+            <form class="header-search">
+                <input type="search" name="" id="">
+                <input type="submit" value="搜尋">
+            </form>
+        </div>
+    </header>
+
+    <!-- 圖文滿版區塊001 -->
+    <style type="text/css">
+        .banner{
+            width:100%;
+            height:500px;
+            background-color:red;
+            background:linear-gradient(115deg, rgba(119, 187, 255, 0.3) 50%, 
+            transparent 50%) center center / 100% 100%,
+            url("https://picsum.photos/2310/600?random=10")right center / auto 100%;
+            background-repeat: no-repeat;            
+        }
+        .container{
+            width:100%;
+            max-width: 1440px;
+            height:100%;
+            margin:auto;
+        }
+        .banner-txt{
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:flex-start;
+        }
+        .banner-txt h1{
+            font-size:80px;
+            border-bottom:1px solid #333;
+        }
+        .banner-txt h1 small{
+            display:block;
+            font-size:50px;
+        }
+        .banner-txt h2{
+            font-size:40px;
+        }
+        .banner-txt p{
+            font-size:20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    </style>
+    <div class="banner">
+		<div class="container">
+			<div class="banner-txt">
+				<h1>
+					努力都能懂的
+					<small>
+						這個網頁畫面怎麼切
+					</small>
+				</h1>
+				<h2>圖文滿版區塊</h2>
+				<p>
+					這畫面實在常見，<br>
+					在各種樣版網站可說是設計常客，<br>
+					努力切不出來實在說不過去啊！
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+    <div class="section-group subject1-group">
+        <!-- 文字排版0022-10之一 -->
+        <div class="main-title">
+            <div class="container">
+                <h1 class="title">站長簡介 ！放棄就什麼都沒有了！ 國小畢業</h1>
+                <div class="txt">
+                    <p class="paragraph">2019年開始學習電腦相關技能，我起步於聯成電腦，也許是緣分的牽引開始了我持續的學習並堅持至今。<br></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 破格式設計 0011 -->
+        <style type="text/css">
+                .liquid{
+                    width:1200px;
+                    display:flex;
+                    margin:50px auto;
+                    background-color:lightpink;
+                    padding-top:51px;
+                }
+                .liquid .item{
+                    width:300px;
+                    margin:0 50px;
+                    text-align:center;
+                    border:5px solid lightblue;
+                    border-radius:20px;
+                    background-color:white;
+                    
+                }
+                .liquid .item .icon{
+                    width:100px;
+                    height:100px;
+                    background-color:white;
+                    color: lightblue;
+                    margin: -50px auto 0;
+                    font-size:50px;
+                    line-height:100px;
+                    border-radius:50%;
+                    position:relative;
+                }
+                .liquid .item .icon:before{
+                    content:'';
+                    position:absolute;
+                    width:100%;
+                    height:100%;
+                    border:5px solid skyblue;
+                    border-radius:50%;
+                    left:-5px;
+                    top:-5px;
+                    border-top:5px solid lightblue;
+                    border-right:5px solid lightblue;
+                    border-bottom:5px solid transparent;
+                    border-left:5px solid transparent;
+                    transform:rotate(-45deg);
+                }
+                .liquid .item:hover .fa{
+                    animation:ss .3s linear infinite alternate;
+                }
+                .liquid .item .txt{
+                    padding:20px 20px 2em;
+                }
+                .liquid .item h3{
+                    color:red;
+                }
+                .liquid .item p{
+                    color:black;
+                }
+                @keyframes ss{
+                    0%{transform:rotate(-10deg);}
+                    100%{transform:rotate(10deg);}
+                }
+            </style>
+
+        <div class="liquid">
+            <!-- 1 -->
+            <div class="item">
+                <div class="icon">
+                    <i class="fa fa-gavel"></i>
+                </div>
+                <div class="txt">
+                    <h3>核心解說</h3>
+                    <p>網頁切版沒有想像中的困難，
+                    但也絕對沒有想像中的容易，
+                    下苦功才能有收獲。
+                    chatGPT再怎麼強，終究也是
+                    需要人工調校細節部分。
+                    </p>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="item">
+                <div class="icon">
+                    <i class="fa fa-bell"></i>
+                </div>
+                <div class="txt">
+                    <h3>堅持下去</h3>
+                    <p>網頁切版沒有想像中的困難，
+                    但也絕對沒有想像中的容易，
+                    下苦功才能有收獲。
+                    chatGPT再怎麼強，終究也是
+                    需要人工調校細節部分。
+                    </p>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="item">
+                <div class="icon">
+                    <i class="fa fa-thumbs-up"></i>
+                </div>
+                <div class="txt">
+                    <h3>成就自己</h3>
+                    <p>網頁切版沒有想像中的困難，
+                    但也絕對沒有想像中的容易，
+                    下苦功才能有收獲。
+                    chatGPT再怎麼強，終究也是
+                    需要人工調校細節部分。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 文字排版0022-10之二 -->
+        <div class="main-title">
+            <div class="container">
+                <h1 class="title">隨著時間 ！犧牲休息就是要上課！ 一週一週 </h1>
+                <div class="txt">
+                    <p class="paragraph">2019年開始學習電腦相關技能，我起步於聯成電腦，也許是緣分的牽引開始了我持續的學習並堅持至今。<br></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 超通用橫式版面005 -->
+        <div class="studen-msg">
+            <!-- 父層1:掌管以下三個子區域 -->
+            <div class="container">
+            
+                <!-- 子區域1 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=10">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>1:年度<span style="color:red;"><s>最佳網頁入門</s></span>教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域2 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=20">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>2:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域3 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=30">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>3:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域4 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=40">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>3:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域5 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=50">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>3:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域6 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=60">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>3:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+            
+            </div>
+        
+        </div>
+    </div>
+
+
+    <div class="section-group subject2-group">
+        <!-- 文字排版0022-10之三 -->
+        <div class="main-title">
+            <div class="container">
+                <h1 class="title">考上證照 ！每一道題目就是實戰！ 代表什麼 </h1>
+                <div class="txt">
+                    <p class="paragraph">2019年開始學習電腦相關技能，我起步於聯成電腦，也許是緣分的牽引開始了我持續的學習並堅持至今。<br></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 人員介紹卡003 -->
+        <style type="text/css">
+            .force{
+                width:1200px;
+                display:flex;
+                flex-wrap: wrap;
+                margin:auto;
+                /* flex-direction: column; */
+                /* align-items: center; */
+            }
+            .force .item{
+                width:368px;
+                margin:15px;
+                text-align:center;
+                background-color:white;
+                border:1px solid #ccc;
+                transform:translateY(0px);
+                transition:.5s;
+            }
+            .force .item img{
+                width:100%;
+                vertical-align:middle;
+            }
+            .force .item h2{
+                border-bottom:2px solid rgb(45,100,120);
+                padding-bottom:.3em;
+                margin-bottom:.4em;
+            }
+            .force .item p{
+                line-height:1.6;
+            }
+            .force .item .txt{
+                padding:20px;
+                position:relative;
+            }
+            .force .item .txt:before{
+                content:'';
+                position:absolute;
+                width:0;
+                height:0;
+                left:0;
+                top:0;	
+                border-top:50px solid transparent;
+                border-left:184px solid #fff;
+                border-right:184px solid #fff;
+                transform:translateY(-100%);
+            }
+            .force .item:hover{
+                transform:translateY(-50px);
+            }
+            .force .item:hover .txt{
+                background-image:linear-gradient(0deg,#9ed8f6,#f7dbe9);
+            }
+            .force .item:hover .txt:before{
+                border-left:184px solid #f7dbe9;
+                border-right:184px solid #f7dbe9;
+            }
+            .force .item:hover h2{
+                transition:1s;
+                color:blue;
+                border-bottom-color:blue;
+            }
+        </style>
+        <div class="force">
+        
+            <div class="item">
+                <img src="https://picsum.photos/300/300?random=10">
+                <div class="txt">
+                    <h2>CSS可樂</h2>
+                    <p>
+                    一個優質的技術型 Youtube頻道，旨在讓更多網路新手跳坑學習網站開發技術，平日用簡單易
+                    懂的教學方式讓新手能跨進網頁設領域，並開設知名的網路課程「網頁設計暴力入門班」用紮實的原
+                    理解析讓新手能學習到深入的網頁製作技術及知識。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://picsum.photos/300/300?random=20">
+                <div class="txt">
+                    <h2>Coding</h2>
+                    <p>
+                    一個優質的技術型 Youtube頻道，旨在讓更多網路新手跳坑學習網站開發技術，平日用簡單易
+                    懂的教學方式讓新手能跨進網頁設領域，並開設知名的網路課程「網頁設計暴力入門班」用紮實的原
+                    理解析讓新手能學習到深入的網頁製作技術及知識。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://picsum.photos/300/300?random=30">
+                <div class="txt">
+                    <h2>堆坑大魔王</h2>
+                    <p>
+                    一個優質的技術型 Youtube頻道，旨在讓更多網路新手跳坑學習網站開發技術，平日用簡單易
+                    懂的教學方式讓新手能跨進網頁設領域，並開設知名的網路課程「網頁設計暴力入門班」用紮實的原
+                    理解析讓新手能學習到深入的網頁製作技術及知識。
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- 文字排版0022-10之四 -->
+        <div class="main-title">
+            <div class="container">
+                <h1 class="title">考上證照 ！每一道題目就是實戰！ 代表什麼 </h1>
+                <div class="txt">
+                    <p class="paragraph">2019年開始學習電腦相關技能，我起步於聯成電腦，也許是緣分的牽引開始了我持續的學習並堅持至今。<br></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 超通用橫式版面005 -->
+        <div class="studen-msg">
+            <!-- 父層1:掌管以下三個子區域 -->
+            <div class="container">
+            
+                <!-- 子區域1 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=10">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>1:年度<span style="color:red;"><s>最佳網頁入門</s></span>教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域2 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=20">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>2:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                
+                <!-- 子區域3 -->
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/400/400?random=30">
+                    </div>
+                    <div class="txt">
+                        <h2>努力就能懂的切版入門</h2>
+                        <p>3:年度最佳網頁入門教學影片，
+                        輕輕鬆鬆學會網頁製作，原始碼原來如盤有趣。
+                        </p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+            
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- 頁尾版塊006 -->
+    <div class="main-footer">
+		
+		<div class="container">
+		
+			<div class="footer-item">
+				<h4>關於課程</h4>
+				<nav>
+					<a href="#">>課程目標</a>
+					<a href="#">>學習理念</a>
+					<a href="#">>課程宗旨</a>
+				</nav>
+			</div>
+			
+			<div class="footer-item">
+				<h4>課程列表</h4>
+				<nav>
+					<a href="#">>網頁入門</a>
+					<a href="#">>RWD網頁深入理解</a>
+					<a href="#">>CSS3互動動畫設計</a>
+					<a href="#">>Bootstrap框架實務</a>
+				</nav>
+			</div>
+			
+			<div class="footer-item">
+				<h4>服務項目</h4>
+				<nav>
+					<a href="#">>網站建置顧問</a>
+					<a href="#">>網站建置設計</a>
+					<a href="#">>網站規劃</a>
+					<a href="#">>企業教育訓練</a>
+				</nav>
+			</div>
+			
+			<div class="footer-item footer-subs">
+				<h4>訂閱電子報</h4>
+				<form>
+					<input type="text" name="">
+					<input type="submit" value="訂閱">
+				</form>
+			</div>
+			
+		</div>
+		
+		<div class="copyright">
+				Copyright&copy;2023
+				努力就能懂得這個網頁畫頁怎麼切
+		</div>
+		
+	</div>
+</body>
+</html>

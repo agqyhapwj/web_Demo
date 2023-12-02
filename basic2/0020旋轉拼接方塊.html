@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020旋轉拼接方塊</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900,&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family:'Noto Sans TC', sans-serif;    
+        }
+        .cubeBox{       /* 主框架設定1 */
+            width: 960px;
+            margin: auto;
+            padding: 100px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{           /* 主框架設定2 */
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            /* outline: 1px solid #f00; */
+            margin: 0 60px -40px;
+            position: relative;
+            font-size: 25px;
+        }
+        /* =========開始變化========= */
+        .box::before{   /*子框線 對齊 旋轉*/
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* outline: 1px solid #00f; */
+            top: 0;
+            left: 0;
+            transform: rotate(45deg);
+            z-index: -1; /*這樣背景色才不會把字遮住*/
+        }
+        .box:nth-child(n+4){
+            left: 160px; /*從第四個開始向右偏移130px*/
+        }
+        .box:nth-child(n+7){
+            left: 0;     /*從第七個開始歸零回原點*/
+        }
+        .deg1::before{background-color: #3ed0cd;}
+        .deg2::before{background-color: #b2e086;}
+        .deg3::before{background-color: #ef8899;}
+        .deg4::before{background-color: #fc7b51;}
+        .deg5::before{background-color: #2fccf9;}
+        .deg6::before{background-color: #5f539b;}
+        .deg7::before{background-color: #fce920;}
+        .deg8::before{background-color: #7cc85c;}
+        .deg9::before{background-color: #ffa55e;}
+        .box:hover{
+            color: #fff;
+        }
+        .box:hover::before{
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul.cubeBox>li.box${text}*9 -->
+    <ul class="cubeBox">
+        <li class="box deg1">PHOTOSHOP</li>
+        <li class="box deg2">ILLUSTRATOR</li>
+        <li class="box deg3">UI&UX</li>
+        <li class="box deg4">HTML&CSS3</li>
+        <li class="box deg5">RWD</li>
+        <li class="box deg6">PYTHON</li>
+        <li class="box deg7">MYSQL</li>
+        <li class="box deg8">WEB SERVER</li>
+        <li class="box deg9">LINUX</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020-006技巧彙整</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container{
+            width: 1240px;
+            background-color: #bbb;
+            margin: auto;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        .title{
+            width: 400px;
+            text-align: center;
+            /* background-color: #faf; */
+            margin: auto;
+            padding: 5px 0;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+        }
+        .text-areas{
+            display: flex;
+            width: 1200px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(96, 107, 110);
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .content{
+            width: 200px;
+            height: 600px;
+            background-color: #ddd;
+            margin: 10px 10px ;
+        }
+        .subtitle{
+            font-size: 30px;
+            border-bottom: 2px solid black;
+        }
+        .paragraph{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Position定位</h2>
+        <ul class="text-areas">
+            <li class="content"><span class="subtitle">absolute</span>
+                <p class="paragraph">我並不是？</p>
+            </li>
+            <li class="content"><span class="subtitle">fixed</span>
+                <p class="paragraph">你一定是？</p>
+            </li>
+            <li class="content"><span class="subtitle">relative</span>
+                <p class="paragraph">他也許是？</p>
+            </li>
+            <li class="content"><span class="subtitle">static</span>
+                <p class="paragraph">全部都是？</p>
+            </li>
+            <li class="content"><span class="subtitle">sticky</span>
+                <p class="paragraph">全都不是？</p>
+            </li>
+            <li class="content"><span class="subtitle">-webkit-sticky</span>
+                <p class="paragraph">到底誰是？</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

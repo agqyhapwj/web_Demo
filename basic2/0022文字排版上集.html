@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0022文字排版上集</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            padding: 100px 0;
+            /* background-color: skyblue; */
+        }
+        .title{
+            width: 400px;
+            text-align: right;
+            box-sizing: border-box;
+            padding: 0 15px;
+            background-color: #c9c2bc;
+        }
+        .title::after{
+            content: '';
+            display: block;
+            height: 4px;
+            width: 5.1em;
+            background-color: #000;
+            margin-left: auto;
+        }
+        .txt{
+            width: 800px;
+            box-sizing: border-box;
+            padding: 0 15px;
+            column-count: 2;/*設定直欄 分左右兩欄*/
+            column-gap: 30px;
+        }
+        .paragraph{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1 class="title">TYPOGRAPHY EXERCISE</h1>
+            <div class="txt">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!</p>
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!</p>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!</P>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!</P>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

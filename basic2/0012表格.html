@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+	<meta chatset="utf-8">
+	<title>0012表格</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		html,body{
+			height:100%;
+		}
+		body{
+			display:flex;
+			align-items:center;
+			background-image:linear-gradient(90deg,#3d5894,#08c7a5);
+		}
+		.table{
+			width:800px;
+			margin:auto;
+		}
+		.table table{
+			width:100%;
+			border: 3px double gray;
+			background:#fff;
+			border-radius:10px;
+		}
+		.table thead{
+			background:#3d5894;
+			color:white;
+		}
+		.table thead th:first-child{
+			border-radius:7px 0 0 0;
+		}
+		.table thead th:last-child{
+			border-radius:0 7px 0 0;
+		}
+		.table tbody tr:nth-child(even){
+		/*even在這裡是指表格內偶數列*/
+			background-color:skyblue;
+		}
+		.table tbody a{
+			text-decoration:none;
+			color:black;
+		}
+		.table tbody tr:hover{
+			background-color:rgba(240,174,193,.7);
+		}
+		.table tfoot td:first-child{
+			border-radius:0 0 0 7px;
+		}
+		.table tfoot td:last-child{
+			border-radius:0 0 7px 0;
+		}
+		.table th{
+			border:1px solid gray;
+			padding:6px 10px;
+		}
+		.table td{
+			border:1px solid gray;
+			padding:6px 10px;
+		}
+		.table caption{
+			/*將表格最上層標題置於最下層*/
+			caption-side:bottom;
+			text-align:right;
+			padding:10px 0;
+		}
+		.table caption a{
+			text-decoration:none;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="table">
+	
+		<table>
+			<caption><!-- 標題 -->
+				範例一覽表：資料來源-
+				<a href="http://wywbnm.asuscomm.com">
+				http://wywbnm.asuscomm.com
+				</a>
+				我寫的當然是導到我的網站^_^
+			</caption>
+			
+			<thead><!-- 表頭 -->
+				<tr>
+					<th scope="co1">基礎式版面</th>
+					<th scope="co1">破格式版面</th>
+					<th scope="co1">滿版</th>
+					<th scope="co1">選單</th>
+					<th scope="co1">表單</th>
+					<th scope="co1">表格</th>
+				</tr>
+			</thead>
+				
+			<tbody>
+				<tr><!-- 第一列 -->
+					<td><a href="001圖文滿版區塊.html">圖文滿版</a></td>
+					<td>交錯漂浮版</td>
+					<td>圖文滿版</td>
+					<td>導覽列</td>
+					<td>敬請期待</td>
+					<td>表格</td>
+				</tr>
+				
+				<tr><!-- 第二列 -->
+					<td>互動圖文</td>
+					<td>破格式設計</td>
+					<td>用橫式版面</td>
+					<td>變化導覽列</td>
+					<td>敬請期待^^</td>
+					<td>敬請期待^^</td>
+				</tr>
+				
+				<tr><!-- 第三列 -->
+					<td>人員介紹</td>
+					<td>敬請期待^^</td>
+					<td>敬請期待^^</td>
+					<td>網站麵包屑</td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr><!-- 第四列 -->
+					<td>橫式版面</td>
+					<td></td>
+					<td></td>
+					<td>敬請期待^^</td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr><!-- 第五列 -->
+					<td>網頁頁尾</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr><!-- 第六列 -->
+					<td>方塊版面</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+			
+			<tfoot><!-- 表尾 -->
+				<tr>
+					<td>備註</td>
+					<td colspan="5">colspan="n"：是合併儲存格的語法，一次合併多個儲存格</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0021-陰影參數解釋-不規則邊緣</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900,&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .first-banner{/*以下五段是基本的排列 .second是後來才寫*/
+            height: 500px;
+            background: url('./images/1950x700/1.jpg') center top / cover;
+        }
+        .second{/*2.做相對定位 紅方塊就會 定在我要的位置*/
+            position: relative;
+        }
+        .second .container{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: powderblue;
+            padding: 100px 0;
+            position: relative; /*4.*/
+            z-index: 2;         /*4.*/
+        }
+        .container .item{
+            width: 570px;
+            margin: 0 15px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .item .title{
+            margin-bottom: 1em;
+        }
+        .item .paragraph{
+            line-height: 1.7;
+            margin-bottom: 1.7em;
+        }
+        /* ======================================== */
+        .second::after{/*1.用絕對定位 定在上方 bgcolor調整先選紅色 確定再調回白色*/
+            content: '';
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            top: 0;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            border-radius: 50%;/*圓的產生 除第一個外 其餘都是用box-shadow*/
+            box-shadow: /*參數由左至右：水平偏移 垂直偏移 模糊半徑 擴展半徑*/
+                        178px 0 0 30px rgba(255, 255, 255, .7),
+                        330px 35px 0 20px rgba(255, 255, 255, .7),
+                        480px 9px 0 60px rgba(255, 255, 255, .7),
+                        690px 70px 0 60px rgba(255, 255, 255, .7),
+                        880px 0 0 90px rgba(255, 255, 255, .7),
+                        
+                        -178px 0 0 30px rgba(255, 255, 255, .7),
+                        -330px 35px 0 20px rgba(255, 255, 255, .7),
+                        -480px 9px 0 60px rgba(255, 255, 255, .7),
+                        -690px 70px 0 60px rgba(255, 255, 255, .7),
+                        -880px 0 0 90px rgba(255, 255, 255, .7),
+                        -1100px 50px 0 89px rgba(255, 255, 255, .7);
+        }
+        .second::before{/*3.*/
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background-color: #fff;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="first-banner"></div>
+
+<div class="second">
+    <div class="container">
+        <div class="item">
+            <h2 class="title">我很笨拙</h2>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+        </div>
+        <div class="item">
+            <h2 class="title">要很努力</h2>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+        </div>
+        <div class="item">
+            <h2 class="title">我很笨拙</h2>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+        </div>
+        <div class="item">
+            <h2 class="title">要很努力</h2>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+            <p class="paragraph">森林消除什麼樣笑着將在產生，學科有限責任，是一個很熱一把世界，格式看不到，分享投票這段藝術模組正確父親閲讀者那麼多多估計緊急點這裡，部落答應類型笑容猶豫十年或者把它因為環節，爸爸輔助小姐，大哥默認舉行，空中不大思想沉默學習新鮮那麼多如果你丈夫一會交通巨大大哥，出租不斷改變檔案處罰導致發貼備案年輕之中權力儘量諾基亞，無關小學誠信審核政府階段熱門太陽老公三人黃金如果大門，喜愛已被展開，進口一致，在這。</p>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

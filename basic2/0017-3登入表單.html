@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="content-type" content="text/html"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0017-3登入表單</title>
+	<link rel="stylesheet" href="
+	https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/
+	font-awesome.min.css">
+	<link rel="stylesheet" href="../css/01Esmall_max-width576/login.css">
+	<link rel="stylesheet" href="../css/02Small_min-width576/login.css">
+    
+</head>
+
+<body>
+	
+
+
+	<div class="main">
+
+        <div class="login">
+            <form  action="login_process.php" method="POST" class="form"><!-- 0 -->
+            
+                <h2>Login System</h2> <!-- 1 -->
+                
+                <div class="group"><!-- 2-1 -->
+                    <label for="userAccount">Account</label>
+                    <input type="text" name="userAccount" id="userAccount">
+                </div>
+                
+                <div class="group"><!-- 2-2 -->
+                    <label for="userPassword">Password</label>
+                    <input type="password" name="userPassword" id="userPassword">
+                </div>
+                
+                <div class="btn-group"><!-- 2-3 -->
+                    <input type="submit" value="Login" class="btn"></input>
+                    <input type="reset" value="Reset" class="btn"></input>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE hrml>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<title>001-005技巧彙整</title>
+	<style type="text/css">
+		.box1{
+			/*有寬高變斜角 無寬高變三角*/
+			width:100px;
+			height:100px;
+			border-top:50px solid silver;
+			border-right:50px solid green;
+			border-bottom:50px solid red;
+			border-left:50px solid blue;
+		}
+		.box2{
+			/*有寬高變斜角 無寬高變三角*/
+			width:0px;
+			height:0px;
+			border-top:50px solid silver;
+			border-right:50px solid green;
+			border-bottom:50px solid red;
+			border-left:50px solid blue;
+			margin-top:10px;
+		}
+		p{
+			background-color:silver;
+		}
+		p::before{
+			content:'I an before text';
+			display:block;
+			width:100px;
+			height:20px;
+			background-color:red;
+		}
+		p::after{
+			content:'I an after text';
+			display:block;
+			width:200px;
+			height:20px;
+			background-color:skyblue;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<p>內容文字</p>
+	
+</body>
+
+</html>

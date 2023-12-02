@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0022-4文字排版中集</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900,&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .wrap{/*1.*/
+            margin: 100px 0;
+        }
+        .container{/*2.*/
+            position: relative;
+            width: 1200px;
+            margin: auto;
+            background-color: rgba(85, 107, 47, 0.37);
+        }
+        .title{/*3.*/
+            width: 400px;
+            font-size: 70px;
+            box-sizing: border-box;
+            padding: 15px;
+            float: right;/*6.*/
+            color: #aaa;
+            position: relative;/*7.*/
+        }
+        .title::before{/*8.正方形出現*/
+            content: '';
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 20px solid rgb(255, 230, 0);
+            z-index: -1;
+            top: 80px;
+            transform: rotate(20deg);
+        }
+        .title::after{/*9.*/
+            content: '';
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 20px solid #eee;
+            z-index: -2;
+            top: 80;
+            transform: rotate(10deg);
+        }
+        .txt{/*4.*/
+            column-count: 2;
+            column-gap: 30px;
+        }
+        .paragraph{/*5.*/
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1 class="title">WYWBNM CONTENT PROJECT</h1>
+            <div class="txt">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</p>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</P>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</P>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</P>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</P>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

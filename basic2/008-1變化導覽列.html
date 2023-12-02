@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<title>008-1變化導覽列</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		.main-header{
+			background-color:#ccc;
+			background:linear-gradient(-20deg,#3f5494,#08c7a5);
+		}
+		.main-header .container{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			padding:0;
+			max-width:1200px;
+			margin:auto;
+		}
+		.main-header .logo{
+			width:150px;
+		}
+		.main-header .logo img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.main-header .main-nav{
+			display:flex;
+		}
+		.main-header .main-nav:first-of-type{
+			order:-1;
+		}
+		.main-header .main-nav a{
+			text-decoration:none;
+			color:#fff;
+			padding:5px 1em;
+			font-size:20px;
+		}
+		.main-header .main-nav a:hover{
+			color:#fa0;
+		}
+	</style>
+</head>
+
+<body>
+
+<!--
+008 與 008--1 html的內容有一點差別
+	   008 CSS 的內容只差在 
+		   .main-header .main-nav{
+			display:flex;
+		}
+			之下多了這段語法
+			
+			.main-header .main-nav:first-of-type{
+			order:-1;
+		}
+			
+-->
+
+<header class="main-header">
+
+	<div class="container">
+		<a href="#" class="logo">
+			<img src="images/logo/wywbnm.png" alt="Adobe Express Designer Myself">
+		</a>
+		
+		<nav class="main-nav">
+			<a href="#">Photoshop</a>
+			<a href="#">Illustrator</a>
+			<a href="#">Adobe-XD</a>
+		</nav>
+		
+		<nav class="main-nav">
+			<a href="#">Python</a>
+			<a href="#">Mysql</a>
+			<a href="#">HTML</a>
+		</nav>
+		
+	</div>
+	
+</header>
+
+</body>
+
+</html>

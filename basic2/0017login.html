@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta lang="zh-tw">
+		<meta http-eguiv="content-type" content="html/text">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>0017Login</title>
+		<style type="text/css">
+			.table{
+				border: 1px solid #000;
+				background-color: skyblue;
+				margin: auto;
+				width: 250px;
+				height: 150px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			td{
+				border: 1px solid #000;
+				text-align: center;
+				background-color: skyblue;
+			}
+		</style>
+	</head>
+			<!-- form 表單只傳送input的資料 --> 
+			<!-- table表格 tr一列 td儲存格 -->
+			<!-- type=屬性 若屬性password 改成test即可見到密碼內容 -->
+			<!-- cellpadding="0" cellspacing="0" 能消除欄位框線 -->
+	<body>
+		<form action="login_process.php" method="POST">
+			<table class="table">
+				<tr>
+					<td colspan="2">會員登入系統</td>
+				</tr>
+				<tr>
+					<td>帳號</td>
+					<td> <input type="text" name="userAccount"> </input> </td>
+				</tr>
+				<tr>
+					<td>密碼</td>
+					<td> <input type="password" name="userPassword"> </input> </td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="submit" value="登入">
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

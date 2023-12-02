@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0013-1側邊選單</title>
+	<!-- https://fontawesome.com/v4/icons/ looking for icons name -->
+	<style type="text/css">
+		@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+		@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+		*{
+			margin:0;
+			padding:0;
+			list-style: none;
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+		html,body{
+			height: 100%;
+		}
+		body{
+			background-image: linear-gradient(90deg, #3d5894, #08c7a5);
+		}
+		/* ★★★★★ 側邊選單基本框架 ★★★★★ */
+		.side-menu{
+			width: 300px;
+			height: 100%;
+			background-image: linear-gradient(0deg, #3381b0, #c2196c);
+			display: flex;          /*☆這跟子層的display: block;相關*/
+			flex-direction: column; /*☆這跟子層的display: block;相關*/
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+		}
+		/* ★★★★★ 搜尋框 ★★★★★ */
+		.side-menu form{
+			display: flex;
+			margin: 20px 10px 20px;
+			border-radius: 100px;
+			border: 1px solid #fff;
+		}
+		.side-menu form input{width: 230px;}
+		.side-menu form button{width: 50px;}
+
+		.side-menu form input,
+		.side-menu form button{
+			border: none;
+			padding: 5px 10px;
+			color: #fff;
+			background-color: transparent; /* 這將上層矩形拿掉 */
+			outline:unset; /*outline: none;相同效果*/
+		}
+		input[type="search"]::placeholder{
+			color:#fff;
+		}
+		/* ★★★★★ 側邊選單 ★★★★★ */
+		.side-menu .nav a{
+			display: block; /* ☆block才會佔掉一整列空間(變成直排) */
+			padding: 10px;
+			color: #fff;
+			text-decoration: none;
+			position: relative;
+		}
+		/* ↓這裡需要絕對定位是因為有padding↓ */
+		/* ↓這裡是白色border線出現的區塊↓ (從第二個a元素開始出現border) */
+		.side-menu .nav a + a::before{
+			content: '';
+			position: absolute;
+			border-top: 1px solid #fff;
+			left: 10px;
+			right: 10px;
+			top: 0;
+		}
+		/* 文字向左靠 然後icon消失 */
+		.nav a .fa{
+			margin-right: -1.1em;
+			transform: scale(0);
+			transition: .3s;
+		}
+		/* 超連結被摸到 文字向右靠 icon出現*/
+		.nav a:hover .fa{
+			margin-right: 0em;
+			transform: scale(1);
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+	<div class="side-menu">
+		<form action="">
+			<input type="search" placeholder="請輸入關鍵字">
+			<button><i class="fa fa-search"></i></button>
+		</form>
+		<div class="nav">
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i>
+				PHOTOSHOP
+			</a>
+			<a href="#">
+				<i class="fa fa-car" aria-hidden="true"></i>
+				ILLUSTRATOR
+			</a>
+			<a href="#">
+				<i class="fa fa-gavel" aria-hidden="true"></i>
+				UI&UX
+			</a>
+			<a href="#">
+				<i class="fa fa-cutlery" aria-hidden="true"></i>
+				HTML&CSS切版
+			</a>
+			<a href="#">
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				RWD響應式網頁
+			</a>
+			<a href="#">
+				<i class="fa fa-child" aria-hidden="true"></i>
+				PYTHON
+			</a>
+			<a href="#">
+				<i class="fa fa-taxi" aria-hidden="true"></i>
+				MYSQL
+			</a>
+			<a href="#">
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				雲端架設
+			</a>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

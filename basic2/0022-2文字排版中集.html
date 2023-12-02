@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0022-2文字排版中集</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900,&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .wrap{
+            margin: 100px 0;
+        }
+        .container{/*1.*/
+            background: url("images/bg/bg1.jpg");
+            position: relative;
+            width: 1200px;
+            margin: auto;
+        }
+        .title{/*2.*/
+            width: 400px;
+            box-sizing: border-box;
+            padding: 15px;
+            background-color: #eee;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        .txt{/*3.*/
+            column-count: 2;
+            column-gap: 460px;
+        }
+        .paragraph{/*4.*/
+            line-height: 1.3;
+            margin-bottom: 1em;
+        }
+        .paragraph:first-child::first-letter{
+            font-size: 40px;
+            float: left;
+            /* padding-right: 10px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1 class="title">TYPOGRAPHY EXERCISE</h1>
+            <div class="txt">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</p>
+                <P class="paragraph">創新全面制度好多技術每個人按照也有作為享受儘快，不知性別就業執行環境，評論網際也許教材信用頻道留言板面臨表示一定會積分團體生氣，存在年輕實踐治療國內過去僅僅不停，並在一隻分別西方負責人受傷實業整合有限責任公司，交通課堂策劃百度任何人沒有什麼兄弟程式，達到。</P>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!</P>
+                <P class="paragraph">必要生意藍色黑色一大社區今天，最初面對姓名故障生日回覆說法已被感覺到動畫十分看不到，平方米關於，產生承受，發表你要支付查找共享政治於是仍然媽媽美麗，行為天使門口也不指數在這個種類幾個先進性達到競爭三星不如，瀏覽強大，登記每個，高速一些原料咖啡獨立相關，是。</P>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

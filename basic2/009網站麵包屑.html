@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+	<meta>
+	<meta charset="utf-8">
+	<title>009網站麵包屑</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		body,html{
+			height:100%;
+			margin:0;
+		}
+		body{
+			background:linear-gradient(-20deg,#3f5494,#08c7a5);
+		}
+		.wrap{
+			background-color:rgba(63,84,148,.8);
+			padding:10px 0;
+			box-shadow:0px 5px 5px hsla(260,100%,20%,.5);
+		}
+		.breadcrumb{
+			background-color:rgba(255,255,255,.3);	
+			width:90%;
+			margin:auto;
+			display:flex;
+		}
+		.breadcrumb li{
+			padding:0 20px;
+		}
+		.breadcrumb li + li:before{
+			content:'>';
+			color:white;
+			margin-right:20px;
+		}
+		.breadcrumb li + li{
+			padding-left:0;
+		}
+		.breadcrumb a{
+			text-decoration:none;
+			color:white;
+		}
+		.breadcrumb a:hover,
+		.breadcrumb li:last-child a{
+			color:yellow;
+		}
+		
+	</style>
+</head>
+
+<body>
+
+	<div class="wrap">
+		<ol class="breadcrumb">
+			<li> <a href="#">程式設計慣例</a> </li>
+			<li> <a href="#">變數命名邏輯</a> </li>
+			<li> <a href="#">四大容器用法</a> </li>
+			<li> <a href="#">檔案讀取寫入</a> </li>
+			<li> <a href="#">會員登入初階</a> </li>
+			<li> <a href="#">會員登入進階</a> </li>
+		</ol>
+	</div>
+
+</body>
+
+</html>

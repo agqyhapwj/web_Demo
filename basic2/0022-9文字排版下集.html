@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0022-9文字排版下集</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900,&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        body{
+            background-color: #000;
+        }
+        .header{
+            margin: 100px 0;
+        }
+        .container{
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .title{
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 90px;
+            color: #a00;
+            /* border-top: 1px solid #a00;
+            border-bottom: 1px solid #a00;
+            margin-bottom: .5em; */ /*第一種邊框線*/
+        }
+        .title::before{/*第二種邊框線*/
+            content: '';
+            display: block;
+            height: 1px;
+            width: 10em;
+            background-color: #a00;
+            margin: auto;
+        }
+        .title::after{/*第二種邊框線*/
+            content: '';
+            display: block;
+            height: 1px;
+            width: 6em;
+            background-color: #a00;
+            margin: auto;
+            margin-bottom: .5em;
+        }
+        .title-span{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .txt{
+            flex-shrink: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        .paragraph{
+            margin-bottom: 1em;
+            border-bottom: 2px solid #000;
+        }
+        /* .paragraph:first-child:first-letter{
+            font-size: 40px;
+            float: left;
+            padding-right: 10px;
+        } */
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <h1 class="title">WYWBNM CONTENT <span class="title-span">！WARNING！</span></h1>
+            <div class="txt">
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, sit? Quibusdam labore cupiditate vel incidunt! Exercitationem eveniet illo quod quae?</p>
+                <P class="paragraph">不良雙方報名經理貼圖，共同遠程執行賺錢傳真一般左右人大音樂，分公司最好的用於心中文明物流一年大多數最高不錯五金首頁企業，情況可以用沒有付出，面向軟體是我我想五年以前鈴聲作用支付以及，相冊輕鬆採訪也沒上午，再也不起手機鈴聲皇帝推進老闆我們，德國魅力有點遠留。 處理你好責任編輯從而適用於平靜，硬體一系列，有個收集是從你是討論區，做什麼系列遠程利用註明培訓協會付出競爭公園主板攝影，條款重新本網站禮品字體滑鼠集體需要做法穿著怎麼樣不肯，請問只需晚上情感無比輕輕解放，劇情糖尿病五年賺錢再次臺東兩人常見，利用知名先後接。</P>
+                <P class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur dignissimos voluptas ipsum tempora deleniti esse cupiditate temporibus, provident aliquam accusantium cum laudantium nobis quisquam at. Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit!Veniam repellendus dolorum fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt at inventore aliquid repellat laudantium similique optio omnis, impedit distinctio nemo?</P>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>

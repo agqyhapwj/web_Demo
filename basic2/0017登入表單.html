@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0017登入表單</title>
+	<link rel="stylesheet" href="
+	https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/
+	font-awesome.min.css">
+	
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-type:none;
+		}
+		html,body{
+			height:100%;
+		}
+		body{
+			background-image: url("images/bg/bg1.jpg");
+			/* background-repeat:no-repeat; */
+			/* background-size:cover; */
+			display:flex;/*讓.login置於螢幕正中央*/
+			justify-content:center;
+			align-items:center;
+		}
+		.login{
+			width:500px;
+			height:350px;
+			background-color:rgba(0,0,0,.3	);
+			border:3px  solid rgba(0,0,0,.5);
+			border-radius:10px;
+			box-shadow:0 0 30px #000;
+			backdrop-filter:blur(5px);
+			display:flex;/*讓.from置於.login正中央*/
+			justify-content:center;
+			align-items:center;
+		}
+		.form{
+			/* background-color:lightpink; */
+			width:300px;
+		}
+		.form h2{
+			margin-bottom:15px;
+			border-bottom:2px solid white;
+			padding-bottom:10px;
+		}
+		.form .group{
+			margin-bottom:15px;
+		}
+		.form label{
+			line-height:2;
+		}
+		.form input{
+			width:100%;
+			border:1px solid #aaa;
+			line-height:2;
+			border-radius:5px;
+		}
+		.form .btn-group{
+			font-size:0;
+			margin-top:20px;
+		}
+		.form .btn{
+			font-size:15px;
+			border-radius:5px;
+			border:none;
+			background-color:skyblue;
+			width:140px;
+			padding:10px 0;
+		}
+		.form .btn + .btn{
+		margin-left:20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="login"><!-- 最外圍總管區塊 -->
+	
+		<form class="form"><!-- 0 -->
+		
+			<h2>會員登入</h2> <!-- 1 -->
+			
+			<div class="group"><!-- 2-1 -->
+				<label for="user_id">帳號</label>
+				<input type="text" name="" id="user_id">
+			</div>
+			
+			<div class="group"><!-- 2-2 -->
+				<label for="user_password">密碼</label>
+				<input type="text" name="" id="user_password">
+			</div>
+			
+			<div class="btn-group"><!-- 2-3 -->
+				<button class="btn">登入</button>
+				<button class="btn">取消</button>
+			</div>
+			
+		</form>
+		
+	</div>
+</body>
+
+</html>

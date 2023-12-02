@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<title>0018訊息對話紀錄</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			list-style:nene;
+		}
+		html,body{
+			height:100%;
+		}
+		/*彈性佈局、水平與垂直置中*/
+		body{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			background-color:skyblue;
+		}
+		/*對話框*/
+		.dialogue{
+			width:500px;
+			padding:20px;
+			box-shadow:0 0 10px #3e92cc;
+			background-color:silver;
+		}
+		/*區塊變水平*/
+		.user{
+			display:flex;
+			margin-bottom:20px;
+			align-items:flex-start;
+		}
+		.local{
+			justify-content:flex-end;
+		}
+		/*父層flex預設是彈性的*/
+		/*若無flex-shrink:0;則文字越多頭像會越小*/
+		.user .avatar{
+			width:60px;
+			text-align:center;
+			flex-shrink:0;
+		}
+		.user .pic{
+			border-radius:100px;
+			overflow:hidden;
+		}
+		.user .pic img{
+			width:100%;
+			vertical-align:middle;
+		}
+		.user .txt{
+			background-color:pink;
+			padding:16px;
+			border-radius:10px;
+			position:relative;
+		}
+		.remote .txt{
+			margin-left:20px;
+			margin-right:80px;
+			background-color:white;
+			color:#a1b4c5;
+		}
+		.local .txt{
+			margin-right:20px;
+			margin-left:80px;
+			order:-1;
+			background-color:#3e92cc;
+			color:white;
+		}
+		/*以下設定:會出現訊息框的左右三角形*/
+		.remote .txt:before,
+		.local .txt:before{
+			content:'';
+			position:absolute;
+			top:10px;
+			border-top:10px solid transparent;
+			border-bottom:10px solid transparent;
+		}
+		.remote .txt:before{
+			border-right:10px solid white;
+			left:-8px;
+			top:5px;
+		}
+		.local .txt:before{
+			border-left:10px solid #3e92cc;
+			right:-8px;
+			top:5px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 最外圍區塊 -->
+	<div class="dialogue">
+	
+		<!-- 遠端對話者1 -->
+		<div class="user remote">
+			<div class="avatar">
+				<div class="pic">
+					<img src="images\babyFace\Hubert.jpg">
+				</div>
+				<div class="name">Hubert</div>
+			</div>
+			<div class="txt">
+				今天看見你哦
+			</div>
+		</div>
+		<!-- 本地對話者1 -->
+		<div class="user local">
+			<div class="avatar">
+				<div class="pic">
+					<img src="images\babyFace\Shirley.jpg">
+				</div>
+				<div class="name">Shirley</div>
+			</div>
+			<div class="txt">
+				當真，在哪裡？
+			</div>
+		</div>
+		
+		<!-- 遠端對話者2 -->
+		<div class="user remote">
+			<div class="avatar">
+				<div class="pic">
+					<img src="images\babyFace\Hubert.jpg">
+				</div>
+				<div class="name">Hubert</div>
+			</div>
+			<div class="txt">
+				台中火車站，站前靠近XX分校的附近
+			</div>
+		</div>
+		<!-- 本地對話者2 -->
+		<div class="user local">
+			<div class="avatar">
+				<div class="pic">
+					<img src="images\babyFace\Shirley.jpg">
+				</div>
+				<div class="name">Shirley</div>
+			</div>
+			<div class="txt">
+				那就對了，我今天真的在那上課
+			</div>
+		</div>
+		
+		<!-- 遠端對話者3 -->
+		<div class="user remote">
+			<div class="avatar">
+				<div class="pic">
+					<img src="images\babyFace\Hubert.jpg">
+				</div>
+				<div class="name">Hubert</div>
+			</div>
+			<div class="txt">
+				今天的穿著好吸睛，讓我深深地為你暗裏著迷
+			</div>
+		</div>
+		<!-- 本地對話者3 -->
+		<div class="user local">
+			<div class="avatar">
+				<div class="pic">
+					<img src="images\babyFace\Shirley.jpg">
+				</div>
+				<div class="name">Shirley</div>
+			</div>
+			<div class="txt">
+				呵，什麼都不會，就會貧嘴
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+
+</html>

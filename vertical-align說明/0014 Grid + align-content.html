@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0014 Grid + align-content</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 460px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 460px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 400px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0014 Grid + align-content 來達到垂直置中的效果</h1>
+        <p>
+            CSS Grid 跟 Flex 一直都會被一些開發者搞混，就是因為其屬性很相似，<br>
+            這次使用的 align-content 也是 Flex 也有的屬性，<br>
+            但是 Flex 的 align-content 是針對整個內容「行」的次軸做靠齊設定，<br> 
+            且如果只有一行的話，那麼這一個行就會佔滿整個父層，<br>
+            Grid 則是直接針對整體格子，可是如果你的格子只有一個的話，那就直接對內容做控制啦，<br>
+            所以在這個例子中，縱使我們沒有設定多個格子，align-content卻依舊有作用，看起來比起 Flex 更方便呢!<br> 
+            但 Flex 跟 Grid 兩者要解決的問題不一樣，所以特性上面除了部分重疊外，有些概念也不同，還是要注意一下就是了。<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+            display: grid;
+            justify-content: center;/*水平置中*/
+            align-content: center;  /*垂直置中*/
+            margin-bottom: 30px;
+        }
+        .content{
+            width: 400px;
+            background-color: #aaa;
+        }
+    </style>
+    <div class="box box14">
+        <div class="content">
+            立馬來看 這個例子
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

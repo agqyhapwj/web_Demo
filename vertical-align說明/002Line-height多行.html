@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002 Line-height 多行</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <style type="text/css">
+        /* 以下只是說明區塊的樣式 */
+        .wrap{
+            width: 460px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 460px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 400px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>002 Line-height + Line-block 多行文字置中</h1>
+        <p>
+            這個例子最基本就是利用line-height針對行物件可置中的特性，
+            將整個裝載多行文字的.content區塊設定為inline-block，
+            使其具備inline的特性好讓它支援line-height屬性以及vertical-align屬性，
+            接著在.box區塊設定line-height取代其height，就能達成跟第一天的例子一樣的效果了。<br>
+            簡單的說 Amos 是將.content區塊當作是一個單行文字來思考，這樣就能做到『單行』的垂直置中了，
+            但這效果的缺點就是父層一定要固定高度。
+            這方式一般來說不常見到有人這樣寫，但是使用在一些小型區塊其實也挺方便的。
+            要注意到這中間有一個小地方要特別注意，就是.content需要設定vertical-align:middle;
+            才能讓內容區塊順利垂直置中喔。
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            border: 1px solid #f00;
+            margin: auto;
+            line-height: 200px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .box2 .content{
+            display: inline-block;
+            height: auto;
+            line-height: 1;
+            width: 400px;
+            background: #ccc;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="box box2">
+        <div class="content">
+            <h2>立馬來看 這個例子</h2>
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

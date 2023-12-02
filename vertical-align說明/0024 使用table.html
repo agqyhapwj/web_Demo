@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0024 使用table</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+            height: 100vw;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0024 使用table 來達到垂直置中的效果</h1>
+        <p>
+            這個方式...沒甚麼好講的，就是一個很單純的用表格來做垂直置中，應該算是初初初初初級垂直置中技巧啦。<br>
+            去看這篇 使用 Display: table-cell 做網頁垂直置中 的說明就知道了(寫這麼少! Amos 用偷吃步啦)好啦!<br> 
+            <span>我們還是來講講原理好了，基本上 CSS 中的 vertical-align: middle 只在 inline 跟 table-cell 兩種屬性的物件上會有作用，</span><br>
+            其中 table-cell 的部份就是表格的儲存格屬性，之前我們有利用過將 div 設定為 table-cell 屬性來達成垂直置中的方式，<br>
+            這次我們直接用原生的 table 來做啦，所以原理很簡單吧XDDDD，如果這樣還不懂的話，那麼歡迎來看 Amos 的直播直接聊聊。<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        table.box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+        }
+        table.box td{
+            vertical-align: middle;
+            text-align: center;
+        }
+        .content{
+            width: 400px;
+            background: #ccc;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+    <table class="box">
+        <tr>
+            <td>
+                <div class="content">
+                    <div class="txt">
+                        立馬來看 Amos 實際完成的
+                        <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                        CSS3精美相簿效果
+                        </a>
+                        效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+                        這個置中的想法來自於 Paul 
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

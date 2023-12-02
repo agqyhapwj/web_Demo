@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 使用計算機calc</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0020 使用計算機calc 來達到垂直置中的效果</h1>
+        <p>
+            Calc 是計算機英文單字「calculator」的縮寫，這個由微軟提出的 CSS 方法，<br>
+            真的是網頁開發的一大福音啊！我們竟然可以在網頁中直接做計算！？<br>
+            這真是太猛啦，從此我們再也不用在那邊絞盡腦汁的計算數學，或是想辦法用 JavaScript 來動態計算，<br>
+            我們可以很輕鬆的利用 calc() 這個「計算機」方法，來將百分比即時且動態的計算出實際要的什麼高度，<br>
+            真可謂劃時代的一個方法啊！<br>
+            <strong style="color:blue;">但這個方法需要注意的是太過大量的使用的話，網頁效能會是比較差的，所以請審慎使用喔。</strong><br>
+            calc 計算機，是一個可以讓我們動態在網頁中動態計算數值的一種 CSS 屬性『函式』的寫法，<br>
+            經常會用在百分比跟像素的計算，因為百分比是一個不確定的數值，而像素卻又是一個很明確的單位，<br>
+            這時候的計算就導致我們很困擾了，因為我們會需要依據父層的寬度或高度來做動態的計算，<br>
+            在這次的例子中 Amos 就是直接取父層 100% 高，再扣掉字身高度後，將這個數值除以 2 就是我需要的上方空間啦，<br>
+            計算原理很簡單，但是若是沒有 calc 這個特別的『函式』來協助我們的話，我們還真的是很麻煩阿，這時候 Amos 真心覺得應該好好感謝微軟阿。<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+        .content{
+            width: 400px;
+            background-color: #aaa;
+            position: relative;
+            top: calc((100% - 70px) / 2);
+            margin: auto;
+            height: 70px;
+        }
+    </style>
+    <div class="box box20">
+        <div class="content">
+            立馬來看 這個例子
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

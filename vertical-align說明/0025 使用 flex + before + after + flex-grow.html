@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0025 使用 flex + before + after + flex-grow</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+            height: 100vw;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0025 使用 flex + before + after + flex-grow</h1>
+        <p>
+            這個方式跟之前的一個方式很相似，但只是利用上下包夾的偽元素包夾我們的內容物件來達成垂直置中的目的。<br>
+            <span>使用 Flex 的時候我們可以利用 flex-grow 來讓物件佔據剩下的父層空間，但假設內容物只有一個的話，這樣是無法達成垂直置中的，</span><br>
+            所以 Amos 利用了偽元素來填充父層上下的空間，僅需將 ::before & ::after 設定 flex-grow ，<br>
+            就能夠讓這兩個偽元素自動將父層剩下的空間完整的分好佔滿，<br>
+            之前 Amos 曾僅利用一個 ::before來達成垂直置中的原理跟這是一樣的，只是這次的做法更加的直覺，直接讓上下都填好填滿，觀念直接多了是不^^<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content{
+            width: 400px;
+            background-color: #aaa;
+        }
+        .box::before,
+        .box::after{
+            content: '';
+            flex-grow: 1;
+            width: 30px;
+            /* height: 60px; */
+            /* border: 1px solid greenyellow; */
+            /* background-color: greenyellow; */
+            /* border-top: 1px solid greenyellow; */
+        }
+    </style>
+    <div class="box box18">
+        <div class="content">
+            立馬來看 這個例子
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

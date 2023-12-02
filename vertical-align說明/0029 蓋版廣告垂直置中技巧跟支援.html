@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./DescriptionCode.css">
+    <title>0029 蓋版廣告垂直置中技巧跟支援</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <h1>0029 蓋版廣告垂直置中技巧跟支援</h1>
+        <h2>數位生態</h2>
+        <p>
+            蓋板廣告太常見到了，目前幾乎人手多機的情況下，我們每天幾乎都離不開上網這行為，上網除了上班用電腦以外，幾乎都是用行動裝置上網了，也就經常會看到蓋版廣告這種網路生態中的常見數位生物（咦？生物？），在一個網路內容多數都閱覽免費的情況下，蓋版廣告可以説是網站經營中不可或缺的收入來源，所以它的重要性可見一班了，今天我們就來帶壞大家看看蓋版廣告的垂直置中方式
+        </p>
+        <h2>蓋版廣告版面需求</h2>
+        <p>
+            蓋版廣告基本上要達到廣告區塊會蓋住整個畫面的情況，所以我們需要固定區塊的定位在視窗之中，其中較常見到的方式有兩個，一個是 absolute ，一個則是 fixed，這兩種都有人使用，但要讓你不管怎麼捲動都能蓋住版面的話，那就是要設定 fixed 才行了，有了 fixed 的區塊之後，我們就能在裡面設置我們所想要的垂直直至中畫面了，大致原理就是這樣。所以讓我們來看看蓋版廣告的範例原始碼
+        </p>
+    </div>
+
+    <div class="middle-insert">
+        <p><strong>只蓋部分並垂直置中</strong></p>
+    </div>
+
+
+<div class="code-area">
+<pre class="code-content">
+<code class="code">
+＜div class="text-content"＞
+    ＜h2＞練習的垂直置中＜/h2＞
+    ＜p＞
+        垂直置中須於中;
+        直豎在中皆可置;
+        置位於中正且直;
+        中於正中不再垂。
+    ＜/p＞
+＜/div＞
+------------------------------
+------------------------------
+------------------------------
+</code>
+</pre>
+
+<pre class="code-content">
+<code class="code">
+    .text-content{
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        background-color: #ccc;
+        text-align: center;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</code>
+</pre>
+</div>
+
+    <div class="middle-insert">
+        <p><strong>↘↓↙以下是產生的結果↘↓↙</strong></p>
+    </div>
+
+    <!-- ==========↘↓↙以下是產生的結果↘↓↙========== -->
+
+    <div class="text-content">
+        <h2>Amos的垂直置中好也</h2>
+        <p>
+          垂直置中須於中;<br>
+          直豎在中皆可置;<br>
+          置位於中正且直;<br>
+          中於正中不再垂.<br>
+          ==================<br>
+          <span>讓它浮在左上角，只為了別讓它阻擋住頁面說明</span><br>
+          <span>將 right: 0; 與 bottom: 0; 註解拿掉就會看出結果</span>
+        </p>
+    </div>
+    <style type="text/css">
+        .text-content{
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            background-color: #aaa;
+            text-align: center;
+            margin: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* right: 0; */
+            /* bottom: 0; */
+        }
+    </style>
+    
+</body>
+
+</html>

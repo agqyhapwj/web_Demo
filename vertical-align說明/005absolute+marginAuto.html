@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>005 absolute+margin auto</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>005 absolute + margin auto 來達到垂直置中</h1>
+        <p>
+            這個垂直置中的方式也是網頁設計中常見的作法之一，歷史悠久的這個做法，人們最容易產生疑問的地方在於 margin 的使用時機，<br>
+            基本上當你將網頁物件設定為 absolute 時，若沒有搭配 left/right/top/bottom 這類屬性的話，它的 margin 計算是有問題的，<br>
+            所以我們在這個例子中，需要使用 absolute 搭配 top & bottom 來讓 margin:auto 能正常計算出來，<br>
+            若是要用比較淺白的解釋的話，Amos 會這麼解釋:『當你將物件設定成絕對定位後，此時你的物件將自己位於一個層，<br>
+            此時尚未知道這一層的空間大小多少，但是一旦將物件設定top:0 以及 bottom:0 時，此時瀏覽器將會計算空間頂端跟底端的空間尺寸，<br>
+            這時你的空間大小就能夠被取得了，接著我們的 margin:auto 就生效囉。』<br>
+            這個原理我們其實也同樣可以運用在 position:fixed 定位屬性上，像是蓋板廣告(好負面的例子)就是這樣製作的。<br>
+            此外一些光箱(跳窗)效果也是這樣製作的喔。             
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .content{
+            width: 400px;
+            background: #ccc;
+            height: 70px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    </style>
+    <div class="box box5">
+        <div class="content">
+            <h2>立馬來看 這個例子</h2>
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

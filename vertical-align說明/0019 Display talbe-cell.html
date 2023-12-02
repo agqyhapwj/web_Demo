@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0019 Display::talbe-cell</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0019 Display::talbe-cell 來達到垂直置中的效果</h1>
+        <p>
+            這一招我想有點年紀的開者應該都有看過了，當然像我這麼嫩的開發者當然是第一次看到啦（這是什麼幹話），<br>
+            這一招的原理在於使用 CSS display 屬性將div設定成表格的儲存格(td)，這樣就能利用支援儲存格垂直對齊的 vertical-align: middle 屬性來將資料垂直置中啦。<br>
+            CSS 的 vertical-align 屬性一直都是很多設計師或工程師心中的痛，因為預設的 block 類型物件是不支援這屬性的，<br>
+            也因為如此所以很多人在製作網頁的垂直置中需求時都會有一種 WTF 的內心戲，明明字面上就是設定直向的位置，<br>
+            為什麼林北設定了沒用阿阿阿阿阿阿!!!!!(對不起我剛剛失控了)，那麼支援 vertical-align 屬性的物件類型有那些呢?<br> 
+            <strong style="color:blue;">基本上有兩種，一種是儲存格(table-cell)物件，一種則是具備 inline 特性的物件</strong>，<br>
+            像是 inline 或是 inline-block 都是具備 inline 特性的屬性值，在這個例子中我們就是利用將物件設定成儲存格(table-cell)屬性，<br>
+            然後就能讓 div 標籤支援 vertical-align 屬性啦，原理就這麼簡單啦，下次我們看到網頁內的物件時，可以好好想想物件是什麼屬性喔，不要光是看表象了^^。<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .content{
+            width: 400px;
+            background: #aaa;
+            margin: auto;
+        }
+    </style>
+    <div class="box box19">
+        <div class="content">
+            立馬來看 這個例子
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

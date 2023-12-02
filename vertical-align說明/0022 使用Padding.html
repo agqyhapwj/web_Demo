@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0022 使用Padding</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+            height: 100vw;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0022 使用Padding 來達到垂直置中的效果</h1>
+        <p>
+            「什麼！這也算垂直置中技巧？連我阿嬤都知道這方式吧？！！」對的！<br>
+            這的確也算是一種垂直置中的方式，不可諱言的這方式真的是簡單過頭了，以至於有些開發者認為這種方式不能算是一種垂直置中技巧，<br>
+            但同樣的你無法反駁的是，我的資料的確垂直置中啦 XDDD，好啦！就當我硬凹吧，你說的都對！好不！？(被打)<br>
+            <strong style="color:blue;">這方式應該很多人都用過啦，也算是最基本的一種垂直置中方式，只是在實際運用時機來說受限蠻多的，</strong><br>
+            也因為這樣導致有些人可能覺得這不能夠算是一種垂直置中的技巧，但內容的確有垂直置中不是嗎? 是不是? 是不是?<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            border: 1px solid #f00;
+            margin: auto;
+            height: auto;
+            padding: 50px 0;
+            margin-bottom: 30px;
+        }
+        .content{
+            width: 400px;
+            background-color: #aaa;
+            margin: auto;
+        }
+    </style>
+    <div class="box box22">
+        <div class="content">
+            立馬來看 這個例子
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

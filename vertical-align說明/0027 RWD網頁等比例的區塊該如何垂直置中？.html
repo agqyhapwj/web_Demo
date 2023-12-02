@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0027 RWD網頁等比例的區塊該如何垂直置中？</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* text-align-last: center; */
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+        span{
+            color: blue;
+        }
+        .code{
+            color: #fff;
+        }
+        .code-content{
+            width: 800px;
+            height: auto;
+            margin: auto;
+            margin-bottom: 30px;
+            padding-top: 30px;
+            background-color: #000;
+            border: 2px solid violet;
+            color: #fff;
+            font-size: 18px;
+        }
+        .middle-insert{
+            width: 800px;
+            margin: auto;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+    </style>
+    <div class="wrap">
+        <h1>0027 RWD網頁等比例的區塊該如何垂直置中？</h1>
+        <p>
+            RWD等比例<br>
+            目前RWD網頁應該是個再普通不過的需求了，這樣的需求在製作網頁時到底怎麼做到垂直置中的需求呢? <br>
+            基本上我們當然先從等比例區塊這裡先處裡啦，等比例區塊的製作通常我們會使用父層的空間來處理，<br>
+            <span>一種是用padding-bottom或padding-top(二擇一)並搭配百分比的單位來處理，又或者width&height使用vw這個單位來製作。</span><br>
+            例如我今天需要一個寬高比是二比一的區塊的話......<br>
+        </p> 
+    </div>
+
+    <div class="middle-insert">
+        <p><strong>可能會這樣寫</strong></p>
+    </div>
+
+    <pre class="code-content">
+        <code>
+            .zhiwei-box{
+                width: 100vw;
+                height: 50vw;
+            }
+        </code>
+    </pre>
+
+    <div class="middle-insert">
+        <p><strong>或者這樣寫</strong></p>
+    </div>
+
+    <pre class="code-content">
+        <code>
+            .zhiwei-box2{
+                width: 100%;
+                height: 0;
+                padding-botom: 50%;
+            }
+        </code>
+    </pre>
+<!-- ================================================== -->
+    <div class="wrap">
+        <h1>怎麼垂直置中</h1>
+        <p>
+            有了等比例區塊後，我們要處裡的就是垂直置中的需求了，這邊我們要來看一下上面兩種等比例區塊的寫法，<br>
+            第二種等比例的寫法其實是 Amos 比較常用的，這種等比例的寫法適用於各個區域，但第一種使用vw的寫法就會受限多了。<br>
+            這邊佔時不討論等比例區塊寫法的優劣，先來看一下第二種等比例寫法的問題點。<br>
+            在第二種寫法中可以看到有一個width:0;的寫法，高度 0!!!!高度0的話我要怎麼去垂直置中阿?<br>
+            我可以可以在區塊內建構一個內容區塊，像是下面這樣<br>
+        </p> 
+    </div>
+
+    <pre class="code-content">
+        <code>
+            <span class="code">＜div class="zhiwei-box2"＞</span>
+            <span class="code">    ＜div class="text"＞</span>
+                    有鐵人賽真好，寫了那麼多的垂直置中
+                <span class="code">＜/div＞</span>
+            <span class="code">＜/div＞</span>
+        </code>
+    </pre> 
+<!-- ================================================== -->
+<div class="wrap">
+    <h1>繼續看下面</h1>
+    <p>
+        然後我們先在父層設定相對定位relative，<br>
+        再對子層設定絕對定位absolute搭配上下左右0跟margin:auto;來處理，<br>
+        詳細的規則可以參考「使用 absolute + margin auto 來達到CSS垂直置中效果」，<br>
+        這樣應該很簡單的啦，當然如果你對於只用到一種方式是無法滿足的話，<br>
+        我們也可以多增加一層 div 標籤來讓整個區塊更加彈性，例如以下這樣<br>
+    </p> 
+</div>
+
+<pre class="code-content">
+    <code>
+        <span class="code">＜div class="zhiwei-box2"＞</span>
+            <span class="code">＜div class="content"＞</span>
+            <span class="code">    ＜div class="text"＞</span>
+                    有鐵人賽真好，寫了那麼多的垂直置中
+                <span class="code">＜/div＞</span>
+            <span class="code">＜/div＞</span>
+        <span class="code">＜/div＞</span>
+    </code>
+</pre>
+<!-- ================================================== -->
+<div class="middle-insert">
+    <p><strong>接者設定CSS如下準備好前置作業誕</strong></p>
+</div> 
+
+<pre class="code-content">
+    <code>
+        .zhiwei-box2{
+            width: 100%;
+            height: 0;
+            padding-botom: 50%;
+            position: relative;
+        }
+        .zhiwei-box2 .content{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </code>
+</pre>
+
+</body>
+</html>

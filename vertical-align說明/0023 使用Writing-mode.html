@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0023 使用Writing-mode</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+            height: 100vw;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0023 使用Writing-mode 來達到垂直置中的效果</h1>
+        <p>
+            這個方式應該是比較少見到有人使用的了，這個想法是被老友 Paul 所激發的，<br>
+            <strong><span>writing-mode 這個 CSS屬性的功能基本上跟垂直置中是八竿子打不上關係，</span></strong><br>
+            <strong><span>它的用途是改變文字書寫的方向從橫書變直書，</span></strong>且支援度從很早期的IE5就有支援了，<br>
+            但當時Amos鮮少使用，一來是網頁多是橫書居多，另外當時除了ＩＥ瀏覽器以外，<br>
+            其他瀏覽器的支援度似乎都不太好，也就很少使用了。writing-mode 本身是設定文字書寫的方向，
+            既然文章書寫方向可以設定直書，那麼就表示我們可以利用直書方式搭配 text-align: center 來讓文字垂直置中囉?!<br> 
+            有了這個想法支後，當然就是馬上試做啦!Amos 利用 writing-mode 將一整個文字容器也就是 div 區塊變成直書，<br>
+            接著此容器設定 text-align: center 來讓子層達到垂直置中的目的，白話一點的解說的話，<br>
+            就是你把原本橫排的文字，變成直排了，所以原本橫排用到的水平對齊中間(text-align: center)，就變成了控制直排的中間了（垂直置中），<br>
+            原理就是這麼簡單。但要特別注意的是瀏覽器對此語法的支援來說，需要拆開寫法才行，不然某些瀏覽器吃的語法不同，<br>
+            可能會讓你的網頁在某些瀏覽器上看起來無效，這會是最需要注意到的。而有些人可能會發現到各瀏覽器好像有些正常有些不正常，<br>
+            這是由於瀏覽器的語法有新舊兩種寫法，所以如果各位須要讓各個瀏覽器都支援的話，那麼請自行去查一下囉(Amos好壞)。<br>
+        </p>
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #f00;
+            margin: auto;
+            writing-mode: tb-lr; /* for ie11 */
+            writing-mode: vertical-lr;
+            text-align: center;
+            margin:0 auto;
+        }
+        .content{
+            width: 400px;
+            background: #ccc;
+            display: inline-block; /* for ie & edge */
+            width: 100%;
+            writing-mode: lr-tb;
+            margin: auto; 
+            text-align: left;
+        }
+        .box .txt{
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+    <div class="box box23">
+        <div class="content">
+            <div class="txt">
+                立馬來看 Amos 實際完成的
+                <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+                </a>
+                效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+                這個置中的想法來自於 Paul 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

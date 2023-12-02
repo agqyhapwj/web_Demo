@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001 Line-height 原理</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 460px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align-last: center;
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 460px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 400px;
+            margin: auto;
+            font-size: 20px;
+        }
+    </style>
+    <div class="wrap">
+        <h1>Line-height說明</h1>
+        <p>
+            基本上Line-height的原理跟特性就是設定行的高度，
+            可以說是一行字所要佔據的高度空間是多少，它會把整個空間分配到文字的上方與下方，
+            因為這樣的特性讓我們可以利用它來達到單行文字垂直置中的目的，
+            等同於利用Line-height來取代height屬性。（但這是指單行文字）<br>
+            至於多行文字，下一個檔案就會有用Line-heihgt做多行垂直置中的技巧！
+        </p>
+    </div>
+
+
+    <!-- vertical垂直置中從這開始 -->
+    <style type="text/css">
+        .content{
+            width: 400px;
+            background-color: #ccc;
+            line-height: 100px;
+            margin: auto;
+            /* ↓↓↓ horizontal水平置中 */
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #f00;
+        }
+    </style>
+
+    <div class="content">001 Line-height 原理</div>
+    
+</body>
+</html>

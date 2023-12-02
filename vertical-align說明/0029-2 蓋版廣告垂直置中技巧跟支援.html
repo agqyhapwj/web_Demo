@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./DescriptionCode.css">
+    <title>0029-2 蓋版廣告垂直置中技巧跟支援</title>
+</head>
+<!-- iT鐵人賽垂直置中最後一天30Day，可到如下網址去看 -->
+<!-- https://ithelp.ithome.com.tw/users/20112550/ironman/2092?page=3 -->
+
+<body>
+
+    <div class="wrap">
+        <h1>0029-2 蓋版廣告垂直置中技巧跟支援</h1>
+        <h2>數位生態</h2>
+        <p>
+            0029檔案的這種寫法的缺點就是需要讓內容有固定高度，有時候我們的內容高度不固定的話就沒辦法了，所以我們可以改用下面的寫法或許更彈性些。
+        </p>
+        <h2>補充說明</h2>
+        <p>這種寫法讓內容可以不用固定高度，彈性變大了，但支援度也變低了，IE10以下都不支援，但你也可以改用支援度更高的「使用CSS ::before + inline-block 屬性來達到垂直置中」，讓他最低可以支援到IE8。</p>
+    </div>
+
+    <div class="middle-insert">
+        <p><strong>下列寫法較有彈性一點點</strong></p>
+    </div>
+
+
+<pre class="code-content">
+<code class="code">
+＜div class="tt-wrap"＞
+    ＜div class="tt-content"＞
+        ＜h2＞練習的垂直置中＜/h2＞
+        ＜p＞
+            垂直置中須於中;
+            直豎在中皆可置;
+            置位於中正且直;
+            中於正中不再垂。
+        ＜/p＞
+    ＜/div＞
+＜/div＞
+</code>
+</pre>
+
+<pre class="code-content">
+<code class="code">
+    .tt-wrap{
+        width: 400px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display:flex;
+        align-items: center;
+      }
+      .tt-content{
+        width: 100%;
+        padding: 10px;
+        background-color: #ccc;
+        text-align: center;
+      }
+</code>
+</pre>
+
+    <div class="middle-insert">
+        <p><strong>↘↓↙以下是產生的結果↘↓↙</strong></p>
+    </div>
+
+    <!-- ==========↘↓↙以下是產生的結果↘↓↙========== -->
+
+    <div class="tt-wrap">
+        <div class="tt-content">
+            <h2>Amos的垂直置中好也</h2>
+            <p>
+              垂直置中須於中;<br>
+              直豎在中皆可置;<br>
+              置位於中正且直;<br>
+              中於正中不再垂.<br>
+              ==================<br>
+              <span>讓它浮在左上角，只為了別讓它阻擋住頁面說明</span><br>
+              <span>將 right: 0; 與 bottom: 0; 註解拿掉就會看出結果</span>
+            </p>
+        </div>
+    </div>
+    <style type="text/css">
+
+        .tt-wrap{
+            width: 400px;
+            /* height: 100%; */
+            position: fixed;
+            /* top: 0; */
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            display:flex;
+            align-items: center;
+            /* justify-content: center; */
+
+        }
+        .tt-content{
+            width: 100%;
+            padding: 10px;
+            background-color: #ccc;
+            opacity: .7;
+            text-align: center;
+        }
+    </style>
+    
+</body>
+
+</html>

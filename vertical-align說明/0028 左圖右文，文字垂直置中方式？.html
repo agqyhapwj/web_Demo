@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./DescriptionCode.css">
+    <title>0028 左圖右文，文字垂直置中方式？</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <h1>0028 左圖右文，文字垂直置中方式？</h1>
+        <h2>支援度最高的垂直置中方式</h2>
+        <p>
+            左圖右文版面的垂直置中應該是最常見到的一種需求了，
+            這種需求的重點在於右側的文字需要垂置對齊於左邊的圖片，
+            這種畫面基本上通常在樣版網站可以說是屢見不鮮了，在我們的專案中也是很常見的一種版面，
+            這種版面的寫法隨便寫的話少說至少也三四種寫法，HTML架構也有多種，
+            以下就用支援度最高且最簡單的寫法來做好了，讓我們先來看一下原始碼
+        </p>
+    </div>
+
+
+<pre class="code-content">
+<code class="code">
+＜div class="text-wrap"＞
+    ＜img src="https://picsum.photos/300/200?random=1"＞
+    ＜div class="txt"＞
+        ＜h2＞Zhiwei CSS＜/h2＞
+        ＜p＞Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Eveniet dolorem velitnobis aspernatur fuga  
+            neque laudantium soluta necessitatibus? Amet, ab
+        ＜/p＞
+    ＜/div＞
+＜/div＞    
+</code>
+</pre>
+
+<pre class="code-content">
+<code class="code">
+*{
+    box-sizing: border-box;
+}
+.text-wrap{
+    width: 600px;
+    margin: auto;
+    border: 1px solid red;
+    display: flex;
+    margin-bottom: 20px;
+}
+.text-wrap img{
+    width: 50%;
+    vertical-align: middle;
+}
+.txt{
+    border: 2px solid violet;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 50%;
+        font-size: 16px;
+    /* vertical-align: middle; */
+    /* justify-content: center; */
+    * align-content: center; */
+    padding: 20px;
+    background-color: #ccc;
+    text-align: left;
+}
+.txt h2{
+    font-size: 42px;
+    text-align: center;
+}
+.txt p{
+    /* background-color: red; */
+    margin-top: 20px;
+    padding-left: 20px ;
+}
+</code>
+</pre>
+
+    <div class="middle-insert">
+        <p><strong>↘↓↙以下是產生的結果↘↓↙</strong></p>
+    </div>
+
+    <!-- ==========↘↓↙以下是產生的結果↘↓↙========== -->
+
+    <div class="text-wrap">
+        <img src="https://picsum.photos/250/250?random=1" alt="">
+        <div class="txt">
+            <h2>Zhiwei CSS</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae recusandae enim earum dignissimos!
+                Hic, voluptatibus illo, sapiente itaque eius, dolores id non temporibus sequi quaerat tempore ullam cum
+                minima earum.
+            </p>
+        </div>
+    </div>
+    
+</body>
+
+</html>

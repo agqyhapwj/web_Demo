@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0026 IE8以上該如何垂直置中？</title>
+    <style type="text/css">
+        body{
+            background:linear-gradient(-20deg,#ffffff,#001725c0);
+            background-repeat: no-repeat;
+            height: 100vw;
+        }
+    </style>
+</head>
+<!-- vartical垂直的 horizontal水平的 -->
+<body>
+    <!-- 以下只是說明區塊的樣式 -->
+    <style type="text/css">
+        .wrap{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* text-align-last: center; */
+            padding: 20px;
+            border: 1px solid black; 
+        }
+        .wrap > h1{
+            width: 760px;
+            margin: auto;
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+        .wrap > p{
+            width: 700px;
+            margin: auto;
+            font-size: 20px;
+        }
+        span{
+            color: blue;
+        }
+        .span{
+            color: blue;
+        }
+    </style>
+    <div class="wrap">
+        <h1>0026 IE8以上該如何垂直置中？</h1>
+        <p>
+            講了這麼多垂直置中...
+            從一開始鐵人賽開賽以來，Amos寫了 25種這麼多的垂直置中技巧，但或許仍舊有人搞不懂這<br> 
+            25種垂直置中方式的使用時機，今天我們就來看看不同情境與需求下的垂直置中選擇方式。<br>
+            然後 Amos 就會直接被朋友當成顧問問說，我的網頁狀況是巴啦巴啦巴啦，<br>
+            然後我用了 Amos你講的25種垂直置中方式裡的第8種方式來寫，但是他無效ㄟ!<br>
+            我想說這不可能啊，在我電腦上都是好的阿會出現這狀況一定是你電腦有問題，<br>
+            最後問了一下才知道原來你的網頁要支援到IE8那個老古董阿，這樣的話你可以有8個方式可以用，<br>
+            然後朋友又會丟訊息回來說他寫了無效，Amos這時候就會給他一個白眼問他說你是不是還有什麼需求沒講到呢?<br> 
+            這時朋友才會說出他的第2種第3種需求出來，好吧!既然這樣，那我們今天就來看看幾個你可能會遇到的狀況以及他的垂直置中的解決方案吧。<br>
+            專案需要支援到IE8、9、10甚至更高<br>
+            對於我們的老敵人朋友IE來說，要做到垂直置中是個比較辛苦的，能使用的方式也較少，但其實說少也不太對，<br>
+        </p> 
+    </div>
+
+    <div class="wrap">
+        <h1>因為至少也還有 8 個垂直置中方式可利用，像是以下這幾個都可以支援到IE8含以上</h1>
+        <p class="span">
+            使用CSS Line-height 做垂直置中<br>
+            使用CSS line-height + inline-block 做多行文字的垂直置中<br>
+            使用CSS ::before + inline-block 屬性來達到垂直置中<br>
+            使用 absolute + margin負值來達到垂直置中的目的<br>
+            使用 absolute + margin auto 來達到CSS垂直置中效果<br>
+            使用 Padding 來做垂直置中啦<br>
+            使用 Writing-mode 來做垂直置中區塊<br>
+            使用 table 來做垂直置中區塊<br>
+        </p> 
+    </div>
+
+
+
+    <!-- vartical多行文字垂直置中從這開始 -->
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 200px;
+            border: 1px solid #f00;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content{
+            width: 400px;
+            background-color: #aaa;
+        }
+        .box::before,
+        .box::after{
+            content: '';
+            flex-grow: 1;
+        }
+    </style>
+    <div class="box box18">
+        <div class="content">
+            立馬來看 這個例子（這篇這個垂直置中的區塊不是用來示範的，只是本人懶得拿掉）
+            <a href="http://csscoke.com/2015/07/31/nth-child_rwd_album/">
+                CSS3精美相簿效果
+            </a>
+            效果吧！別忘了拖拉一下視窗看看 RWD 效果喔！
+        </div>
+    </div>
+</body>
+</html>

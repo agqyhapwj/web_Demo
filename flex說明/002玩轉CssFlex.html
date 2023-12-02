@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002玩轉CssFlex</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* justify-content是主軸，以下的align-xxx是次軸 */
+        /*align-items對行做控制 flex-start or flex-end*/
+        /*align-content對整塊做控制*/
+        .box{
+            width: 960px;
+            height: 800px;
+            border: 6px solid #f00;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            align-items: center;
+            align-content: center;
+        }
+        .item{
+            width: 300px;
+            height: 200px;
+            font-size: 15px;
+            /* margin-bottom: 20px; */
+        }
+        .item::first-letter{
+            font-size: 30px;
+        }
+        .item1{
+            background-color: #aff;
+        }
+        .item2{
+            background-color: #afa;
+            /* align-self: flex-start; */
+        }
+        .item3{
+            background-color: #aaf;
+        }
+        .item4{
+            background-color: #faf;
+            order: -1;
+        }
+        .item5{
+            background-color: #ffa;
+            order: -1;
+        }
+        .item6{
+            background-color: #6af;
+        }
+    
+    </style>
+</head>
+<!-- 搜尋：網頁色彩 -->
+<!--     或     -->
+<!-- https://csscoke.com/2015/01/01/rgb-hsl-hex/ -->
+<body>
+    <div class="box">
+        <div class="item item1">1Lorem dolorum, facilis nemo at libero sint, aspernatur sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, hic ex? Fugiat eius sunt esse ratione, libero laboriosam quae consequuntur facilis ab, cumque dolorem ex corrupti sequi? Magnam, nostrum repellat!</div>
+        <div class="item item2">2Lorem dolorum, facilis nemo at libero sint, aspernatur sapiente.</div>
+        <div class="item item3">3Lorem dolorum, facilis nemo at libero sint, aspernatur sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, hic ex? Fugiat eius sunt esse ratione, libero laboriosam quae consequuntur facilis ab, cumque dolorem ex corrupti sequi? Magnam, nostrum repellat!</div>
+        <div class="item item4">4Lorem dolorum, facilis nemo at libero sint, aspernatur sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, hic ex? Fugiat eius sunt esse ratione, libero laboriosam quae consequuntur facilis ab, cumque dolorem ex corrupti sequi? Magnam, nostrum repellat!</div>
+        <div class="item item5">5Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut corrupti, rerum consectetur aliquam reprehenderit nostrum possimus dolorum, facilis nemo at libero sint, aspernatur sapiente.</div>
+        <div class="item item6">6Lorem dolorum, facilis nemo at libero sint, aspernatur sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, hic ex? Fugiat eius sunt esse ratione, libero laboriosam quae consequuntur facilis ab, cumque dolorem ex corrupti sequi? Magnam, nostrum repellat!</div>
+    </div>
+</body>
+</html>

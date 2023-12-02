@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003範例Css3D</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .space{
+            width: 900px;
+            height: 600px;
+            border: 1px solid #f00;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            outline: 2px solid #F00;
+            transform-style: preserve-3d;
+            transform: translateZ(-200px) rotate3d(1,1,0,37deg);
+        }
+        .box div{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background-color: hsla(203, 99%, 40%, .3);
+            font-size: 200px;
+            color: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 400px;
+        }
+        .front{
+            transform: rotate3d(0, 0, 0, 0deg) translateZ(200px);
+        }
+        .back{
+            transform: rotate3d(0, 1, 0, 180deg) translateZ(200px);
+        }
+        .left{
+            transform: rotate3d(0, 1, 0, 90deg) translateZ(200px);
+        }
+        .top{
+            transform: rotate3d(1, 0, 0, 90deg) translateZ(200px);
+        }
+        .bottom{
+            transform: rotate3d(1, 0, 0, 270deg) translateZ(200px);
+        }
+        .right{
+            transform: rotate3d(0, 1, 0, 270deg) translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="space">
+        <div class="box">
+            <div class="front">F</div>
+            <div class="back">K</div>
+            <div class="left">L</div>
+            <div class="right">R</div>
+            <div class="top">T</div>
+            <div class="bottom">B</div>
+        </div>
+    </div>
+</body>
+</html>

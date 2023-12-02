@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001說明Css3D</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .text-area{
+            margin: auto;
+            width: 600px;
+            height: auto;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        .title{
+            width: 95%;
+            text-align: center;
+            border: 1px solid #000;
+            margin: 20px 15px 0 15px;
+            background-color: #ccc;
+        }
+        .p-area{
+            width: 95%;
+            margin: 10px 15px 10px 15px;
+            /* border: 1px solid #000; */
+        }
+        .p-content{
+            border: 1px solid #000;
+            margin: 10px 0;
+            white-space: pre;/*保留原始空何和換行*/
+            font-size: 18px;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--  https://flexboxfroggy.com/ -->
+    <div class="text-area">
+        <h2 class="title">CSS3 3D 說明</h2>
+        <div class="p-area">
+            <p class="p-content">
+                透視點   perspective
+                透視原點 perspective-origin
+                變形原點 transform-origin
+                變形樣式 transform-style
+                變形屬性 transform
+                透視點 寫在自己身上？ 寫在爸爸身上？ 要寫多大？
+
+            </p>
+            <p class="p-content">
+                透視點：perspective
+                >>>>>>>也就是說眼睛與螢幕的距離
+                >>>>>>>只是設定距離，並不影響物件尺寸
+            </p>
+            <p class="p-content">
+                透視原點：prespective-origin
+                >>>>>>>也就是眼睛對到螢幕的2D平面位置
+                >>>>>>>預設是正中間
+            </p>
+            <p class="p-content">
+                變形原點 transform-origin
+                >>>>>>> 定義變形原點
+                >>>>>>> 預設是正中間
+            </p>
+            <p class="p-content">
+                變形樣式 transform-style
+                >>>>>>> 變形樣式
+                >>>>>>> 預設是平面 flat
+                flat(平面-預設值)
+                preserve-3d(3D-預設不繼承)
+            </p>
+            <p class="p-content">
+                變形屬性 transform
+                scale 比例
+                skew 傾斜
+                retate 旋轉
+                translate 位移
+                ================================================
+                ↓大概是長成下面這樣↓
+                <span>transform: scale() skew() retate() translate();</span>
+                ------------------------------------------------
+                ↓不過也有可能長這樣↓
+                <span>transfoorm: matrix(0,0,0,0,0,0,)</span>
+                ------------------------------------------------
+                ↓這個才是3D的matrix↓
+                <span>transform: matrix3d(0,0,0,0,0,0,0,0,
+                                                 0,0,0,0,0,0,0,0)  
+                </span>
+            </p>
+            <p class="p-content">
+                簡單的3D大概是這樣
+                =================
+                我翻 我再翻 我翻翻翻 我折
+            </p>
+        </div>
+    </div>
+
+    <div class="text-area">
+        <h2 class="title">怎麼寫？ 先了解結構</h2>
+        <div class="p-area">
+            <p class="p-content">
+                建立一個3D空間放置所有物件
+                把透視點放在該3D空間物件
+                一個盒子有六個面
+                所有面在一個容器
+                控制一個物件比控制多個物件簡單
+                <span>MOME:請看同層目錄的:003範例Css3D.html</span>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

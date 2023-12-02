@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003 float</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            width: 300px;
+            margin: auto;
+            background-color: #aaa;
+            overflow: hidden;
+        }
+        .item{
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            background-color: #fa0;
+            font-size: 50px;
+        }
+        .item:nth-child(3n+1){
+            width: 180px;
+            height: 180px;
+        }
+        .item:nth-child(6n+1),
+        .item:nth-child(6n+2),
+        .item:nth-child(6n+3){
+            float: left;
+        }
+        .item:nth-child(6n+4),
+        .item:nth-child(6n+5),
+        .item:nth-child(6n+6){
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+
+</body>
+</html>

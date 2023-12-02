@@ -1,0 +1,71 @@
+/* 動畫需要 “@property” 才能運作。如果沒有它，角度值將無法正確插值。
+   @see https://dev.to/afif/we-can-finally-animate-css-gradient-kdk 
+*/
+@property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+/* 為了對漸變進行動畫處理，將自訂屬性設為 1 full迴轉。動畫從預設值“0deg”開始。*/
+  @keyframes spin {
+    to {
+      --bg-angle: 360deg;
+    }
+  }
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  main{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+  }
+  article{
+    /* 新增動畫，預設是暫停 */
+    animation: spin 2.5s infinite linear paused;
+    color: white;
+    padding: 1rem;
+    width: min(400px, 90vw);
+    border-radius: 1rem;
+    box-shadow: 0.125rem 0.25rem 0.25rem 0.5rem oklch(0.1 0.37 315 / 0.25);
+    /* 使用“background-origin”，可以使用兩個漸層來建立“邊框”。
+       讓漸變更好看，使用OKLCH
+       @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
+       @see https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl 
+    */
+    background:
+        /* Background colors don’t work with `background-origin`, so use a gradient. */
+        linear-gradient(
+            to bottom,
+            oklch(0.1 0.2 240 / 0.95),
+            oklch(0.1 0.2 240 / 0.95)
+        )
+        padding-box, /* 結束於內邊框邊緣 */
+        conic-gradient(
+            from var(--bg-angle) in oklch longer hue,
+            oklch(1 0.37 0) 0 0
+        )
+        border-box; /* 延伸至外側邊框邊緣 */
+    
+        /* 清晰的邊框讓背景漸層閃耀 */
+        border: 6px solid transparent;
+
+        /* 懸停時取消暫停動畫 */
+        &:hover {
+            animation-play-state: running;
+        }
+  }
+
+  & h1{
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  & p{
+    margin: 0.75rem 0 0;
+  }

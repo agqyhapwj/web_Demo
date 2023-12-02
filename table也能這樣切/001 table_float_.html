@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001 table</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            padding-bottom: 600px;
+        }
+        /* Example-1 */
+        .title-area{
+            width: 520px;
+            margin: auto;
+            padding-left: 20px;
+            position: relative;
+            box-shadow: 5px 5px 5px 1px #ccc;
+            /* border: 1px solid #000; */
+            /* background-color: red; */
+        }
+        h1{
+            margin: 30px;
+        }
+        .wrap{
+            margin: auto;
+            padding: 10px;
+            width: 520px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 5px 1px #ccc;
+            /*overflow: hidden;*/ /*因為這有設定，所以下面所有float物件，父層會抓到子層的高度*/
+        }
+        .wrap .pic{
+            padding-right: 10px;
+            vertical-align: top;
+        }
+        .pic img{
+            border-radius: 50%;
+        }
+        .wrap h2{
+            font-size: 24px;
+            line-height: 1.3;
+            padding-bottom: .4em;
+        }
+        .wrap p{
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Example-2 */
+        .sample2 .pic{
+            width:40px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .sample2 .text{
+            box-sizing: border-box;
+            float: left;
+            width: 460px;
+        }
+        .sample2::after{
+            /*把.wrap的overflow: hidden;拿掉 所以畫面壞掉*/
+            /* 這設定是為了要處理壞掉的float物件 */
+            content: '';
+            display: block;
+            clear: both;
+            /* 高度設0，是為了避免一些字體繼承的問題，或者是突然多了一行空白行 */
+            height: 0;
+        }
+
+        /* Example-3 */
+        .sample3 .pic{
+            width:40px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .sample3 .text{
+            box-sizing: border-box;
+            margin-left: 40px;
+        }
+
+        /* Example-4 */
+        .sample4 .pic{
+            width:40px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .sample4 .text{
+            box-sizing: border-box;
+            overflow: hidden;/*會排除掉float的特性*/
+        }
+
+        /* Example-5 */
+        .sample5{
+            position: relative;
+            height: 320px;
+        }
+        .sample5 .pic{
+            width:30px;
+            position: absolute;
+        }
+        .sample5 .text{
+            position: absolute;
+            width: 460px;
+            left: 50px;
+        }
+
+        /* Example-6 這裡把圖片放在標題裡面 */
+        .sample6 h2{
+            padding-left: 40px;
+            text-indent: -40px;
+        }
+        .sample6 img{
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .sample6 p{
+            padding-left: 40px;
+            /* background-color: red; */
+        }
+
+        /* Example-7 這裡圖片可以給客戶套用 */
+        .sample7 h2{
+            padding-left: 40px;
+            background: url(https://picsum.photos/30/30?random=1) no-repeat;
+        }
+        .news h2{
+            background-image: url(https://picsum.photos/30/30?random=3);
+        }
+        .sample7 p{
+            padding-left: 40px;
+        }
+
+        /* Example-8 */
+        .sample8{
+            padding-left: 50px;
+        }
+        .sample8 h2{
+            text-indent: -40px;
+        }
+        .sample8 h2 img{
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* Example-9 結構有變化 */
+        .sample9{
+            display: flex;
+            background-color: cadetblue;
+        }
+        .sample9 .pic{
+            flex: 0 0 30px;
+        } 
+        .sample9 .text{
+            flex: 1 1 auto;
+        }
+        .sample9 h2 img{
+            border-radius: 50%;
+        }
+
+        /* Example-10 結構有小變化 用Grid作兩欄兩列的畫面 */
+        .sample10{
+            display: flex;
+        }
+        
+        .sample10{
+            display: grid;
+            grid-auto-rows: auto auto;
+            grid-auto-columns: 40px 1fr;
+            grid-template-areas: 
+                'pic title'
+                '_. txt_';
+        }
+        .sample10 .pic{
+            grid-area: pic;
+            position: absolute;
+        }
+        .sample10 h2{grid-area: title;}
+        .sample10 .text{grid-area: txt;}
+
+        .sample11{
+            display: grid;
+            grid-auto-rows: auto auto;
+            grid-auto-columns: 40px 1fr;
+            grid-template-areas: 
+                'pic txt'
+                '_. txt';
+        }
+        .sample11 .pic{
+            grid-area: pic;
+            position: absolute;
+        }
+        .sample11 .text{grid-area: txt;}
+
+    </style>
+</head>
+<body>
+    <!-- Example-1 -->
+    <div class="title-area">
+        <h1>01 一個表格</h1>
+    </div>
+    <div class="wrap">
+        <table>
+            <tr>
+                <td class="pic"><img src="https://picsum.photos/30/30?random=1" alt=""></td>
+                <td><h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Example-2 -->
+    <div class="title-area">
+        <h1>02 兩欄 float</h1>
+    </div>
+    <div class="wrap sample2">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        <div class="text">
+            <h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-3 -->
+    <div class="title-area">
+        <h1>03 一欄 float + margin</h1>
+    </div>
+    <div class="wrap sample3">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        <div class="text">
+            <h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-4 -->
+    <div class="title-area">
+        <h1>04 一欄 float + overflow</h1>
+    </div>
+    <div class="wrap sample4">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        <div class="text">
+            <h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-5 -->
+    <div class="title-area">
+        <h1>05 一欄 absolute</h1>
+    </div>
+    <div class="wrap sample5">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        <div class="text">
+            <h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-6 這裡把圖片放在標題裡面-->
+    <div class="title-area">
+        <h1>06 一欄 + 首行縮排</h1>
+    </div>
+    <div class="wrap sample6">
+        <div class="text">
+            <h2>
+                <img src="https://picsum.photos/30/30?random=1" alt="">
+                加油的網頁補給室：切版好難！切版不難！切切看就對了？！
+            </h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-7 -->
+    <div class="title-area">
+        <h1>07 一欄 + background</h1>
+    </div>
+    <div class="wrap sample7 news">
+        <div class="text">
+            <h2>
+                加油的網頁補給室：切版好難！切版不難！切切看就對了？！
+            </h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-8 -->
+    <div class="title-area">
+        <h1>08 一欄 + 文字縮排</h1>
+    </div>
+    <div class="wrap sample8">
+        <div class="text">
+            <h2>
+                <img src="https://picsum.photos/30/30?random=1" alt="">
+                加油的網頁補給室：切版好難！切版不難！切切看就對了？！
+            </h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-9 結構有變化 -->
+    <div class="title-area">
+        <h1>09 flex + 兩欄</h1>
+    </div>
+    <div class="wrap sample9">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        <div class="text">
+            <h2>
+                加油的網頁補給室：切版好難！切版不難！切切看就對了？！
+            </h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-10 Grid格線 -->
+    <div class="title-area">
+        <h1>10 Grid格線</h1>
+    </div>
+    <div class="wrap sample10">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        
+        <div class="text">
+            <h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+    <!-- Example-11 -->
+    <div class="title-area">
+        <h1>11 兩欄 Grid</h1>
+    </div>
+    <div class="wrap sample11">
+        <div class="pic">
+            <img src="https://picsum.photos/30/30?random=1" alt="">
+        </div>
+        <div class="text">
+            <h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！</h2>
+            <p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌，最後全家像是溝通專欄政策證券統計醫藥命令漢化可愛，無比早上怎樣面前損失，一是增加交給創建期間屏東，擁有機會熱線法規加速出去房間出售他人配套標準注重，不見辦理調整特別是那就最佳考核道德，評估陽光請您平方米現代化笑容維持一套，出生增長支持強化兩次存款紡織免費地下更新時間，進入必然體制並在好評短信氣氛近年來，一下子生產傷害如有江湖財經輸出物業你自己，本科很多人代表鈴聲經常液晶專門都市但我，義務眼睛表達眼前會員價翻譯東西這款決定回事各國倒是官員。</p>            
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003範例Grid</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container-grid{
+            display: grid;
+            grid-template-areas:
+            'header header header header header'
+            'left middle middle middle right'
+            'footer footer footer footer footer';
+
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+        }
+        .header{
+            background-color: powderblue;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            grid-area: header;
+        }
+        .footer{
+            background-color: powderblue;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            grid-area: footer;
+        }
+        .left{
+            background-color: #ccc;
+            grid-area: left;
+        }
+        .middle{
+            background-color: lightyellow;
+            grid-area: middle;
+        }
+        .right{
+            background-color: #ccc;
+            grid-area: right;
+        }
+        
+        .left, .middle, .right{
+            padding: 10px;
+            height: 300px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media screen and (max-width:576px) {
+            .container-grid{
+                display: grid;
+                grid-template-areas:
+                'header '
+                'left'
+                'middle'
+                'right'
+                'footer';
+            }
+            .header{
+                background-color: powderblue;
+                padding: 30px;
+                position: sticky;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-grid">
+        <div class="header"><h2>Header</h2></div>
+        <div class="left"><p>left</p></div>
+        <div class="middle"><p>middle</p></div>
+        <div class="right"><p>right</p></div>
+        <div class="footer"><h2>footer</h2></div>
+    </div>
+</body>
+</html>

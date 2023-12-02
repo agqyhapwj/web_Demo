@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002範例Grid</title>
+    <style type="text/css">
+        .container{
+            width: 1200px;
+            height: 800px;
+            display: grid;
+            outline: 2px solid #f00;
+            grid-template-rows: 200px 200px 200px auto;
+            grid-template-columns: 2fr 2fr 1fr 1fr;
+            grid-template-areas: 
+            "B2 B4  B3 B3"
+            "B2 B4  B3 B3"
+            "B1 B1 B1 B1"
+            "B1 B1 B1 B1";
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        .container{font-size: 50px; margin: auto;}
+        .AA{
+            grid-area: B1;
+            background-color: #aff;
+        }
+        .BB{
+            grid-area: B2;
+            background-color: #faf;
+        }
+        .CC{
+            grid-area: B3;
+            background-color: #ffa;
+        }
+        .DD{
+            grid-area: B4;
+            background-color: #aaf;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="AA">A</div>
+        <div class="BB">B</div>
+        <div class="CC">C
+        </div>
+        <div class="DD">D</div>
+    </div>
+
+</body>
+</html>

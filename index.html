@@ -1,11 +1,1422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wywbnm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/01Esmall_max-width576/index.css">
+    <link rel="stylesheet" href="./css/02Small_min-width576/index.css">
+    <link rel="stylesheet" href="./css/03Medium_min-width768/index.css">
+    <link rel="stylesheet" href="./css/04Large_min-width992/index.css">
 </head>
 <body>
+
+
+
+
+
+    <input type="checkbox" name="" id="menu-control">
+    <!-- header======================================================== -->
+    <header class="header">
+        <nav class="header-nav">
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo/wywbnm-1.png" alt="">
+                </a>
+            </div>
+            
+            
+            <div class="menu-btn-area">
+                <label for="menu-control" class="menu-btn"><span>選單</span></label>
+            </div>
+
+            <!-- 手機版 側邊選單 -->
+            <div class="side-menu-area">
+                <div class="side-menu">
+                    <label for="menu-control" class="close" id="close">x</label>
+                    <!-- 從這結構改變nav 改成ul class="nav" -->
+                    <!-- 所有a標籤外圍加上li 再新增ul li a  -->
+                    <ul class="side-menu-nav">
+                        <!-- 0 登出 -->
+                        <li>
+                            <a href="logout.php">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                Logout
+                            </a>
+                        </li>
+                        <!-- 1 PHOTOSHOP -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                PHOTOSHOP
+                            </a>
+                            
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">去背方法-</a>
+                                    <ul class="sub-menu-nav">
+                                        <li><a href="#">一般去背</a></li>
+                                        <li><a href="#">反向去背</a></li>
+                                        <li><a href="#">髮絲去背</a></li>
+                                        <li><a href="#">冰塊去背</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">商品合成-</a>
+                                    <ul class="sub-menu-nav">
+                                        <li><a href="#">文創手機架</a></li>
+                                        <li><a href="#">化妝品</a></li>
+                                        <li><a href="#">名片</a></li>
+                                        <li><a href="#">書冊</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">創意合成-</a>
+                                    <ul class="sub-menu-nav">
+                                        <li><a href="#">峭壁老人</a></li>
+                                        <li><a href="#">田中翻車</a></li>
+                                        <li><a href="#">鼻孔叼菸</a></li>
+                                        <li><a href="#">萬佛朝宗</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">實用特效-</a>
+                                    <ul class="sub-menu-nav">
+                                        <li><a href="#">街道光線</a></li>
+                                        <li><a href="#">玩具模型</a></li>
+                                        <li><a href="#">改變姿勢</a></li>
+                                        <li><a href="#">淡化皺紋</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 2 ILLUSTRATOR -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-gavel" aria-hidden="true"></i>
+                                ILLUSTRATOR
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">1</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 3 UI&UX -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-object-group" aria-hidden="true"></i>
+                                UI&UX
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">1</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 4 HTML&CSS3 -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                HTML&CSS3
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">1</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 5 RWD -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                RWD
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">1</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 6 PYTHON -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                PYTHON
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">1</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 7 MySQL -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                MYSQL
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">1</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 8 CLOUD -->
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                CLOUD
+                            </a>
+                            <ul class="sub-menu-nav">
+                                <li>
+                                    <a href="#">GITHUB</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">1-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">WAMP</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">待定</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">待定</a>
+                                    <ul class="sub-menu-nav">
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4-1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </nav>
+
+
+        <!-- 電腦版 選單 -->
+        <div class="menu-area">
+            <div class="menu">
+                <ul class="menu-nav">
+
+                    <!-- 0 登出 -->
+                    <li>
+                        <a href="logout.php">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            LOGOUT
+                        </a>
+                    </li>
+                
+                    <li><!-- 1 PHOTOSHOP -->
+                        <a href="#">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            PHOTOSHOP
+                        </a>
+                        
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">去背方法-</a>
+                                <ul class="subMenuNav">
+                                    <li><a href="#">一般去背</a></li>
+                                    <li><a href="#">反向去背</a></li>
+                                    <li><a href="#">髮絲去背</a></li>
+                                    <li><a href="#">冰塊去背</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">商品合成-</a>
+                                <ul class="subMenuNav">
+                                    <li><a href="#">文創手機架</a></li>
+                                    <li><a href="#">化妝品</a></li>
+                                    <li><a href="#">名片</a></li>
+                                    <li><a href="#">書冊</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">創意合成-</a>
+                                <ul class="subMenuNav">
+                                    <li><a href="#">峭壁老人</a></li>
+                                    <li><a href="#">田中翻車</a></li>
+                                    <li><a href="#">鼻孔叼菸</a></li>
+                                    <li><a href="#">萬佛朝宗</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">實用特效-</a>
+                                <ul class="subMenuNav">
+                                    <li><a href="#">街道光線</a></li>
+                                    <li><a href="#">玩具模型</a></li>
+                                    <li><a href="#">改變姿勢</a></li>
+                                    <li><a href="#">淡化皺紋</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 2 ILLUSTRATOR -->
+                        <a href="#">
+                            <i class="fa fa-gavel" aria-hidden="true"></i>
+                            ILLUSTRATOR
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">1</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 3 UI&UX -->
+                        <a href="#">
+                            <i class="fa fa-object-group" aria-hidden="true"></i>
+                            UI&UX
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">1</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 4 HTML&CSS3 -->
+                        <a href="#">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        HTML&CSS3
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">1</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 5 RWD -->
+                        <a href="#">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            RWD
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">1</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 6 PYTHON -->
+                        <a href="#">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            PYTHON
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">1</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 7 MySQL -->	
+                        <a href="#">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            MYSQL
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">1</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><!-- 8 CLOUD -->
+                        <a href="#">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            CLOUD
+                        </a>
+                        <ul class="subMenuNav">
+                            <li>
+                                <a href="#">GITHUB</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">WAMP</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">待定</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">待定</a>
+                                <ul class="subMenuNav">
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4-1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <!-- search -->
+        <form action="">
+            <input type="search" placeholder="S e a r c h">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+
+        <div class="clear"></div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <!-- main======================================================== -->
+    <div class="main">
+
+        <div class="license">
+            <!-- 證照 -->
+            <div class="item">
+                <div class="label">License</div>
+                <!-- <div class="close">X</div> -->
+                <img src="./images/License/Illustrator.JPG" alt="">
+                <h2>Illustratoor</h2>
+                <p>第一張Adobe軟體應用證照，
+                接受了先腦式的證照說：考照加分…考照求職有利…考照好處多…。
+                本人跟風了一波「證照一下」^_^
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="label">License</div>
+                <!-- <div class="close">X</div> -->
+                <img src="./images/License/DigitalColorsCertification.JPG" alt="">
+                <h2>TQC+電腦繪圖與數位色彩</h2>
+                <p>TQC+這張證照完全偏理論，缺少一些實做的部分！
+                   不過說完全沒學到什麼東西是騙人的啦。
+                  （知識永遠不嫌多是真的）
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="label">License</div>
+                <!-- <div class="close">X</div> -->
+                <img src="./images/License/DigitalMediaPublishing.JPG" alt="">
+                <h2>TQC+數位媒體出版</h2>
+                <p>已經忘了當初考這張證照的過程了=.=<br>
+                   雖然嘴上這麼說，但必竟是自己曾經的一段歷程！
+
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="label">License</div>
+                <!-- <div class="close">X</div> -->
+                <img src="./images/License/Acrobat.JPG" alt="">
+                <h2>Adobe Acrobat</h2>
+                <p>那時學了很多相關的教學，如今忘的差不多了…
+                   至今最長用的就是，文件完成後的加密功能了。
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="label">License</div>
+                <!-- <div class="close">X</div> -->
+                <img src="./images/License/PythonWebSpider.JPG" alt="">
+                <h2>Python網路爬蟲結訓證書</h2>
+                <p>本人多數時候都專注在網頁切版，
+                   生活上和工作上用到的機會不大，
+                   偶爾抓一些資料進MySQL，
+                   做一些實用的小功能還是超強的。<br>
+                <span class="span-memo">爬取圖片，大量調整圖片尺寸，幾百張甚至千張
+                也就只是一、兩分鐘的小事。<br>
+                Python處理圖片的某些功能（速度之快）強大到連
+                Photoshop都是望塵莫及。
+                </span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- footer======================================================== -->
+    <footer class="footer">
+        <!-- 手機版頁尾導覽列 -->
+        <hr>
+        <nav class="footer-nav">
+            <ul>
+                <li class="about"> <a href="#">Line</a> </li>
+                <li class="vertical-line">|</li>
+                <li class="address"> <a href="#">Address</a> </li>
+                <li class="vertical-line">|</li>
+                <li class="email"> <a href="mailto:agqyhapwj555@gmail.com">Email</a> </li>
+                <li class="vertical-line">|</li>
+                <li class="local-map"> <a href="#">Location</a> </li>
+            </ul>
+        </nav>
+
+
+        <!-- 電腦版頁尾資訊 -->
+        <div class="container">
+		
+			<div class="footer-item">
+				<h4>關於課程(未開放)</h4>
+				<nav>
+					<a href="#">>課程目標</a>
+					<a href="#">>學習理念</a>
+					<a href="#">>課程宗旨</a>
+				</nav>
+			</div>
+			
+			<div class="footer-item">
+				<h4>課程列表(未開放)</h4>
+				<nav>
+					<a href="#">>網頁入門</a>
+					<a href="#">>RWD網頁深入理解</a>
+					<a href="#">>CSS3互動動畫設計</a>
+					<a href="#">>Bootstrap框架實務</a>
+				</nav>
+			</div>
+			
+			<div class="footer-item">
+				<h4>服務項目(未開放)</h4>
+				<nav>
+					<a href="#">>網站建置顧問</a>
+					<a href="#">>網站建置設計</a>
+					<a href="#">>網站規劃</a>
+					<a href="#">>企業教育訓練</a>
+				</nav>
+			</div>
+			
+			<div class="footer-item footer-subs">
+				<h4>訂閱電子報(未開放)</h4>
+				<form>
+					<input type="text" name="">
+					<input type="submit" value="訂閱">
+				</form>
+			</div>
+			
+		</div>
+
+        <!-- 版權宣告-->
+        <div class="copyright">
+            copyright &copy; 2023 - <span id="Year">2021</span>
+        </div>
+
+
+    </footer>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- script-Link======================================================== -->
+    <script src="./javascript/jquery-3.6.0.js"></script>
+    <script src="./javascript/a-footer-year.js"></script>
+    <!-- <script src="./javascript/a-side-menu.js"></script> -->
 </body>
 </html>

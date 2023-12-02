@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-格線排序控制</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style type="text/css">
+        /* 首字變大 及 文繞圖 (垂直置中之一) 就是這麼作出來的 */
+        /* .container{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin-top: 400px;
+        } */
+        .item:first-letter{
+            font-size: 50px;
+            float: left;
+        }
+        .item{
+            background-color: #ccc;
+            /* height: 100%; */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- order-1 order-2 ... order-first order-last -->
+    <!-- mb-3 可設定間距 h-100 可設高度 -->
+    <!-- order-md-2 指定在平版(md)上物件的順序 若單一物件排序數字從0開始 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 mb-3 order-md-4">
+                <div class="item h-100">
+                    A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3 order-md-3">
+                <div class="item h-100">
+                    B Lorem ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3 order-md-2">
+                <div class="item h-100">
+                    C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-3 order-md-1">
+                <div class="item h-100">
+                    D Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2_安裝與快速檢測</title>
+    <style type="text/css">
+        /* 手機版 */
+        @media screen and (max-width:576px) {
+            .main{
+                width: 100%;
+                background-color: lightslategrey;
+            }
+            .briefing{
+                width: 100%;
+                height: auto;
+                background-color: #ccc;
+                margin: 10px 0 10px 0;
+            }
+            .title{
+                width: 95%;
+                text-align: left;
+                font-size: 18px;
+                padding-left: 10px;
+                /* background-color: red; */
+            }
+            .paragraph{
+                width: 95%;
+                margin: auto;
+                background-color: paleturquoise;
+                overflow: scroll;
+            }
+            .preContent{
+                position: relative;
+                top: 0;
+                right: 140px;
+                font-size: 13px;
+                line-height: 1.4em;
+                padding: 10px 0;
+            }
+            .memo{
+                color: blue;
+            }
+        }
+        /* 小平版 */
+        @media  screen and (min-width:576px) {
+            .main{
+                width: 100%;
+                height: auto;
+                background-color: lightslategrey;
+            }
+            .briefing{
+                width: 100%;
+                background-color: #ccc;
+                margin: 10px 0 10px 0;
+            }
+            .title{
+                width: 95%;
+                margin: auto;
+                padding-left: 10px;
+                text-align: left;
+                /* background-color: red; */
+            }
+            .paragraph{
+                width: 95%;
+                margin: auto;
+                background-color: paleturquoise;
+                overflow: scroll;
+            }
+            .preContent{
+                position: relative;
+                top: 0;
+                right: 160px;
+                font-size: 15px;
+                line-height: 1.4em;
+                padding: 10px 0;
+                /* background-color: red; */
+            }
+            .memo{
+                color: blue;
+            }
+            }
+        /* 平版 */
+        @media  screen and (min-width:768px) {
+            .main{
+                width: 100%;
+                background-color: lightslategrey;
+            }
+            .briefing{
+                width: 100%;
+                height: auto;
+                background-color: #ccc;
+                margin: 10px 0 10px 0;
+            }
+            .title{
+                width: 95%;
+                margin: auto;
+                padding-left: 10px;
+                text-align: left;
+                /* background-color: red; */
+            }
+            .paragraph{
+                width: 95%;
+                margin: auto;
+                background-color: paleturquoise;
+                overflow: scroll;
+            }
+            .preContent{
+                position: relative;
+                top: 0;
+                right: 170px;
+                font-size: 16px;
+                line-height: 1.4em;
+                padding: 10px 0;
+                /* background-color: red; */
+            }
+            .memo{
+                color: blue;
+            }
+        }
+            /* 螢幕 */
+        @media  screen and (min-width:992px) {
+            .main{
+                width: 100%;
+                background-color: white;
+            }
+            .briefing{
+                width: 1280px;
+                height: auto;
+                background-color: white;
+                box-shadow: 
+                            -5px 0 10px #ccc,
+                             5px 0 10px #ccc,
+                             0 -5px 10px #ccc,
+                             0 5px 10px #ccc;
+                margin: auto;
+                margin-top: 20px;
+                padding: 20px 0;
+            }
+            .title{
+                width: 860px;
+                align-items: center;
+                justify-content: center;
+                padding-left: 10px;
+                text-align: left;
+                /* background-color: red; */
+            }
+            .paragraph{
+                width: 860px;
+                background-color: paleturquoise;
+                overflow: scroll;
+            }
+            .preContent{
+                /* position: relative;
+                top: 0; */
+                right: 180px;
+                font-size: 17px;
+                line-height: 1.4em;
+                padding: 10px 0;
+                /* background-color: yellow; */
+            }
+            .memo{
+                color: blue;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+<div class="main">
+        <!-- 1.入門網址 檔案：1_入門網址.html -->
+        <div class="briefing">
+            <h2 class="title">1.入門網址--檔案：1_入門網址.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    https://getbootstrap.com/docs/5.0/getting-started/introduction/
+                </pre>   
+            </div> 
+        </div>
+
+
+
+        <!-- 2.安裝與快速檢測 檔案：2-1.html--2-2.html -->
+        <div class="briefing">
+            <h2 class="title">2.安裝與檢測--檔案：2-1.html--2-2.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    方式一：
+                    右側 Starter template (CDN外連方式)，copy 它的程式碼★貼到 2-1.html ★
+                    
+                    方式二： 
+                    Installation(下載到本機連結方式)            
+                    左側 Download > Compiled CSS and JS (點 Download)            
+                    下載並解壓縮，然後將解壓縮的檔案，放到和 hmtl 文件同一個目錄之下，這裡我用下載到本地端的方式            
+                    做連結 copy 原本 2-1.html的程式碼 ★貼到 2-2.html★            
+                    把這份檔案內的＜h1＞＜a＞標籤和 .js 連接＜script＞全部也一併刪除, 然後連結如下這三個檔案
+                    
+                    <span class="memo">本站的程式碼，千萬不要複製貼上去練習，你會哭的！ </span>
+                    因為站長我本人所有的 "角括號＜＞都是用全形字打的哦"
+                    所以最好自己用手打，一位開發者若連打字的基本功都沒有，真該拖去槍弊了。
+
+                    <span class="memo">
+                    將這行打在＜head＞裡
+                    ＜link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"＞
+                    </span>
+
+                    <span class="memo">
+                    將這三行打在body最下方
+                    ＜script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"＞＜/script＞
+                    ＜script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"＞＜/script＞
+                    ＜script src="./bootstrap-5.0.2-dist/js/popper.min.js"＞＜/script＞
+                    </span>  
+                    
+                    <span class="txtMemo">如果找不到 popper.mia.js 這檔案，別緊張，貼上如下網址，然後另存新檔即可：</span>
+                    https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js
+                
+                
+                    重點整理：Layout > Grid  
+                    Bt的格線系統 預設分割成12欄        
+                    假設要做成一個兩欄的面畫 等於要 6 6 分 左側12/6 右側12/6         
+                    如果要做成一個三欄的畫面 等於要 4 4 4 分 左中右 平均都是 12分之4        
+                    修改重點 是 <col-6>兩欄 <col-4>三欄 以此類推        
+                    ★這裡的 container-fluid 是定寬容器，用container和container-fluid效果會不同 -->        
+                    col-12手機要呈現一欄畫面 col-md-6平版要呈現兩欄畫面        
+                    col-lg-4大型呈現三欄畫面 col-xl-3電腦要呈現四欄畫面
+                            
+                </pre>   
+            </div> 
+        </div>
+
+
+
+        <!-- 3.格線系統入門 檔案：3.html--3-1.html -->
+        <div class="briefing">
+            <h2 class="title">3.格線系統入門--檔案：3格線系統入門.html--3-1格線系統入門.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    以Bootstrap的格線系統來說，可以把它分成三個部分
+                    第一個「外部容器」例 container-fluid可做滿版
+                    第一個「外部容器」例 container不做滿版也就是一個定寬容器
+                
+                    Bootstrap格線系統裡面，多數是使用flex的原理去排列出來的
+                    row 主要是負責兩件事 1.把內部的容器分割 2.自動分割 3.flex 與 flex-wrap
+                    img 裡面添加一個 class="w-100" 就是width:100%; 的意思
+                    如果當我們想把畫面切成3等分，多出來的部分可以自動換行，將class="col-4"即可
+                    
+                    接下來就是RWD了，我們要了解在Bootstrap中，它到底將裝置分為幾種類型或尺寸？
+                
+                    Layout > Breakpoints(斷點)
+                
+                    Breadpoint           Class infix           Dimensions
+                    ----------------------------------------------------------------------------------------
+                    X-Small              Nore                  ＜576px
+                    Small                sm                    ＞576px
+                    Medium               md                    ＞768px
+                    Large                lg                    ＞992px
+                    Extra large          xl                    ＞1200px
+                    Extra extra large    xxl                   ＞1400px
+                
+                    Layout > Containers
+                
+                                    Extra small   Small    Medium   Large   X-Large   XX-Large
+                                    ＜576px       ＞576px  ＞768px  ＞992px  ＞1200px  ＞1400px
+                    ----------------------------------------------------------------------------------------
+                    .container          100%         540px    720px    960px   1140px    1320px
+                    .container-sm       100%         540px    720px    960px   1140px    1320px
+                    .container-md       100%         100%     720px    960px   1140px    1320px
+                    .container-lg       100%         100%     100%     960px   1140px    1320px
+                    .container-xl       100%         100%     100%     100%    1140px    1320px
+                    .container-xxl      100%         100%     100%     100%    100%      1320px
+                    .container-fluid    100%         100%     100%     100%    100%      100%
+                    ========================================================================================
+                
+                    針對不同裝置 呈現不同欄數
+                    做法一 ＜div class="col-12 col-md-4 col-lg-3 col-xxl-2"＞
+                        預設格線是12欄 col-md-4 這樣就是4/1 4/1 4/1 等於三欄的畫面呈現
+                    做法二 ＜div class="row row-cols-md-6"＞這樣就是直接指定以六欄的畫面呈現"
+                    做法二 ＜div class="row row-cols-md-3 row-cols-lg-4 row-cols-xl-6"＞
+                    做法三 ＜div class="<span class="memo">g-5</span> row row-cols-md-3 row-cols-lg-4 row-cols-xl-6"＞ <span class="memo">g-5等於設定間距</span>
+                    ========================================================================================
+
+                    以下範示：
+                    <span class="memo">本站的程式碼，千萬不要複製貼上去練習，你會哭的！ </span>
+                    因為站長我本人所有的 "角括號＜＞都是用全形字打的哦"
+                    所以最好自己用手打，一位開發者若連打字的基本功都沒有，真該拖去槍弊了。
+
+                    class="col-md"的區塊，就是會產生的圖文物件，這的程式碼只會出現兩個，
+                    如果要呈現多個以上，請自己打好以後，再自行複製貼上吧。
+
+                    ＜div class="container"＞
+                        ＜div class="g-3 row row-cols-md-3 row-cols-lg-4 row-cols-xl-6"＞
+                            
+                            ＜div class="col-md"＞
+                                ＜div class="item"＞
+                                    ＜img src="https://picsum.photos/300/200?random=100" class="w-100" alt=""＞
+                                    ＜p＞早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算＞/p＞
+                                ＜/div＞
+                            ＜/div＞
+
+                            ＜div class="col-md"＞
+                                ＜div class="item"＞
+                                    ＜img src="https://picsum.photos/300/200?random=200" class="w-100" alt=""＞
+                                    ＜p＞早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算＞/p＞
+                                ＜/div＞
+                            ＜/div＞
+                            
+                        ＜/div＞
+                    ＜/div＞
+                </pre>   
+            </div> 
+        </div>
+
+
+
+        <!-- 4.格線對齊與分佈 -->
+        <div class="briefing">
+            <h2 class="title">4.格線對齊與分佈---4_格線對齊與分佈.html 4_1格線對齊與分佈.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    Grid預設是12欄的情況下，如果我們只有三個物件，
+                    那我們又在物件上設定col-md-3欄寬3的情境下，畫面一定是無法滿版的，
+                    也是說畫面一定會偏左。那我們又該讓物件置中呢？
+                    其實有兩個做法：
+                    一.直接設定col-md-4畫面就置中了，但這是滿版的錯覺。
+                    二.在 row 裡設定 justify-content-center 這樣就置中了
+                       在 row 裡設定 justify-content-start  這樣就偏左了
+                       在 row 裡設定 justify-content-end    這樣就偏右了
+
+                        其實這就是CSS中的 justify-content:flex-end;
+                                         justify-content:flex-start;
+                                         justify-content:space-between;
+                                         justify-content:space-around;
+                    以下示範：
+                    <span class="memo">本站的程式碼，千萬不要複製貼上去練習，你會哭的！ </span>
+                    因為站長我本人所有的 "角括號＜＞都是用全形字打的哦"
+                    所以最好自己用手打，一位開發者若連打字的基本功都沒有，真該拖去槍弊了。
+
+                    ＜style type="text/css"＞
+                        .kv{
+                            width: 100%;
+                            height: 98vh;
+                            background-image: url(https://picsum.photos/1400/900?random=10);
+                            background-size: cover;
+                        }
+                        .kv .text{
+                            text-align: center;
+                        }
+                        #效果一 垂直置中
+                        /* .kv .container,
+                           .kv .container > .row{
+                            height: 100%;
+                        } */
+                    ＜/style＞
+                    ================================
+                    ＜div class="kv"＞
+                    ＜div class="container h-100"＞
+                            ＜div class="row h-100 justify-content-center align-items-center"＞
+                                ＜div class="col-8 col-md-6"＞
+                                    ＜div class="text"＞
+                                        ＜h1＞一定要懂的Bootstrap＜/h1＞
+                                        ＜p＞Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, possimus!＜/p＞
+                                    ＜/div>                    
+                                ＜/div>
+                            ＜/div>
+                        ＜/div>
+                    ＜/div>    
+                </pre>   
+            </div> 
+        </div>
+
+
+
+        <!-- 5-格線排序控制 -->
+        <div class="briefing">
+            <h2 class="title">5-格線排序order控制--檔案：5-格線排序控制.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    <span class="memo">特別再提醒一下，Bootstrap的格線系統基本上都採用flex的原理去製作的</span>
+
+                    頁面左側 Utilities 選項中有 Flex 點下去後找 Order，看一下它的內容。
+
+                    <span class="memo">本站的程式碼，千萬不要複製貼上去練習，你會哭的！ </span>
+                    因為站長我本人所有的 "角括號＜＞都是用全形字打的哦"
+                    所以最好自己用手打，一位開發者若連打字的基本功都沒有，真該拖去槍弊了。
+
+                    ＜style type="text/css"＞
+                        /* 首字變大 及 文繞圖 (垂直置中之一) 就是這麼作出來的 */
+                        /* .container{
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin-top: 400px;
+                        } */
+                        .item:first-letter{
+                            font-size: 50px;
+                            float: left;
+                        }
+                        .item{
+                            background-color: #ccc;
+                            /* height: 100%; */
+                        }
+                    ＜/style＞
+                    
+                    <!-- order-1 order-2 ... order-first order-last -->
+                    <!-- mb-3 可設定間距 h-100 可設高度 -->
+                    <!-- order-md-2 指定在平版(md)上物件的順序 若單一物件排序數字從0開始 -->
+                    ＜div class="container"＞
+                        ＜div class="row"＞
+                            ＜div class="col-12 col-md-3 mb-3 order-md-4"＞
+                                ＜div class="item h-100"＞
+                                    A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                ＜/div＞
+                            ＜/div>
+                            ＜div class="col-12 col-md-3 mb-3 order-md-3"＞
+                                ＜div class="item h-100"＞
+                                    B Lorem ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                ＜/div＞
+                            ＜/div>
+                            ＜div class="col-12 col-md-3 mb-3 order-md-2"＞
+                                ＜div class="item h-100"＞
+                                    C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                ＜/div＞
+                            ＜/div＞
+                            ＜div class="col-12 col-md-3 mb-3 order-md-1"＞
+                                ＜div class="item h-100"＞
+                                    D Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                ＜/div＞
+                            ＜/div＞
+                        ＜/div＞
+                    ＜/div＞
+                </pre>   
+            </div> 
+        </div>
+
+        <!-- 6-格線距離控制 -->
+        <div class="briefing">
+            <h2 class="title">6-格線距離控制--檔案：6-格線距離控制.html~6-1格線距離控制.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    網址 https://getbootstrap.com/docs/5.0/getting-started/introduction/
+                    左側 Layout > Columns 
+                    右側 Offsetting columns
+                </pre>   
+            </div> 
+        </div>
+
+        <!-- 備用區塊 -->
+        <div class="briefing">
+            <h2 class="title">--檔案：.html</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    
+                </pre>   
+            </div> 
+        </div>
+</div>
+</body>
+</html>

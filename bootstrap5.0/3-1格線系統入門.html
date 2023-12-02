@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>3-1格線系統入門</title>
+  </head>
+
+  <body>
+    <!-- 以Bootstrap的格線系統來說，可以把它分成三個部分 -->
+    <!-- 第一個「外部容器」例 container-fluid可做滿版 -->
+    <!-- 第一個「外部容器」例 container不做滿版也就是一個定寬容器 -->
+    <!-- Bootstrap格線系統裡面，多數是使用flex的原理去排列出來的 -->
+    <!-- row 主要是負責兩件事 1.把內部的容器分割 2.自動分割 -->
+    <!-- img 裡面添加一個 class="w-100" 就是width:100%; 的意思 -->
+    <!-- 如果當我們想把畫面切成3等分，多出來的部分可以自動換行，將class="col-4"即可 -->
+
+    <!-- 接下來就是RWD了，我們要了解在Bootstrap中，它到底將裝置分為幾種類型或尺寸？ -->
+    <!-- 筆記在 2_安裝與快速檢視.html這個檔案中 -->
+
+    <div class="container">
+        <div class="g-3 row row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
+            <!-- 針對不同裝置 呈現不同欄數 -->
+            <!-- 做法一 <div class="col-12 col-md-4 col-lg-3 col-xxl-2"> -->
+            <!-- 做法一 預設格線是12欄 col-md-4 這樣就是4/1 4/1 4/1 等於三欄的畫面呈現 -->
+            <!-- 做法二 <div class="row row-cols-md-3 row-cols-lg-4 row-cols-xl-6"> -->
+            <!-- 做法二 <div class="row row-cols-md-6這樣就是直接指定以六欄的畫面呈現" -->
+            <!-- 做法三 ＜div class="<span class="memo">g-5</span> row row-cols-md-3 row-cols-lg-4 row-cols-xl-6"＞ <span class="memo">g-5等於設定間距 -->
+            <div class="col-md">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=100" class="w-100" alt="">
+                    <p>早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算氣氛強調海外目標，紅色允許藥品樂隊交友有限壓縮盯着唯一，知道寫出來這些坐在改造簡單有點來到，培訓支付記錄色彩寬頻不肯參與訓練文件大小她們體系，舉辦包括這就是軟體公告精神新聞願意焦點，能不能111。</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=200" class="w-100" alt="">
+                    <p>早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算氣氛強調海外目標，紅色允許藥品樂隊交友有限壓縮盯着唯一，知道寫出來這些坐在改造簡單有點來到，培訓支付記錄色彩寬頻不肯參與訓練文件大小她們體系，舉辦包括這就是軟體公告精神新聞願意焦點，能不能222。</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=300" class="w-100" alt="">
+                    <p>早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算氣氛強調海外目標，紅色允許藥品樂隊交友有限壓縮盯着唯一，知道寫出來這些坐在改造簡單有點來到，培訓支付記錄色彩寬頻不肯參與訓練文件大小她們體系，舉辦包括這就是軟體公告精神新聞願意焦點，能不能333。</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=400" class="w-100" alt="">
+                    <p>早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算氣氛強調海外目標，紅色允許藥品樂隊交友有限壓縮盯着唯一，知道寫出來這些坐在改造簡單有點來到，培訓支付記錄色彩寬頻不肯參與訓練文件大小她們體系，舉辦包括這就是軟體公告精神新聞願意焦點，能不能444。</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=500" class="w-100" alt="">
+                    <p>早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算氣氛強調海外目標，紅色允許藥品樂隊交友有限壓縮盯着唯一，知道寫出來這些坐在改造簡單有點來到，培訓支付記錄色彩寬頻不肯參與訓練文件大小她們體系，舉辦包括這就是軟體公告精神新聞願意焦點，能不能555。</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=600" class="w-100" alt="">
+                    <p>早上圖像化數碼相機可用下降標題二手適用你不大戰，終於一會兒原文打算氣氛強調海外目標，紅色允許藥品樂隊交友有限壓縮盯着唯一，知道寫出來這些坐在改造簡單有點來到，培訓支付記錄色彩寬頻不肯參與訓練文件大小她們體系，舉辦包括這就是軟體公告精神新聞願意焦點，能不能555。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

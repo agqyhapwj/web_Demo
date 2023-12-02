@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_格線對齊與分佈</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <!-- Grid預設是12欄的情況下，如果我們只有三個物件，
+         那我們又在物件上設定col-md-3欄寬3的情境下，畫面一定是無法滿版的，
+         也是說畫面一定會偏左。那我們又該讓物件置中呢？
+         其實有兩個做法：
+         一.直接設定col-md-4畫面就置中了，但這是滿版的錯覺。
+         二.在 row 裡設定 justify-content-center 這樣就置中了
+            在 row 裡設定 justify-content-start  這樣就偏左了
+            在 row 裡設定justify-content-end     這樣就偏右了
+
+            其實這就是CSS中的 justify-content:flex-end;
+                             justify-content:flex-start;
+                             justify-content:space-between;
+                             justify-content:space-around;
+         -->
+
+         <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <div class="item">
+                        <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="item">
+                        <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="item">
+                        <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="item">
+                        <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-3">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="item">
+                    <img src="https://picsum.photos/300/200?random=10" class="w-100" alt="">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, voluptatem!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

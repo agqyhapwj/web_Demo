@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0028-7菜單再再一次</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 第一層========================== */
+        .menu{
+            background-color: #000;
+            text-align: center;
+            position: relative; /*定位要注意*/
+        }
+        .menu li{
+            display: inline-block;
+        }
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 6px 20px;
+        }
+        .menu li a:hover{
+            background-color: #fa0;
+        }
+        /* 第二層========================== */
+        .subMenu{
+            background-color: skyblue;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            transition: .5s;
+            transform: perspective(100px)
+                       rotateX(90deg);
+            transform-origin: center top;
+            opacity: 0;
+        }
+        .subMenu li{
+            display: inline-block;
+        }
+        .subMenu li a{
+            padding: 12px 20px;
+        }
+        li:hover .subMenu{
+            transform: perspective(30px)
+                       rotateX(0deg);
+            opacity: 1;
+        }
+        /* 第三層========================== */
+        .subMenu .subMenu{
+            display: none;
+            width: 8em;
+        }
+        .subMenu li{
+            position: relative;
+        }
+        .subMenu .subMenu li{
+            display: block;
+        }
+        .subMenu li:hover .subMenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- 第一層 -->
+    <ul class="menu">
+        <li>
+            <a href="#">PHOTOSHOP</a>
+            <!-- 第二層 新手最常見的會誤 層級錯誤段 -->
+            <ul class="subMenu">
+                <li>
+                    <a href="#">Ps_1-1</a>
+                    <!-- 第三層 -->
+                    <ul class="subMenu">
+                        <li><a href="#">Ps_2-1</a></li>
+                        <li><a href="#">Ps_2-2</a></li>
+                        <li><a href="#">Ps_2-3</a></li>
+                        <li><a href="#">Ps_2-4</a></li>
+                        <li><a href="#">Ps_2-5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ps_1-2</a>
+                    <!-- 第三層 -->
+                    <ul class="subMenu">
+                        <li><a href="#">Ps_2-1</a></li>
+                        <li><a href="#">Ps_2-2</a></li>
+                        <li><a href="#">Ps_2-3</a></li>
+                        <li><a href="#">Ps_2-4</a></li>
+                        <li><a href="#">Ps_2-5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ps_1-3</a>
+                    <!-- 第三層 -->
+                    <ul class="subMenu">
+                        <li><a href="#">Ps_2-1</a></li>
+                        <li><a href="#">Ps_2-2</a></li>
+                        <li><a href="#">Ps_2-3</a></li>
+                        <li><a href="#">Ps_2-4</a></li>
+                        <li><a href="#">Ps_2-5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ps_1-4</a>
+                    <!-- 第三層 -->
+                    <ul class="subMenu">
+                        <li><a href="#">Ps_2-1</a></li>
+                        <li><a href="#">Ps_2-2</a></li>
+                        <li><a href="#">Ps_2-3</a></li>
+                        <li><a href="#">Ps_2-4</a></li>
+                        <li><a href="#">Ps_2-5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ps_1-5</a>
+                    <!-- 第三層 -->
+                    <ul class="subMenu">
+                        <li><a href="#">Ps_2-1</a></li>
+                        <li><a href="#">Ps_2-2</a></li>
+                        <li><a href="#">Ps_2-3</a></li>
+                        <li><a href="#">Ps_2-4</a></li>
+                        <li><a href="#">Ps_2-5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">ILLUSTRATOR</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤 -->
+            <ul class="subMenu">
+                <li><a href="#">Ai1_-1</a></li>
+                <li><a h2ef="#">Ai1_-2</a></li>
+                <li><a href="#">Ai1_-3</a></li>
+                <li><a href="#">Ai1_-4</a></li>
+                <li><a href="#">Ai1_-5</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">UI&UX</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤 -->
+            <ul class="subMenu">
+                <li><a href="#">Ui_1-1</a></li>
+                <li><a href="#">Ui_1-2</a></li>
+                <li><a href="#">Ui_1-3</a></li>
+                <li><a href="#">Ui_1-4</a></li>
+                <li><a href="#">Ui_1-5</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">HTML5&CSS3</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤 -->
+            <ul class="subMenu">
+                <li><a href="#">web_1-1</a></li>
+                <li><a href="#">web_1-2</a></li>
+                <li><a href="#">web_1-3</a></li>
+                <li><a href="#">web_1-4</a></li>
+                <li><a href="#">web_1-5</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">RWD</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤 -->
+            <ul class="subMenu">
+                <li><a href="#">Rwd_1-1</a></li>
+                <li><a href="#">Rwd_1-2</a></li>
+                <li><a href="#">Rwd_1-3</a></li>
+                <li><a href="#">Rwd_1-4</a></li>
+                <li><a href="#">Rwd_1-5</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">PYTHON</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤 -->
+            <ul class="subMenu">
+                <li><a href="#">Py_1-1</a></li>
+                <li><a href="#">Py_1-2</a></li>
+                <li><a href="#">Py_1-3</a></li>
+                <li><a href="#">Py_1-4</a></li>
+                <li><a href="#">Py_1-5</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">MySQL</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤   -->
+            <ul class="subMenu">
+                <li><a href="#">Sql_1-1</a></li>
+                <li><a href="#">Sql_1-2</a></li>
+                <li><a href="#">Sql_1-3</a></li>
+                <li><a href="#">Sql_1-4</a></li>
+                <li><a href="#">Sql_1-5</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">COLUD</a>
+             <!-- 第二層 新手最常見的會誤 層級錯誤  -->
+            <ul class="subMenu">
+                <li><a href="#">Colud_1-1</a></li>
+                <li><a href="#">Colud_1-2</a></li>
+                <li><a href="#">Colud_1-3</a></li>
+                <li><a href="#">Colud_1-4</a></li>
+                <li><a href="#">Colud_1-5</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+
+</body>
+</html>

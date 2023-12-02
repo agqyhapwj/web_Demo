@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0021RWD入門</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            width: 100%;
+            max-width:1400px;
+            margin: auto;
+        }
+        .item{
+            margin:0px 10px 20px;
+            background-color: #ffa;
+            padding: 10px;
+        }
+        @media screen and (min-width:768px) {
+            .wrap{
+                display:flex;
+            }
+            .item{
+                width: 33.333333%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="item">
+            <h3>Title</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="item">
+            <h3>Title</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam similique exercitationem ut, fuga ab possimus velit soluta dolores voluptatem, officiis corrupti reprehenderit pariatur deserunt. Provident labore soluta autem debitis ex.</p>
+        </div>
+        <div class="item">
+            <h3>Title</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam similique exercitationem ut, fuga ab possimus velit soluta dolores voluptatem, officiis corrupti reprehenderit pariatur deserunt. Provident labore soluta autem debitis ex.</p>
+        </div>
+    </div>
+
+</body>
+</html>

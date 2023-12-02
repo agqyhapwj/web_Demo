@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手機選單按鈕</title>
+    <style type="text/css">
+        /* 寬高設定，若沒有效果：不是inline 就是block (有筆記) */
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #menu-control{
+            position: absolute;
+            z-index:-2;
+            opacity: 0;
+        }
+        .header{
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .header .logo{
+            width: 60px;
+            height: 40px;
+            display: block;
+            top:  3px;
+            left: 10px;
+            position: relative;
+        }
+        .header .logo img{
+            vertical-align: middle;
+        }
+        .menu-btn{
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .header .menu-btn span{
+            color: white;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        /* 漢堡按鈕的三條線 及 陰影的影分身術 寫法如下 */
+        .header .menu-btn::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 36px;
+            background-color: #aaa;
+            left: 2px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa,
+                        0px -8px 0px #aaa;
+        }
+
+        .side-menu{
+            width: 50%;
+            height: calc(100vh - 50px);
+            background-color: black;
+            position: absolute;
+            top: 50px;
+            left: -100%; /*移到範圍外消失不見*/
+            transition: .5s;
+        }
+        .side-menu a{
+            display:block;
+            text-decoration:none;
+            color: powderblue;
+            padding: 10px 20px;
+            border-bottom: 1px solid powderblue;
+        }
+        #menu-control:checked ~ .header .side-menu{
+            left:0;
+        }
+        /* 以下是平版的設定 */
+        @media screen and (min-width:768px) {
+            .menu-btn{display: none;}
+            .header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #aaa;
+            }
+            .header .logo{
+                position: relative;
+                top: 5px;
+            }
+            .header .logo img{
+                position: absolute;
+            }
+            .header .side-menu{
+                position: relative;
+                left: 0;
+                top: 5px;
+                display: flex;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+            }
+            .side-menu a{
+                color: powderblue;
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+
+<input type="checkbox" name="" id="menu-control">
+<div class="header">
+    <h1 class="logo">
+        <a href="#"><img src="https://picsum.photos/180/40?random=1" alt=""></a>
+    </h1>
+    <label for="menu-control" class="menu-btn"><span>選單</span></label>
+    <nav class="side-menu">
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+    </nav>
+</div>
+
+
+
+</body>
+</html>

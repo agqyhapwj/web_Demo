@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0026zjQurery入門</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .header{
+            text-align: center;
+            background-color: #ddd;
+        }
+        .wrap{
+            background-color: skyblue;
+            width: 620px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wrap > h1{
+            margin-bottom: 20px;
+        }
+        .item{
+            width: 460px;
+            border: 1px solid #000;
+            background-color: #ffa;
+            margin: 0 0 20px 0;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+
+</head>
+<!-- DOM Document Object Model -->
+<body>
+
+<div class="header">
+    <div class="wrap">
+        <h1>入=== JQuery ===門</h1>
+        <div class="item">
+            <h2>方法一</h2>
+            <p>瀏覽器輸入 https://jquery.com/ (進入JQuery首頁)</br>
+               點擊右方的 Download JQuery v3.7.xx<br>
+               <span>Download the comporessed xxxxx3.7.xxx</span></br>
+               <span>Download the uncompressed xxxx3.7.xxx</span></br>
+               這兩個一個是壓縮檔，一個是未壓縮檔</br> 
+            </p>
+        </div>
+        <div class="item">
+            <h2>方法二</h2>
+            <p>搜尋 Google cdn 找到下方藍色字體標題的網頁</br>
+                <span>Hosted Libraries - Google for Developers</span></br>
+                進入網頁後點擊右方 >>> JQuery</br>
+                3.x程式碼片段 如下藍色字體 複製貼在html中</br>
+                <span>&lt;script&gt; src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"&lt;/script&gt;</span>
+            </p>
+        </div>
+        <div class="item">
+            <h2>方法三</h2>
+            <p>瀏覽器貼上如下網址</br>
+                <span>https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js</span></br>
+                然後 ctrl+s 儲存成檔案 導入html中</br>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+<script type="text/javascript" src="../javascript/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        // ...做事的位置
+    })
+</script>
+</body>
+</html>

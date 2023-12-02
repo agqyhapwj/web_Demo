@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0013排版聖品flex</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .wrap{
+            width:960px;
+            margin: auto;
+            background: #ccc;
+            display: flex;
+            flex-wrap: wrap; /*換行*/
+            /* top:0;
+            left:0;
+            position:fixed; */
+        }
+        .item{
+            width:300px;
+            margin: 0 10px 10px;/*第三個參數(上右[下]左)的下，設10px才看得出來*/
+            background-color:#ffa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 傳統排版float 新版排版display:flex -->
+    <!-- 像IE8 IE9 IE10...都不支援display:flex的技術 這是就一定要用float -->
+    <div class="wrap">
+        <div class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat ipsa ea culpa sunt consequuntur, labore soluta quis eligendi, neque voluptatum porro ad sit. Consequatur animi cumque provident illum deserunt.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat ipsa ea culpa sunt consequuntur, labore soluta quis eligendi, neque voluptatum porro ad sit. Consequatur animi cumque provident illum deserunt.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat ipsa ea culpa sunt consequuntur, labore soluta quis eligendi, neque voluptatum porro ad sit. Consequatur animi cumque provident illum deserunt.
+        </div>
+        <!-- <div class="item">
+            Lorem ipsum dolor sit
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat ipsa ea culpa sunt consequuntur, labore soluta quis eligendi, neque voluptatum porro ad sit. Consequatur animi cumque provident illum deserunt.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat ipsa ea culpa sunt consequuntur, labore soluta quis eligendi, neque voluptatum porro ad sit. Consequatur animi cumque provident illum deserunt.
+        </div> -->
+    </div>
+</body>
+</html>

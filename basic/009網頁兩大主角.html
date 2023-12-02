@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>009網頁兩大主角</title>
+    <style>
+        .menu{
+            background-color:#fa0;
+            text-align:center;
+            font-size: 0;
+        }
+        /* 消除a標籤與a標籤之間的像素↑↑↑font-size:0; */
+        /*  menu a 會繼承上方 menu 的設定 (全黏一起) */
+        /* 這時menu.a在設一次font-size:16px; */
+        /* 除了會正常顯示a標籤，也同時消除彼此之間的空白像素 */
+        .menu a{
+            color:#fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f00;
+            display:inline-block;
+            font-size: 16px;
+        }
+        .menu a:hover{
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="menu">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+</body>
+</html>

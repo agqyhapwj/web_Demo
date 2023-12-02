@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0028-1菜單拿來</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .menu{
+            background-color: #000;
+            text-align: center;
+        }
+        .menu li{
+            display: inline-block;
+            position: relative;/*定位要注意*/
+        }
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 6px 20px;
+        }
+        .menu li:hover{
+            background-color: #fa0;
+        }
+        .subMenu{
+            background-color: #000;
+            position: absolute;/*定位要注意*/
+            width: 8em;
+            /* display: none; */ /*隱藏方法一*/
+            /* left: -2000px */ /*隱藏方法二*/
+            height: 0;          /*隱藏方法三*/
+            overflow: hidden;   /*隱藏方法三*/
+        }
+        .subMenu li{
+                display: block;
+        }
+        li:hover .subMenu{
+            /* display: block; */ /*出現方法一*/
+            /* left: 0; */        /*出現方法二*/
+            height: auto;         /*出現方法三*/
+        }
+    </style>
+</head>
+<body>
+    
+
+<ul class="menu">
+    <li>
+        <a href="#">Link1</a>
+        <ul class="subMenu">
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link2</a>
+        <ul class="subMenu">
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link3</a>
+        <ul class="subMenu">
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link4</a>
+        <ul class="subMenu">
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link5</a>
+        <ul class="subMenu">
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Link6</a>
+        <ul class="subMenu">
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+            <li><a href="#">Sub Link</a></li>
+        </ul>
+    </li>
+</ul>
+
+
+</body>
+</html>

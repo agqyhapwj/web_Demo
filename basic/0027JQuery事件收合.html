@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0027JQuery事件</title>
+    <style type="text/css">
+        .box-a{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: #aaa;
+            cursor: pointer;     
+        }
+        .box-b{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: #ffa; 
+        }
+        .product-title{
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .content{
+            display: none;
+        }
+    </style>
+</head>
+<!-- https://jquery.com/ 點擊 API Documentation -->
+<!-- 找 Events 再找 Mouse Events -->
+<!-- 主要是click()事件 以及 dblclick() -->
+<!-- .hide()單純就是隱藏 -->
+<!-- .toggle()可以判斷 1.如果是開啟隱藏就幫你隱藏 2.如果是隱藏就幫你開啟 -->
+<body>
+    
+
+<div class="box-a">box-a</div>
+<div class="box-b">box-b</div>
+
+<div class="product-title">產品介紹</div>
+<div class="content">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fuga sed quasi reiciendis exercitationem dolorem asperiores, vero vitae dolorum eum et amet dolore eius alias quam id repellendus aut architecto!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius alias officia quo mollitia necessitatibus aspernatur ad suscipit consequuntur, nulla voluptas velit cum autem consectetur laborum molestias perspiciatis quos aliquam.
+</div>
+
+
+<script src="../javascript/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    // .click()方法一
+    $(document).ready(function(){
+        // test1
+        $(".box-a").click(function(){
+            $(".box-b").toggle();
+        })
+        // demo1
+        $(".product-title").click(function(){
+            $(".content").toggle();
+        })
+    })
+    // .click()方法二 需要呼叫 方法的名稱();
+    // OpenAndHide();
+    // function OpenAndHide(){
+    //     $(".box-a").click(function(){
+    //         $(".box-b").toggle();
+    //     })
+    // }
+    // dblclick()方法三 需要點擊兩下才會執行開啟或隱藏
+    // $(document).ready(function(){
+    //     $(".box-a").dblclick(function(){
+    //         $(".box-b").toggle();
+    //     })
+    // });
+
+    // OpenAndHide_Prouct_content();
+    // function OpenAndHide_Prouct_content(){
+    //     $(".product-title").click(function(){
+    //         $(".content").toggle();
+    //     })
+    // }
+
+
+</script>
+
+</body>
+</html>

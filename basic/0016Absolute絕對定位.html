@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0016Absolute絕對定位</title>
+    <!-- 絕對定位absolute只定一次 而且它是自己獨立一層 -->
+    <!-- 固定定位fixed則是永遠都停在原地 -->
+    <style type="text/css">
+        div{
+            padding:40px;
+            border:6px solid #f00;
+            font-size:24px;
+        }
+        .a{
+            position:relative;
+        }
+        .b{
+            position:relative;
+        }
+        /* 如果.c今天設定絕對定位後 它會往父去找 */
+        /* 1-父層如果有 fixed relative absolute 這三個定位任何一種 它就會定在父層上面 */
+        /* 2-假設今天 .b 沒有做定位 它就會往.a去找或一直往上找 */
+        /* 3-假設.b有做定位 它就會直接定在.b身上 */
+        /* ★重點來了，倘若父層或父父層都沒有做定位，它(.c)則是會直接「定在視窗上 而不是 定在body上」 */
+        .c{
+            border-color: blue;
+            position: absolute;
+            top:0;
+            right:0;
+            /* bottom:0; */
+            /* left:0; */
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">a
+        <div class="b">b
+            <div class="c">c</div>
+        </div>
+    </div>
+    <br>
+    <!-- 給一個父層 底下給30個段落 測試捲動後 定位位置 -->
+    <section class="wrap">
+        <p class="items">1lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+
+        <p class="items">2lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+
+        <p class="items">2lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        
+        <p class="items">3lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">4lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">5lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">6lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">7lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">8lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">9lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">10lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">11lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">12lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">13lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">14lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">15lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">16lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">17lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">18lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">19lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">20lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">21lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">22lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">23lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">24lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">25lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.</p>
+        <p class="items">26lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">27lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">28lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">29lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>
+        <p class="items">30lorem
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis laudantium architecto aliquam amet ea assumenda dolores. Maiores laborum nostrum rem quibusdam temporibus, dolorem ipsam officiis fugit. Sequi, eveniet. Ipsa, velit.
+        </p>  
+    </section>
+</body>
+</html>

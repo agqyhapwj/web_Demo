@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004區塊尺寸計算</title>
+    <style>
+        /* margin:auto 加上最外層 裡面的內容就會置中 */
+        .box{
+            width: 600px;
+            background-color: silver;
+            margin:auto;
+            /* display:flex;這也可以變成三欄橫式的版面 */
+        }
+        /* 靠浮點對齊與尺寸計算 變成三欄式橫式的版面 */
+        .column{
+            width:158px;
+            background-color: #aaa;
+            float:left;
+            margin:10px;
+            padding:10px;
+            border: 1px solid #aaa;
+        }
+        /* 一個區塊的尺寸計算
+           =============================================
+           預設尺寸的情況之下 width + border + padding + margin
+           
+           可見尺寸的情況之下 width + border + padding*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="column">在於出生收集沒事各國高達勝利樣子一陣優化包含真正然後，日記事情區別你的父母興趣聊天建築水果依靠不見業務一批嘉義，努力這一點也會接收而是階段語言視頻鐵路工商異常影視，付出工作人員具體兩年第一個大幅趕緊設為哪些而言好友中學明年，校長明天精神點點，春天一款強化。</div>
+
+        <div class="column">在於出生收集沒事各國高達勝利樣子一陣優化包含真正然後，日記事情區別你的父母興趣聊天建築水果依靠不見業務一批嘉義，努力這一點也會接收而是階段語言視頻鐵路工商異常影視，付出工作人員具體兩年第一個大幅趕緊設為哪些而言好友中學明年，校長明天精神點點，春天一款強化。</div>
+
+        <div class="column">在於出生收集沒事各國高達勝利樣子一陣優化包含真正然後，日記事情區別你的父母興趣聊天建築水果依靠不見業務一批嘉義，努力這一點也會接收而是階段語言視頻鐵路工商異常影視，付出工作人員具體兩年第一個大幅趕緊設為哪些而言好友中學明年，校長明天精神點點，春天一款強化。</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0027-4JQuery動畫</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .btn-controller{
+            display: flex;
+            padding: 6px 10px;
+            background-color: #000;
+            color: #fff;
+            width: 300px;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+        .photos{
+            margin-bottom: -5px;
+        }
+        /* .photos.x{
+            display: none;
+        } */
+        .text{
+            width: 280px;
+            padding: 20px;
+            /* margin: 20px; */
+            background-color: #ccc;
+        }
+        .text.x{
+            display: none;
+        }
+    </style>
+</head>
+<!-- https://jquery.com/ 點擊 API Documentation -->
+<!-- 找 Effects 再找 Fading 與 Sliding -->
+<body>
+    
+    <a href="#" class="btn-controller ctrl-1">開/關</a>
+    <img class="photos photo-1" src="https://picsum.photos/320/200?random=10" alt="">
+    <div class="text txt-1">
+        你就只好用戶，文字生態，同學出了做出天然發現房子一時事情公佈光臨見過很多人股票，推薦繼續網頁誠信實力已經思想光臨圖文貢獻，大學家長採購昨日母親結果湖北補充資料下載地址超市人類反對公里，一句對手不住高雄人大，女友玻璃同意那種自己的資源出現想要聯絡人，基於組。
+    </div>
+
+    <a href="#" class="btn-controller ctrl-2">開/關</a>
+    <img class="photos photo-2" src="https://picsum.photos/320/200?random=20" alt="">
+    <div class="text txt-2">
+        你就只好用戶，文字生態，同學出了做出天然發現房子一時事情公佈光臨見過很多人股票，推薦繼續網頁誠信實力已經思想光臨圖文貢獻，大學家長採購昨日母親結果湖北補充資料下載地址超市人類反對公里，一句對手不住高雄人大，女友玻璃同意那種自己的資源出現想要聯絡人，基於組。
+    </div>
+
+
+    <script src="../javascript/jquery-3.6.0.js"></script>
+
+    <script type="text/javascript">
+        $('document').ready(function(){
+            //最外層開頭不動(只撰寫在中間)
+
+            $('.ctrl-1').click(function(){ //Down只能開 不能關
+                $('.txt-1').slideToggle();//Toggle可開關
+            })                              
+            $('.ctrl-2').click(function(){
+                $('.txt-2').fadeToggle();
+            })
+
+            //最外層結尾不動(只撰寫在中間)
+        })
+    </script>    
+</body>
+</html>

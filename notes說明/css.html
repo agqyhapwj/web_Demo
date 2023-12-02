@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900,&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .main{
+            width: 45%;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            padding-top: 45px;
+            padding-bottom: 15px;
+            background-color: #abc;
+        }
+        .container{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #ddd;
+            margin-bottom: 30px;
+            border: 3px solid black;
+        }
+        .c-point{
+            background-color: darkcyan;
+            color: #fff;
+        }
+        .title{
+            width: 95%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            margin: 20px auto;
+            text-align: center;
+            /* border: 2px solid black; */
+        }
+        .t-point{
+            border-bottom: 2px solid #fff;
+        }
+        .txt{
+            width: 95%;
+            margin: auto;
+            /* background-color: #faf; */
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        .paragraph{
+            line-height: 1.6;
+            font-size: 18px;
+            height: 600px;
+            overflow: scroll;
+            border: 2px solid black;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+            text-align: center;
+        }
+        span {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <main class="main">
+		
+        <!-- B. 盒尺寸 -->
+        <div class="container">
+            <h2 class="title">Title(B):box-sizing:border-box;</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    box-sizing: border-box; 是 CSS 中一個屬性，它影響元素的盒模型。
+                    盒模型是用於定義元素在網頁中的佈局和尺寸的模型，
+                    它包括元素的內容、邊框、填充和外邊距。
+                    當我將元素的 box-sizing 屬性設置為 border-box 時，元素的
+                    寬度和高度將包括元素的內容、填充和邊框。
+                    這個屬性的作用在於簡化佈局計算和處理，更容易控制元素的寬度和高度，
+                    而不必考慮邊框和填充的影響。
+                    舉例來說，假設我有一個具有 width: 200px; 和 padding: 20px; 的元素，
+                    在默認的 box-sizing: content-box; 下，元素的寬度將是 240px（200px + 2 * 20px 填充）
+                    如果使用 box-sizing: border-box; 那麼元素的寬度將保持為 200px，填充將被包含在內。
+                </pre>
+            </div>
+        </div>
+
+        <!-- B. 區塊尺寸計算 -->
+        <div class="container">
+            <h2 class="title">Title(B):Block size calculation 區塊尺寸計算</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    以下這塊＜div＞內的程式碼，文字內容原始寬度是300px。
+                    但經過詳細計算的內容包含： 
+                    原設定寬度_300px + border左右_20px + padding左右_40px + margin左右_40px
+                    最後總寬度：400px
+
+                    *{
+                        margin:0;
+                        padding:0;
+                    }
+                    .text-area{
+                        background-color: #aaa;
+                        width:300px;
+                        border: 10px solid #666;
+                        padding:20px;
+                        margin:20px;
+                    }
+
+                    ＜div class="text-area"＞
+                        房地產運用外貿差距有什麼經營時代...
+                        房地產運用外貿差距有什麼經營時代...
+                        房地產運用外貿差距有什麼經營時代...
+                    ＜/div＞
+                    =================================================================
+                    補充說明：
+                                <span>預設尺寸的情況 width + border + padding + margin</span>
+                                <span>可見尺寸的情況 width + border + padding     </span>
+                </pre>
+            </div>
+        </div>
+
+        <!-- B :尺寸計算錯誤 Debug方向與技巧 -->
+        <div class="container">
+            <h2 class="title">Title(B):block size error 造成尺寸計算錯誤的有？<br><span>Debug方向與技巧</span></h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    1.inline 2.block 
+                    (3.inline-block 4.float 早期的排版)
+                    (5.flex             6.grid  現在的排版)
+                    7.瀏覽器快取  8.class 大小寫  9.class名稱錯誤
+                    10.class結構錯誤  11.tag標籤錯誤  12.css外部檔案路徑錯誤  13.優先權不足
+                    <span>★ style區 * {outline: 1px solid red;} /*即可看出所有框線的距離，以便除錯！*/</span>
+                    <span>★ 開發人員模式中 HTML的區塊 一個區塊 一個區塊 用刪去法，查看到底是哪裡出了問題？</span>
+                    <span>★ 再或者於CSS中 先用二分法註解掉 逐步開始查找 →例：1400行 700行  350行  75行......</span>
+                    <span>★ （=.=若沒把握會不會誤刪原始碼，建議先備份=.=）</span>
+                    =================================================================
+                    ※特殊情形：當你前端檔案寫好時，交給了後端工程師去套資料，然後跑版了…=.=
+                    ※檢查情形：1.你的是好的(寫好時)  2.他的是壞的(套完資料後)
+                    ---------------------------------------------------------------------------------
+                    ※確認情形：3.先換我的CSS檔案    4.換了CSS還是壞的  5.是不是HTML結構有誤
+                    ※影響版面：A.屬性有哪些？           B.因素有哪些？         C.走向有哪些？(主軸)
+                </pre>
+            </div>
+        </div>
+
+        <!-- B. display:block -->
+        <div class="container">
+            <h2 class="title">Title(B):display:block</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    1.佈局：
+                                塊級元素會佔據可用寬度的整個行，並在水平方向上擁有獨立的寬度。它們會從新
+                                的一行開始，並在前後都插入額外的空白，形成一個獨立的塊。
+                    2.寬度：
+                                塊級元素可以設置寬度和高度，並預設擁有 100% 的寬度，即擴展到其容器的寬度。
+                    3.高度：
+                                塊級元素會在垂直方向上擁有自己的高度，不與其他元素共享行高。
+                    4.元素間距：
+                                塊級元素之間通常存在空白，因為每個塊狀元素都會開始一個新行。
+
+                    使用的情境包括：
+
+                                 當你想要元素佔據整個可用寬度時。
+                                 當你想要元素具有獨立的寬度和高度時。
+                                 當你希望元素之間有明顯的區分，形成垂直堆疊的布局時。
+                                 總的來說，display: block; 用於塊級元素，它對於構建頁面的結構和佈局非常重要。
+                </pre>
+            </div>
+        </div>
+
+        <!-- D. display:flex中的三個參數 -->
+        <div class="container">
+            <h2 class="title">Title(D):display:flex + flex: x x x中的三個參數</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    1.第一個參數（flex-grow）：它代表彈性容器中的彈性增長因子。這個值決定了
+                        元素在父容器中可用的額外空間中增長的比例。
+                        所有子元素的 flex-grow 都是相同的，它們將平均分配可用的空間。
+                        某個元素的 flex-grow 值是其他元素的兩倍，它將獲得比其他元素多一倍的可用空間。
+
+                    2.第二個參數（flex-shrink）：這代表彈性容器中的彈性收縮因子。這個值決定了
+                        元素在父容器中空間不足時縮小的比例。
+                        所有子元素的 flex-shrink 都是相同的，它們將以相同的比例縮小以適應父容器。
+                        某個元素的 flex-shrink 值是其他元素的兩倍，那麼它將比其他元素更快地縮小。
+
+                    3.第三個參數（flex-basis）：它代表元素的初始大小。
+                    這可以是一個固定的長度（像素、百分比等）或者是 auto。
+                    當 flex-basis 設置為 auto 時，元素的初始大小將由其內容的大小決定，
+                    而 flex-grow 和 flex-shrink 屬性將根據這個初始大小來分配空間。
+
+                    MEMO:綜合來說，這三個參數共同影響了元素在彈性佈局中的
+                                增長、收縮和初始大小，這有助於實現靈活的版面設計。
+                    =================================================================
+                    ＜style type="text/css"＞
+                        *{
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                        }
+                        .wrap{
+                            width: 720px;
+                            display: flex;
+                            background-color: skyblue;
+                            padding-left: 20px;
+                        }
+                        .item{margin: 20px 20px;}
+                        .item1{flex-basis: 100px;}
+                        .item2{flex-basis: 200px;}
+                        .item3{flex-basis: 300px;}
+                    ＜/style＞
+
+                    ＜div class="wrap"＞
+                        ＜div class="item item1">
+                            ＜div class="pic"＞＜/div＞
+                            ＜h3＞Title＜/h3＞
+                            ＜p＞Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis.＜/p＞
+                        ＜/div＞
+                        ＜div class="item item2"＞
+                            ＜div class="pic"＞＜/div＞
+                            ＜h3＞Title＜/h3＞
+                            ＜p＞Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis.＜/p＞
+                        ＜/div＞
+                        ＜div class="item item3"＞
+                            ＜div class="pic"＞＜/div＞
+                            ＜h3＞Title＜/h3＞
+                            ＜p＞Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis.＜/p＞
+                        ＜/div＞
+                    ＜/div＞
+                </pre>
+            </div>
+        </div>
+
+        <!-- D. display:-inline or inline-block -->
+        <div class="container">
+            <h2 class="title">Title(D):display:inline or inline-block</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    display: inline; 和 display: inline-block;它們之間有一些關鍵的區別。
+
+                    1.佈局模型：
+                               display: inline; 使元素呈現為內聯元素，類似於文字的行為。
+                               它不接受寬度（width）和高度（height）屬性。水平方向上，元素會盡可能佔據與
+                               內容行高相同的空間，而垂直方向上，不會影響行高。
+                    2.盒模型：         
+                               display: inline; 的盒模型對外表現為一個內聯元素，它不會產生塊狀的盒子，因此水
+                               平方向上不會影響其他元素。
+                               display: inline-block; 的盒模型對外表現為一個內聯塊元素，它既具有塊級元素的盒
+                               模型特性（可以設置寬度和高度），又在水平方向上不會撐滿整個行。
+                    3.元素間距：
+                               在使用 display: inline; 時，元素之間的空白符（空格、換行等）會導致它們之間存
+                               在空白間隙，因為它們被視為文字。
+                               display: inline-block; 元素之間的空白符會產生空隙，但你可以通過一些技巧（例如
+                               將父元素的 font-size 設置為 0）來解決這個問題。
+                               總之，display: inline; 適用於行內元素的佈局，而 display: inline-block; 適用於希望
+                               具有塊級元素特性但仍然保持行內元素外觀的情況。
+
+                               總之，display: inline; 適用於行內元素的佈局，而 display: inline-block; 適用於希望
+                               具有塊級元素特性但仍然保持行內元素外觀的情況
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </pre>
+            </div>
+        </div>
+
+        <!-- F. 浮動對齊 -->
+        <div class="container">
+            <h2 class="title">Title(F):float : 001 ~ 004 float.html</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    浮動物件的效果，就是對後方的物件產生效果。
+                </pre>
+            </div>
+        </div>
+
+        <!-- G. 格線系統 -->
+        <div class="container c-point">
+            <h2 class="title t-point">Title(G):Grid</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    Grid Layout 是 CSS 中的排版方式之一，可以幫助建立一個複雜的網頁佈局。
+                    1.建立容器：
+                        首先，我們需要在 HTML 中選擇一個元素作為格線的容器。
+                        通常使用一個＜div＞區塊元素，然後設定成 class 或 id
+
+                        ＜div class="grid-container"＞
+                            放置子元素
+                        ＜/div＞
+                    =================================================================
+                    2.定義格線：
+                        CSS 中，使用 'grid-template-columns' 和 'grid-template-rows' 屬性來定義格線的結構。
+                        可以指定每個格線的大小，
+                        可以是固定大小、彈性大小(使用 fr 單位)或自動調整(使用 auto 單位)。
+
+                        .grid-container {
+                            display: grid;
+                            grid-template-columns: 1fr 2fr 1fr; /* 三列，中間的列寬度是兩側的兩倍 */
+                            grid-template-rows: auto 100px; /*兩行，第一行高度自動，第二行高度為100像素*/
+                        }
+                    =================================================================
+                    3.放置子元素：
+                        將子元素放置到格容器內，使用 grid-column 和 grid-row 屬性來指定子元素應該
+                        出現在哪些格線上。
+                        
+                        .item1 {
+                            grid-column: 1 / 4 ;  /* 子元素跨越三列 */
+                            grid-row: 1;              /* 子元素在第一行 */
+                        }
+                        .item2 {
+                            grid-cloumn: 2;  /* 子元素在第二列 */
+                            grid-row: 2;        /* 子元素在第二行 */
+                        }
+                    =================================================================
+                    4.可選-自動佈局：
+                        如果不想手動指定每個子元素的位置，可以使用 grid-auto-flow 屬性來佈局子元素。
+
+                        .grid-container {
+                            grid-auto-flow: row;   /* 子元素會一行接一行自動排列 */
+                        }
+                    =================================================================
+                    5.可選-區域命名：
+                        還可以使用 grid-template-areas 屬性來以名稱指定區域，然後在子元素中
+                        使用 grid-area 屬性來放置它們。
+
+                        .grid-container {
+                            grid-template-areas:
+                                "header header"
+                                "sidebar main"
+                                "footer footer"
+                        }
+                        .header {
+                            grid-area:header;
+                        }
+                        .sidebar {
+                            grid-area: sidebar;
+                        }
+                        .main {
+                            grid-area: main;
+                        }
+                        .footer {
+                        grid-area: footer;
+                        }
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                        *{
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        .title-area{
+                            width: 520px;
+                            margin: auto;
+                            padding-left: 20px;
+                            position: relative;
+                            box-shadow: 5px 5px 5px 1px #ccc;
+                            /* border: 1px solid #000; */
+                            /* background-color: red; */
+                        }
+                        h1{
+                            margin: 30px;
+                        }
+                        .wrap{
+                            margin: auto;
+                            padding: 10px;
+                            width: 520px;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            box-shadow: 5px 5px 5px 1px #ccc;
+                            /*overflow: hidden;*/ /*因為這有設定，所以下面所有float物件，父層會抓到子層的高度*/
+                        }
+                        .wrap .pic{
+                            padding-right: 10px;
+                            vertical-align: top;
+                        }
+                        .pic img{
+                            border-radius: 50%;
+                        }
+                        .wrap h2{
+                            font-size: 24px;
+                            line-height: 1.3;
+                            padding-bottom: .4em;
+                        }
+                        .wrap p{
+                            font-size: 16px;
+                            line-height: 1.7;
+                        }
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        .sample11{
+                            display: grid;
+                            grid-auto-rows: auto auto;
+                            grid-auto-columns: 40px 1fr;
+                            grid-template-areas: 
+                                'pic txt'
+                                '_. txt';
+                        }
+                        .sample11 .pic{
+                            grid-area: pic;
+                            position: absolute;
+                        }
+                        .sample11 .text{grid-area: txt;}
+                    }
+
+                    ＜div class="title-area"＞
+                        ＜h1>11 兩欄 Grid＜/h1＞
+                        ＜/div＞
+                        ＜div class="wrap sample11"＞
+                            ＜div class="pic"＞
+                                ＜img src="https://picsum.photos/30/30?random=1" alt=""＞
+                            ＜/div＞
+                            ＜div class="text"＞
+                                ＜h2>加油的網頁補給室：切版好難！切版不難！切切看就對了？！＜/h2＞
+                                ＜p>都是表現的是那位用來檔案，他說是在影片就不因而明確投訴標誌…＜/p＞            
+                            ＜/div＞
+                        ＜/div＞
+                    =================================================================
+                        
+                </pre>
+            </div>
+        </div>
+
+        <!-- H. 高度什麼時候適合設為 0 -->
+        <div class="container c-point">
+            <h2 class="title t-point">Title(H):（高度 height）什麼時候適合設為0？</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    1.隱藏元素：
+                        希望將一個元素完全隱藏起來時，可以將其高度設置為0，
+                        可以使元素的內容和邊框都不可見。
+                        ↓↓↓示例如下↓↓↓：
+                        .hidden-element {
+                            height: 0;
+                            overflow: hidden; /*可用於隱藏溢出內容*/
+                        }
+                    =================================================================
+                    2.製作三角形或箭頭：
+                        通過將一個塊級元素的寬度和高度設定為 0，
+                        並將邊框屬性添加到元素，你可以建立一個三角形或箭頭。
+                        ↓↓↓示例如下↓↓↓：
+                        .triangle {
+                            width: 0;
+                            height: 0;
+                            border-left: 20px solid transparent;
+                            border-right: 20px solid transparent;
+                            border-bottom: 20px solid red; /*可以換成其它顏色*/
+                        }
+                    =================================================================
+                    3.清除浮動：
+                        我們可能需要在容器內清除浮動以確保容器包含浮動的子元素。
+                        設置容器的高度為 0 ，然 使用 clear: both; 屬性來清除浮動。
+                        ↓↓↓示例如下↓↓↓：
+                        .clearfix::after {
+                            content: '';
+                            display: block; or table;
+                            clear: both;
+                            height: 0;
+                        }
+                    =================================================================
+                    4.製作純CSS加載動畫：
+                        通過將一個元素的高度設定為 0 ，然後使用動畫或過渡效果來逐漸增加其高度，
+                        可以製作純CSS的加載動畫效果。
+                        ↓↓↓示例如下↓↓↓：
+                        .loading-spinner {
+                            height: 0;
+                            animation: spin 2s infinite linear;
+                        }
+                        @keyframes spin {
+                            0% {transform: rotate(0deg);}
+                            100% {transform; rotate(360deg);}
+                        }
+                </pre>
+            </div>
+        </div>
+
+        <!-- I. input type="search" placeholder -->
+        <div class="container">
+            <h2 class="title">Title(I):＜input type="search" placeholder="XXX"＞</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    CSS中如果要改變搜尋框內「提示文字的字體顏色」
+                    語法：
+                         input[type="searcg"]::placeholder {
+                            color: xxx;
+                         }
+                    ===========================================
+                    但不是所有瀏覽器都支援這種方式，所以需要提供一些瀏覽器特定的前綴字。
+                    以下是一個例子：
+                    
+                    /* 將placeholder文字顏色設定為紅色，包括瀏覽器前綴 */
+
+                        input[type="search"]::-webkit-input-placeholder {
+                            color: red; <span>/* Chrome, Safari, Edge */</span>
+                        }
+                        input[type="search"]::-moz-placeholder {
+                            color: red; <span>/* Firefox 19+ */</span>
+                        }
+                        input[type="search"]:-ms-input-placeholder {
+                            color: red; <span>/* IE 10+ */</span>
+                        }
+                        input[type="search"]::placeholder {
+                            color: red; <span>/* 這是原始標準語法 Chrome適用 其他瀏覽器本人沒有測試哦*/</span>
+                        }
+
+                         
+                </pre>
+            </div>
+        </div>
+
+        <!-- M. menu選單常見的隱藏方式 -->
+        <div class="container">
+            <h2 class="title">Title(M):menu選單常見的幾種隱藏和出現方法</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    方法一：display:none;(隱藏)
+                    方法一：display:block(出現)#寫在hover的條件下哦
+                    ★缺點：對SEO會有影響，不好
+                    ==========================
+                    方法二：left:-2000px;(隱藏)
+                    方法二：left:0;(出現)#寫在hover的條件下哦
+                    ★缺點：會導致頁面多了一個隱藏的長度
+                    ==========================
+                    方法三：height:0; overflow:hidden;(隱藏)
+                    方法三：height:auto;(出現)#寫在hover的條件下哦
+                    ★可以：本人是選擇這個寫法，除了用程式控制之外。
+                </pre>
+            </div>
+        </div>
+
+        <!-- O. overflow -->
+        <div class="container">
+            <h2 class="title">Title(O):overflow</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    overflow它用於控制元素的內容溢出其容器。
+                    overflow屬性可應用於具有限定尺寸的容器。
+                    例如：＜div＞
+                    1-visible(預設值):內容溢出容器時，會在容器外部繼續顯示。
+                        這也代表溢出的內容可能會遮蓋住其他元素！
+                    2-hidden:內容溢出容器時，超出容器的部分將被裁剪，變成不可見。
+                        相對表示溢出的內容會被隱藏，不會氣響其它元素！
+                </pre>
+            </div>
+        </div>
+
+        <!-- OT. -->
+        <div class="container">
+            <h2 class="title">Title(OT):透明度的兩種用法(opacity不透明度)與(transparent透明的)</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    一、opacity: .6; <span>/*opacity會將整個區塊都變成透明的「可調整」*/</span>
+                    二、background-color: transparent; <span>/*transparent只針對背景色「不可調整」*/</span>
+                </pre>
+            </div>
+        </div>
+
+        <!-- V. 二十多種中vertical align -->
+        <div class="container">
+            <h2 class="title">Title(V):vertical-align多達二十幾種的寫法</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    <a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2092">教學網址 : https://ithelp.ithome.com.tw/users/20112550/ironman/2092</a>
+                    當有一天如果你的切版必需要支援IE瀏覽器時，面對float排版時，
+                    你就會了解垂直置中有多重要了！
+                </pre>
+            </div>
+        </div>
+
+        <!-- W&h -->
+        <div class="container">
+            <h2 class="title">Title(W):Width And Height no effect 寬度與高度設定卻沒效果？</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    網頁切版有著這麼一句話流傳：「若寬度與高度設定後沒有效果，不是inline，就是block」
+                    1.<span>inline元素</span>:inline元素是指行內元素，如文字、連結、圖片等。
+                       行內元素通常不具備寬度和高度，它們會自動適應其內容的大小。
+                       如果嘗試為行內元素設定寬度和高度，這些設定可能會被忽略？
+                       因為行內元素的特性是在同一行內排列，它們不會占據高立的區域。
+
+                    2.<span>block元素</span>:block元素是指<span>塊級元素</span>，如段落、標題、＜div＞等。
+                       塊級元素通常可以設定寬度和高度，因為它們在文檔流中占據獨立的區域，
+                       可以在頁面上占用一整行或更多的空間。
+                       設定塊級元素的寬度和高度可以明顯地影響它們益頁面中的布局。
+                    
+                    3.所以當我們在設定元素的寬度和高度後，卻沒看到效果時，首先要檢查
+                       該元素是被視為<span>「行內元素」還是「塊級元素」</span>。
+                       如果元素被視為行內元素，嘗試將其轉換為塊級元素，可以使用CSS的<span>display:block;</span>
+                       將行內元素改成為塊級元素，然後設定寬度和高度。
+                </pre>
+            </div>
+        </div>
+
+        <!-- @. @layer優先權 -->
+        <div class="container">
+            <h2 class="title">Title(@):css : @layer優先權</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    important  animation  inline-style  id class tag  *  繼承  @layer
+                    ---------------------------------------------------------------------------------
+                    CAN I USE 網坫來查詢:<a href="https://caniuse.com/">https://caniuse.com/</a> 搜尋 @layer
+                    一開始的時候宣告，我有幾個 @layer 後面的優先權會比前面的高
+                    若一開始就宣告順序，那麼將會以一開始宣告的後面的為主
+                    優先權由高往低的順序 important inline-style ID class tag
+                    @layer中 若加了 !imoprtant 就會有反轉優先權的事實產生
+                </pre>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="container">
+            <h2 class="title">Title:標題</h2>
+            <div class="txt">
+                <pre class="paragraph">
+
+                    內容
+                </pre>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

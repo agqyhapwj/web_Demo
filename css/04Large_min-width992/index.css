@@ -13,11 +13,6 @@
     #menu-control{
         display: none;
     }
-    /* ===== */
-    /* ===== */
-    /* ===== */
-    /* ===== */
-    /* header */
     .header{
         width:100%;
         height: 100px;
@@ -26,7 +21,7 @@
         /* background-color: red; */
     }
     .header-nav{
-        width: 70%;
+        width: 100%;
         height: 90px;
         position: fixed;
         top: 0;
@@ -48,7 +43,7 @@
     }
     .header-nav .logo > a > img{
         width:40%;
-        margin: 10px 15px;
+        margin: 10px 15px 10px 40%;
     }
     /* menu-botton========================================== */
     .header .menu-btn-area{
@@ -63,18 +58,17 @@
         display: block;
     }
     .menu-area{
-        width: 100%;
+        width: 80%;
         /* background-color: yellow; */
         position: fixed;
         top: 80px;
-        left: 0;
+        left: 10%;
         z-index: 999;
     }
     .menu{
         width: 95%;
         height: auto;
         margin: auto;
-        /* background-color: red; */
     }
     .menu-nav{
         /* background-color: #000; */
@@ -146,7 +140,7 @@
         background-color: #000;
         z-index: 100;
         display: flex;
-        /* top: -2px; */
+        top: -10px;
         left: -50px;
         float: left; 
         border-radius: 100px;
@@ -177,20 +171,19 @@
     /* ===== */
     /* main */
     .main{
-        width: 100%;
-        /* background-color: #fff; */
+        width: 76%;
+        background:linear-gradient(-20deg,#3f5494,#08c7a5,#3f5494);
         margin: auto;
-        margin-top: 50px;
+        margin-top: 100px;
     }
     /* License-證照區 */
     .license{
-        width: 80%;
+        width: 100%;
         margin: auto;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background-color: #fff; */
     }
     .main .item
     {
@@ -228,106 +221,26 @@
     .main .item p{
         line-height: 1.5em;
     }
-    /* about關於站長 */
-    .about-area{
-        display: block;
-        width: 100%;
-        background-color: #ccc;
-        margin: 30px 0;
-    }
-    .about-area .block{
-        width: 960px;
-        display: flex;
-        margin: auto;
-    }
-    .about-area .pic{
-        width:50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        vertical-align: middle;
-    }
-    .about-area .pic img{
-        width: 100%;
-        vertical-align: bottom;
-    }
-    .about-area .txt{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        padding:0 10px;
-        
-    }
-    h3{
-        position: relative;
-        margin: auto;
-        font-size: 25px;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-        /* border-bottom: 2px solid #000;
-        border-top: 2px solid #000; */
-    }
-    p{
-        line-height: 1.5em;
-        position: relative;
-        margin: auto;
-    }
-    .spaced-text{
-        white-space: pre;
-    }
     /* ===== */
     /* ===== */
     /* ===== */
     /* ===== */
-    /* footer */
+    /* footer手機版 */
     .footer{
-        background:linear-gradient(-20deg,#3f5494,#08c7a5);
-        /* background-color: #000; */
-        width: 100%;
-        padding-bottom: 10px;
+        background-color: #000;
     }
-    .footer hr{
-        margin: 10px 0;
-        border: 5px solid #000;
+    .footer-nav{
+        display: none;
     }
-    .footer-nav ul{
-        width: 90%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    } 
-    .vertical-line{
-        color: #fff;
-    }
-    .footer-nav ul li > a{
-        padding: 0 10px;
-        text-decoration: none;
-        color: #fff;
-        font-size: 19px;
-    }
-    .copyright{
-		width:100%;
-		text-align:center;
-		margin: 50px 0 0;
-		padding:10px 0;
-		background:#3e5293;
-		color:#70f6df;
-	}
-    /* ==================================================== */
-    /* ==================================================== */
-    /* Footer頁尾區  電腦版================================= */
-    .footer > .container{
+    /* footer電腦版頁尾 */
+    .pc-footer{
         display: block;
     }
-    /* .footer{
-		padding:150px 0 0 ;
+    .pc-footer{
+		padding:50px 0 50px 0;
 		background:linear-gradient(-20deg,#3f5494,#08c7a5);
-	} */
-	.footer > .container{
+	}
+	.pc-footer .container{
 		display:flex;
 		width:1200px;
 		margin:auto;
@@ -379,5 +292,12 @@
 		color:#70f6df;
 		background-color:#3e5293;
 	}
-	
+	.copyright{
+		width:100%;
+		text-align:center;
+		/* margin:150px 0 0; */
+		padding:10px 0;
+		background:#3e5293;
+		color:#70f6df;
+	}
 }

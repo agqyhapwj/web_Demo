@@ -445,9 +445,51 @@
                     <span class="memo">仔細看並嘗試手動作作看，切版就是要自己動手切切看</span>
 
                     重點整理：
-                    class="w-100" 就代表 width:100%;
+                    class="mt-5 w-100" mt-5 代表 margin-top:50px; w-100 代表 width:100%;
                     offset <span class="memo">顧名思義就是「抵消」之意</span>
                     利用offset 可以作出交錯式的設計
+                    ===============================================================
+                    ===============================================================
+                    以下為簡易程式碼範例：
+                    ＜style type="text/css"＞
+                        .txt{
+                            background-color: #ccc;
+                            padding: 20px;
+                        }
+                        @media screen and (min-width:768px){
+                            .container{
+                                margin-top: 50px;
+                            }
+                            /*這設定是為了讓它在平版以上圖文會重疊*/
+                            .txt-block{
+                                margin-top: -100px;
+                            }
+                        }
+                    ＜/style＞
+
+                    ＜div class="container"＞
+                        ＜div class="row"＞
+
+                            ＜div class="col-12 col-md7"＞
+                                ＜div class="item"＞
+                                    ＜div class="pic"＞
+                                    ＜img src="https://picsum.photos/300/200?random=500"＞
+                                ＜/div＞
+                            ＜/div＞
+
+                            ＜div class="col-12 col-md7 offset-md-5 txt-block"＞
+                                ＜div class="item"＞
+                                    ＜div class="txt"＞
+                                        ＜h2＞努力切版與排版＜/h2＞
+                                        ＜p＞Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus molestiae sed fugit distinctio reprehenderit illo deserunt laudantium impedit modi repellendus enim rerum aspernatur ut dolore, iste voluptatum eos suscipit!@_@687
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus molestiae sed fugit distinctio reprehenderit illo deserunt laudantium impedit modi repellendus enim rerum aspernatur ut dolore, iste voluptatum eos suscipit!@_@987
+                                        ＜/p＞
+                                    ＜/div＞
+                                ＜/div＞
+                            ＜/div＞
+
+                        ＜/div＞
+                    ＜/div＞
                 </pre>   
             </div> 
         </div>

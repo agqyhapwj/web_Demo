@@ -42,8 +42,8 @@
         color: black;
     }
     .header-nav .logo > a > img{
-        width:40%;
-        margin: 10px 15px 10px 40%;
+        width:35%;
+        margin: 10px 15px 10px 55%;
     }
     /* menu-botton========================================== */
     .header .menu-btn-area{
@@ -58,11 +58,11 @@
         display: block;
     }
     .menu-area{
-        width: 80%;
+        width: 70%;
         /* background-color: yellow; */
         position: fixed;
         top: 80px;
-        left: 10%;
+        left: 15%;
         z-index: 999;
     }
     .menu{
@@ -140,8 +140,8 @@
         background-color: #000;
         z-index: 100;
         display: flex;
-        top: -10px;
-        left: -50px;
+        top: -5px;
+        left: -35px;
         float: left; 
         border-radius: 100px;
     }
@@ -171,7 +171,7 @@
     /* ===== */
     /* main */
     .main{
-        width: 76%;
+        width: 70%;
         background:linear-gradient(-20deg,#3f5494,#08c7a5,#3f5494);
         margin: auto;
         margin-top: 100px;
@@ -187,7 +187,7 @@
     }
     .main .item
     {
-        width: 40%;
+        width: 60%;
         border: 2px solid #aaa;
         box-shadow: 5px 5px 5px #aaa;
         margin: 15px;

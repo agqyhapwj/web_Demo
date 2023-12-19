@@ -1,0 +1,23 @@
+@media screen and (min-width:992px) {
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .side-menu-area{
+        width: 80%;
+        height: auto;
+        margin: auto;
+        background-color: yellow;
+    }
+    .side-menu{
+        width: 90%;
+        margin: auto;
+        background-color: #faf;
+        text-align: center;
+        position: relative;
+    }
+    .side-menu-nav{
+        display: flex;
+    }
+}

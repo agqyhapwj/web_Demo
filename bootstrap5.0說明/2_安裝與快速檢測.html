@@ -170,7 +170,7 @@
 <div class="main">
         <!-- 1.入門網址 檔案：1_入門網址.html -->
         <div class="briefing">
-            <h2 class="title">1.入門網址--檔案：1_入門網址.html</h2>
+            <h2 class="title">1.入門網址</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     https://getbootstrap.com/docs/5.0/getting-started/introduction/
@@ -182,7 +182,7 @@
 
         <!-- 2.安裝與快速檢測 檔案：2-1.html--2-2.html -->
         <div class="briefing">
-            <h2 class="title">2.安裝與檢測--檔案：2-1.html--2-2.html</h2>
+            <h2 class="title">2.安裝與檢測_(總筆記區)</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     方式一：
@@ -232,7 +232,7 @@
 
         <!-- 3.格線系統入門 檔案：3.html--3-1.html -->
         <div class="briefing">
-            <h2 class="title">3.格線系統入門--檔案：3格線系統入門.html--3-1格線系統入門.html</h2>
+            <h2 class="title">3.格線系統入門</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     以Bootstrap的格線系統來說，可以把它分成三個部分
@@ -314,7 +314,7 @@
 
         <!-- 4.格線對齊與分佈 -->
         <div class="briefing">
-            <h2 class="title">4.格線對齊與分佈---4_格線對齊與分佈.html 4_1格線對齊與分佈.html</h2>
+            <h2 class="title">4.格線對齊與分佈</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     Grid預設是12欄的情況下，如果我們只有三個物件，
@@ -372,7 +372,7 @@
 
         <!-- 5-格線排序控制 -->
         <div class="briefing">
-            <h2 class="title">5-格線排序order控制--檔案：5-格線排序控制.html</h2>
+            <h2 class="title">5-格線排序order控制</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     <span class="memo">特別再提醒一下，Bootstrap的格線系統基本上都採用flex的原理去製作的</span>
@@ -434,15 +434,17 @@
             </div> 
         </div>
 
+
+
         <!-- 6-格線距離控制 -->
         <div class="briefing">
-            <h2 class="title">6-格線距離控制--檔案：6-格線距離控制.html~6-1格線距離控制.html</h2>
+            <h2 class="title">6-格線距離控制</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     網址 https://getbootstrap.com/docs/5.0/getting-started/introduction/
                     左側 Layout > Columns 
                     右側 Offsetting columns
-                    <span class="memo">仔細看並嘗試手動作作看，切版就是要自己動手切切看</span>
+                    <span class="memo">仔細看並嘗試手動做做看，切版就是要自己動手切切看</span>
 
                     重點整理：
                     class="mt-5 w-100" mt-5 代表 margin-top:50px; w-100 代表 width:100%;
@@ -495,9 +497,11 @@
             </div> 
         </div>
 
+
+
         <!-- 7-圖片與寬高尺寸控制 -->
         <div class="briefing">
-            <h2 class="title">7-圖片與寬高尺寸控制--檔案：7-圖片與寬高尺寸控制.html</h2>
+            <h2 class="title">7-圖片與寬高尺寸控制</h2>
             <div class="paragraph">
                 <pre class="preContent">
                     網址 https://getbootstrap.com/docs/5.0/getting-started/introduction/
@@ -510,11 +514,78 @@
 
                     w-100:是寬度要100%，這張圖片的寬度會跟父層容器一樣寬
                     max-width:100%則是img fluid的特性，假設有一圖片是300px，那麼我的圖片最大不會超過300px
+                </pre>   
+            </div> 
+        </div>
 
+
+
+        <!-- 8-共用項目margin與padding -->
+        <div class="briefing">
+            <h2 class="title">8-共用項目margin與padding</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    按照慣例進入boottrap5.0首頁
+                    介紹重點 (Utilities > Spacing[間距])
+
+                    # m mt mr mb ml mx 例:margin-top, margin-right...
+                    # p pt pr pb pl px 例:同上
+                    # img 標籤的 class名稱若加上 img-thumbnail 圖片會出現邊框
+                    =======================================================
+                    ＜style type="text/css"＞
+                        /* .box{
+                            height: 300px;
+                            background-color: #aaa;
+                        } */
+                        .pic-card{
+                            background-color: #aaa;
+                            padding: 20px;
+                        }
+                        .text{
+                            background-color: #ffa;
+                        }
+                
+                        @media screen and (min-width:768px){
+                            .pic-card .col-12:last-child{
+                            margin-top: -100px;
+                            margin-left: auto;
+                        }
+                        }
+                    ＜/style＞
+                    -------------------------------------------------------
+                    # Examples-1
+                    # mt mr mb ml mx 例:margin-top, margin-right...
+                    
+                    ＜div class="box w-25 m-auto"＞＜/div＞
+
+
+                    # Examples-2
+                    # img-thumbnail 圖片區出邊框
+
+                    ＜div class="container pic-card"＞
+
+                        ＜div class="row"＞
+                            ＜div class="col-12 col-md-7"＞
+                                ＜div class="pic"＞
+                                    ＜img src="https://picsum.photos/300/150?random=300" alt="" class="w-100 img-thumbnail"＞
+                                ＜/div＞
+                            ＜/div＞
+
+                            ＜div class="col-12 col-md-7"＞
+                                ＜div class="text p-4"＞
+                                    ＜h3＞努力就學得會＜/h3＞
+                                    ＜p＞各項反饋液晶還可以資料庫上升上了，擔心這種畢業生是的浪費書庫官方得知忍不住德國漂亮媽媽另一進了，成就學成了時尚模特兒。＜/p＞
+                                ＜/div＞
+                            ＜/div＞
+                        ＜/div＞
+
+                    ＜/div＞
 
                 </pre>   
             </div> 
         </div>
+
+
 
         <!-- 備用區塊 -->
         <div class="briefing">

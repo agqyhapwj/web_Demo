@@ -625,6 +625,31 @@
 
 
 
+        <!-- 10-再探卡片組件 -->
+        <div class="briefing">
+            <h2 class="title">10-再探卡片組件</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    按照慣例進入boottrap5.0首頁
+                    介紹重點 (Doc > Components > Card > 右側最下方 Card layout)
+
+                    複製 Card groups 程式碼，container自己加，<span class="memo">觀察加之前和之後的區別</span>
+                    複製 Grid cards  程式碼，container或container-fluid，<span class="memo">前者無滿版效果，後者有滿版效果</span>
+
+                    以下設定，可讓畫面呈現 手機一欄、平版三欄、大螢幕四欄的畫面
+                    <span class="memo">class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4</span>
+                    ===============================================================================
+                    此時會發現在手機或平板看起來畫面好像都正常，其是不然。
+                    在大螢幕尺寸的設備瀏覽時，會發現第三欄的文字區塊因為字數量不相等，
+                    而導致文字區塊的高度，很直觀的看起來就是不一樣。
+                    
+                    解決方式，給它高度，在class="card"另加高度100%，<span class="memo">class="card h-100"</span>
+
+                </pre>   
+            </div> 
+        </div>
+
+
         <!-- 備用區塊 -->
         <div class="briefing">
             <h2 class="title"></h2>

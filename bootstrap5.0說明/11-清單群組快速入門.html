@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-清單群組快速入門</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style type="text/css">
+        .thick-line{
+            border: 5px solid black;
+            background-color: chartreuse;
+        }
+    </style>    
+</head>
+<body>
+
+    <div class="container">
+        <ul class="list-group">
+            <ul class="list-group-item">An item</ul>
+            <ul class="list-group-item active">A second item</ul>
+            <ul class="list-group-item disabled">A third item</ul>
+            <ul class="list-group-item">A fourth item</ul>
+            <ul class="list-group-item">And a fifth one</ul>
+        </ul>
+    
+        <div class="thick-line mb-5">===↓↓以下是超連結清單↓↓===</div>
+    
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                The current link item
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+        </div>
+    
+        <div class="thick-line mb-5">===↓↓以下是Flush清單(好像沒差=.=)↓↓===</div>
+    
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+        </ul>
+    </div>
+
+    <!-- 結合卡片組件 -->
+    <div class="container mt-4 mb-4">
+        <div class="row row-cols-1 row-cols-md-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/300/200?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">新粉絲</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">專屬貼圖</li>
+                        <li class="list-group-item">小徽章</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/300/200?random=10" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">老粉絲</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">專屬貼圖</li>
+                        <li class="list-group-item">小徽章</li>
+                        <li class="list-group-item">專屬直播</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/300/200?random=10" class="card-img-top zhiwei-card-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">死忠粉絲</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">專屬貼圖</li>
+                        <li class="list-group-item">小徽章</li>
+                        <li class="list-group-item">專屬直播</li>
+                        <li class="list-group-item">專業溝通群組</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/300/200?random=10" class="card-img-top zhiwei-card-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">開掛粉絲</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">專屬貼圖</li>
+                        <li class="list-group-item">小徽章</li>
+                        <li class="list-group-item">專屬直播</li>
+                        <li class="list-group-item">專業溝通群組</li>
+                        <li class="list-group-item">專業教學影片</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

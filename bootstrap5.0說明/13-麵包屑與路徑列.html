@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-麵包屑與路徑列</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style type="text/css">
+        .breadcrumb{
+            background-color: #ddd;
+            height: 30px;
+            border-radius: 5px;
+            padding: 2px 0 0 20px;
+            position: relative;
+            top: 18px;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        #active,#active2{
+            color: red;
+        }
+    </style>    
+</head>
+<body>
+    <!-- 官方樣式 -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" id="active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+
+    <hr class="" style="border:100px solid red; position:relative; top:20px;">
+
+    <!-- 修改樣式 -->
+    <div class="path">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" id="active2" aria-current="page">Data</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

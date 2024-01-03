@@ -694,7 +694,47 @@
                     按照慣例進入boottrap5.0首頁
                     介紹重點 (Doc > Components > Breadcrumb)
 
-                    Example 下方的程式碼，<span class="memo">選擇第三個nav的區塊</span>，複製後，先整理程式碼。
+                    Example 下方的程式碼，<span class="memo">選擇第三個nav的區塊</span>，複製後貼上之後，先整理程式碼。
+                    =============================================================================================
+                    ＜style type"text/css"＞
+                        .breadcrumb{
+                            background-color: #ddd;
+                            height: 30px;
+                            border-radius: 5px;
+                            padding: 2px 0 0 20px;
+                            position: relative;
+                            top: 18px;
+                        }
+                        a{
+                            color: #000;
+                            text-decoration: none;
+                        }
+                        #active,#active2{
+                            color: red;
+                        }
+                    ＜/style＞
+
+                    <span class="memo"># 官方樣式</span>
+                    ＜nav aria-label="breadcrumb"＞
+                        ＜ol class="breadcrumb"＞
+                            ＜li class="breadcrumb-item"＞＜a href="#"＞Home＜/a＞＜/li＞
+                            ＜li class="breadcrumb-item"＞＜a href="#"＞Library＜/a＞＜/li＞
+                            ＜li class="breadcrumb-item active" id="active" aria-current="page"＞Data＜/li＞
+                        ＜/ol＞
+                   ＜/nav＞
+
+                    ＜hr class="" style="border:100px solid red; position:relative; top:20px;"＞
+
+                    <span class="memo"># 修改樣式</span>
+                    ＜div class="path"＞
+                        ＜div class="container"＞
+                            ＜ol class="breadcrumb"＞
+                                ＜li class="breadcrumb-item"＞＜a href="#">Home＜/a＞＜/li＞
+                                ＜li class="breadcrumb-item"＞＜a href="#">Library＜/a＞＜/li＞
+                                ＜li class="breadcrumb-item active" id="active2" aria-current="page">Data＜/li＞
+                            ＜/ol＞
+                        ＜/div＞
+                    ＜/div＞
                 </pre>   
             </div> 
         </div>

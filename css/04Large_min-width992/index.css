@@ -158,7 +158,7 @@
         font-size: 15px;
         border: none;
         padding: 5px 10px;
-        color: #fff; /*↓這將上層矩形拿掉↓*/
+        color: #fff; /*↓ 這將上層矩形拿掉 ↓*/
         background-color: transparent;
         .header  input[type="search"]::placeholder{
             color: #fff;

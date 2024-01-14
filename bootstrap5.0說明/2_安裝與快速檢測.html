@@ -772,6 +772,81 @@
 
 
 
+        <!-- 15-Diaplay之顯示隱藏屬性控制 -->
+        <div class="briefing">
+            <h2 class="title">15-Diaplay之顯示隱藏屬性控制</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    按照慣例進入boottrap5.0首頁
+                    介紹重點 (Doc > Utilities > Display)
+
+                    class 的名稱使用:<span class="memo">「.d-none .d-block .d-flex .d-sm-block 等…」</span>
+                    Hiding elements:，看一下它的屬性介紹和類別名稱的使用方式。
+                    ========================================================================================
+                    <span class="memo">CSS 程式碼如下：</span>
+                    ＜style type="text/css"＞
+                        .text{
+                            width: 80%;
+                            height: 50px;
+                            background-color: powderblue;
+                            position: absolute;
+                            top: 50%;
+                            left: 10%;
+                            right: 0;
+                            bottom: 0;
+                            justify-content: center;
+                            display: flex;
+                        }
+                        .text2 > h2{
+                            color: rgba(0, 0, 0, 0);
+                        }
+                        .text2:hover{
+                            width: 80%;
+                            height: auto;
+                            margin: auto;
+                            margin-top: 30px;
+                            background-color: red;
+                            transition: .5s;
+                            transform: scale(1);
+                            color: #fff;
+                        }
+                        .text2:hover > h2{
+                            color: #fff;
+                        }
+                        .cue-text{
+                            text-align: center;
+                            margin-top: 50px;
+                        }
+                    ＜/style＞
+
+                    <span class="memo">html程式碼如下</span>
+                    ＜div class="main bg-dark">
+
+                        #1.這是測試
+                        ＜div class="text "＞
+                            ＜div class="d-lg-block m-3"＞hide on lg and wider screens＜/div＞
+                            ＜div class="d-none d-lg-block m-3"＞hide on screens smaller than lg＜/div＞
+                        ＜/div＞
+                
+                
+                       
+                        #2.手機顯示 平版直向消失 平版橫向顯示
+                        ＜div class="text2 d-block d-md-none d-lg-block"＞
+                            ＜h2＞Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Praesentium velit odit accusantium vero, perspiciatis, voluptate 
+                                quod assumenda voluptates nostrum ea ex quam beatae＜/h2＞
+                            ＜/div＞
+                        ＜/div＞
+                
+                        #3.Cue Text
+                        ＜h1 class="cue-text"＞請將滑鼠移至上方橫幅＜/h1＞
+                    ＜/div＞
+                </pre>   
+            </div> 
+        </div>
+
+
+
         <!-- 備用區塊 -->
         <div class="briefing">
             <h2 class="title"></h2>

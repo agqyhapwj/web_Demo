@@ -125,7 +125,7 @@
                 background-color: white;
             }
             .briefing{
-                width: 1280px;
+                width: 80%;
                 height: auto;
                 background-color: white;
                 box-shadow: 
@@ -138,7 +138,7 @@
                 padding: 20px 0;
             }
             .title{
-                width: 860px;
+                width: 100%;
                 align-items: center;
                 justify-content: center;
                 padding-left: 10px;
@@ -146,7 +146,7 @@
                 /* background-color: red; */
             }
             .paragraph{
-                width: 860px;
+                width: 100%;
                 background-color: paleturquoise;
                 overflow: scroll;
             }
@@ -163,7 +163,51 @@
                 color: blue;
             }
         }
-        
+        /* 大螢幕 */
+        @media  screen and (min-width:1400px) {
+            .main{
+                width: 100%;
+                background-color: white;
+            }
+            .briefing{
+                width: 70%;
+                height: auto;
+                background-color: white;
+                box-shadow: 
+                            -5px 0 10px #ccc,
+                             5px 0 10px #ccc,
+                             0 -5px 10px #ccc,
+                             0 5px 10px #ccc;
+                margin: auto;
+                margin-top: 20px;
+                padding: 20px 0;
+            }
+            .title{
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                padding-left: 10px;
+                text-align: left;
+                /* background-color: red; */
+            }
+            .paragraph{
+                width: 100%;
+                background-color: paleturquoise;
+                overflow: scroll;
+            }
+            .preContent{
+                /* position: relative;
+                top: 0; */
+                right: 180px;
+                font-size: 17px;
+                line-height: 1.4em;
+                padding: 10px 0;
+                /* background-color: yellow; */
+            }
+            .memo{
+                color: blue;
+            }
+        }
     </style>
 </head>
 <body>
@@ -364,7 +408,9 @@
                                 ＜div class="col-8 col-md-6"＞
                                     ＜div class="text"＞
                                         ＜h1＞一定要懂的Bootstrap＜/h1＞
-                                        ＜p＞Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, possimus!＜/p＞
+                                        ＜p＞Lorem ipsum, dolor sit amet consectetur 
+                                        adipisicing elit. Cupiditate, possimus!
+                                        ＜/p＞
                                     ＜/div>                    
                                 ＜/div>
                             ＜/div>
@@ -378,6 +424,7 @@
 
         <!-- 5-格線排序控制 -->
         <div class="briefing">
+
             <h2 class="title">5-格線排序order控制</h2>
             <div class="paragraph">
                 <pre class="preContent">
@@ -416,7 +463,8 @@
                         ＜div class="row"＞
                             ＜div class="col-12 col-md-3 mb-3 order-md-4"＞
                                 ＜div class="item h-100"＞
-                                    A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                    A Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus 
+                                    ut officia officiis neque, libero tempore recusandae magni.
                                 ＜/div＞
                             ＜/div>
                             ＜div class="col-12 col-md-3 mb-3 order-md-3"＞
@@ -426,12 +474,14 @@
                             ＜/div>
                             ＜div class="col-12 col-md-3 mb-3 order-md-2"＞
                                 ＜div class="item h-100"＞
-                                    C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                    C Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus 
+                                    ut officia officiis neque, libero tempore recusandae magni.
                                 ＜/div＞
                             ＜/div＞
                             ＜div class="col-12 col-md-3 mb-3 order-md-1"＞
                                 ＜div class="item h-100"＞
-                                    D Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus ut officia officiis neque, libero tempore recusandae magni.
+                                    D Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsum maxime natus 
+                                    ut officia officiis neque, libero tempore recusandae magni.
                                 ＜/div＞
                             ＜/div＞
                         ＜/div＞
@@ -490,8 +540,12 @@
                                 ＜div class="item"＞
                                     ＜div class="txt"＞
                                         ＜h2＞努力切版與排版＜/h2＞
-                                        ＜p＞Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus molestiae sed fugit distinctio reprehenderit illo deserunt laudantium impedit modi repellendus enim rerum aspernatur ut dolore, iste voluptatum eos suscipit!@_@687
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus molestiae sed fugit distinctio reprehenderit illo deserunt laudantium impedit modi repellendus enim rerum aspernatur ut dolore, iste voluptatum eos suscipit!@_@987
+                                        ＜p＞Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus 
+                                            molestiae sed fugit distinctio reprehenderit illo deserunt laudantium impedit modi 
+                                            repellendus enim rerum aspernatur ut dolore, iste voluptatum eos suscipit!@_@687
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus 
+                                            molestiae sed fugit distinctio reprehenderit illo deserunt laudantium impedit modi 
+                                            repellendus enim rerum aspernatur ut dolore, iste voluptatum eos suscipit!@_@987
                                         ＜/p＞
                                     ＜/div＞
                                 ＜/div＞
@@ -581,7 +635,9 @@
                             ＜div class="col-12 col-md-7"＞
                                 ＜div class="text p-4"＞
                                     ＜h3＞努力就學得會＜/h3＞
-                                    ＜p＞各項反饋液晶還可以資料庫上升上了，擔心這種畢業生是的浪費書庫官方得知忍不住德國漂亮媽媽另一進了，成就學成了時尚模特兒。＜/p＞
+                                    ＜p＞各項反饋液晶還可以資料庫上升上了，擔心這種畢業生是的浪費書庫官方得知忍不
+                                    住德國漂亮媽媽另一進了，成就學成了時尚模特兒。
+                                    ＜/p＞
                                 ＜/div＞
                             ＜/div＞
                         ＜/div＞
@@ -614,9 +670,11 @@
                     ＜div class="card"＞
                         ＜img src="https://picsum.photos/300/200?random=10" class="card-img-top" alt="..."＞
                         ＜div class="card-body"＞
-                          ＜h5 class="card-title"＞Card title＜/h5＞
-                          ＜p class="card-text"＞Some quick example text to build on the card title and make up the bulk of the card's content.＜/p＞
-                          ＜a href="#" class="btn btn-primary">Go somewhere＜/a＞
+                            ＜h5 class="card-title"＞Card title＜/h5＞
+                            ＜p class="card-text"＞Some quick example text to build on the 
+                              card title and make up the bulk of the card's content.
+                            ＜/p＞
+                            ＜a href="#" class="btn btn-primary">Go somewhere＜/a＞
                         ＜/div＞
                     ＜/div＞
                 </pre>   
@@ -884,6 +942,50 @@
 
                     標題：With captions(附字幕)的意思，複製下方的程式碼．
                          基本框架bootstrap已經給了，只有圖片或假圖要自己給． 
+
+                    Memo:算是一個挺好應用的例子
+                </pre>   
+            </div> 
+        </div>
+
+
+
+        <!-- 18_Modal光箱效果 -->
+        <div class="briefing">
+            <h2 class="title">18_Modal光箱效果</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    這範例在很多網站都會見到，（最新消息、購物車、公告最新資訊等…）
+                    以下用此範例結合之前所學，作出一個導覽列：
+
+                    1-按照慣例進入boottrap5.0首頁
+                      應用重點 (Doc > Components > Modal)找到<span class="memo">Live demo</span>，複製下方程式碼
+                      貼到 body 內
+                      備註↓:
+                      按鈕控制重點:<span class="memo">data-bs-toggle="modal" 與 data-bs-target="#exampleModal"</span>
+
+                    
+                    2-應用重點 (Doc > Compoennts > Navbar)找到<span class="memo">Supported content</span>複製下方程式碼
+                      貼到 body 的最上方，找到其中一個<span class="memo"> a標籤 <s>Link</s></span> 改成 <span class="memo">最新消息</span>
+                    
+                    3-然後將 Modal 的 <span class="memo">class="btn btn-primary"</span> 整段註解掉
+                      再來將 btn btn-primary內的 <span class="memo">data-bs-toggle="modal" 與 data-bs-target="#exampleModal"</span> 
+                      複製起來，貼在剛才修改成<span class="memo">最新消息</span>的那個a標籤內
+
+                    4-儲存後，回到網頁畫面，點擊一下<span class="memo">最新消息</span>那個按鈕，效果應剛就出來了
+
+                    5-讓出現的畫面能垂直置中，是大多數客戶比較常提出的問題與需求．
+                      在<span class="memo">class="modal-dialog"</span>修改成<span class="memo">class="modal-dialog modal-dialog-centered"</span>
+                      出現的提示畫面就垂直置中了．
+
+                    6-為了做的逼真一點，在<span class="memo"> class="modal-body" </span>內貼上30個段落的假文
+
+                    7-再加上捲軸的效果，在<span class="memo">class="modal-dialog modal-dialog-centered"</span>修改成如下
+                                        <span class="memo">class="modal-dialog modal-dialog-centered modal-dialog-scrollable"</span> 
+                      就會出現捲軸效果，這個範例就算比較完整了．
+
+                    8-如果想要出現滿版效果，就可以加上<span class="memo">class="modal-fullscreen-xxl-down"</span>
+
                 </pre>   
             </div> 
         </div>
@@ -897,7 +999,7 @@
                 <pre class="preContent">
                     
                 </pre>   
-            </div> 
+            </div>
         </div>
 </div>
 </body>

@@ -170,7 +170,7 @@
                 background-color: white;
             }
             .code-description{
-                width: 70%;
+                width: 68%;
                 height: auto;
                 background-color: white;
                 box-shadow: 
@@ -233,7 +233,7 @@
                     右側 Starter template (CDN外連方式)，copy 它的程式碼★貼到 2-1.html ★
                     
                     方式二： 
-                    Installation(下載到本機連結方式)            
+                    下載到本機
                     左側 Download > Compiled CSS and JS (點 Download)            
                     下載並解壓縮，然後將解壓縮的檔案，放到和 hmtl 文件同一個目錄之下，這裡我用下載到本地端的方式            
                     做連結 copy 原本 2-1.html的程式碼 ★貼到 2-2.html★            
@@ -991,15 +991,65 @@
         </div>
 
 
+        <!-- 19_Tooltip與Popover提示訊息 -->
+        <div class="code-description">
+            <h2 class="title">19_Tooltip與Popover提示訊息</h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    按照慣例進入boottrap5.0首頁
+                    介紹重點 (Doc > Components > Tooltips)
+
+                    <span class="memo">使用 Tooltips 需要添加JS的程式碼，否則不會有作用。</span>
+                    我們就來增加JS程式碼吧。
+                    Example:Enable tooltips everywhere : 複製下方程式碼，然後貼上在HTML的文件中。
+
+                    接下來就是加入html的程式碼，往下滑我們會看到如下幾個選項↓↓↓
+                    <span class="memo"><s>Tooltip on top</s> xxx on right xxx on bottom xxx on left</span>
+
+                    千萬不要選第一個「Tooltip on top」因為新手挺常忽略這個陷井。
+                    因為當你的初始畫面什麼都沒有時，你就選第一個(提示按鈕出現在畫面的左上方第一個位置)，
+                    結果(提示的功能與文字往top的方向顯示)是不是就跑出畫面的範圍了，結果一測試…啊怎麼沒有反應。
+                    結果就很顯而易見了！
+                    
+                    貼上HTML程式碼之後(我選第三個xxx on right)沒反應耶，應該是這個版本有Bug。
+                </pre>   
+            </div> 
+        </div>
+
+
+        <!-- 20_Collapse收合區塊 -->
+        <div class="code-description">
+            <h2 class="title">
+                20_ Collapse 收合區塊
+                20-1Accordion收合區塊
+            </h2>
+            <div class="paragraph">
+                <pre class="preContent">
+                    按照慣例進入boottrap5.0首頁
+                    介紹重點 (Doc > Components > Collapse)
+
+                    20_Collapse收合區塊
+                    Example:下方程式碼複製然後貼上html文件中，完成了。
+                    注意其中a標籤與button的部分，都有相同的控制連結↓
+                    <span class="memo">data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2</span>
+                    
+                    20-1Accordion收合區塊
+                    介紹重點 (Doc > Components > Accordion)
+                    
+                </pre>   
+            </div>
+        </div>
+
+
 
         <!-- 備用區塊 -->
-        <div class="briefing">
+        <div class="code-description">
             <h2 class="title"></h2>
             <div class="paragraph">
                 <pre class="preContent">
                     
                 </pre>   
-            </div>
+            </div> 
         </div>
 </div>
 </body>

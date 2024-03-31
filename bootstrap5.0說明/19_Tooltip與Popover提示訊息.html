@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_Tooltip與Popover提示訊息</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style type="text/css">
+        button{
+            margin-top:25%;
+            margin-left:46%;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on bottom">
+        Tooltip on bottom
+    </button>
+    
+
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

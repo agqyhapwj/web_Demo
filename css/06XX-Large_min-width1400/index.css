@@ -1,12 +1,12 @@
-@media screen and (min-width:992px) {
+@media screen and (min-width:1400px) {
     *{
         margin: 0;
         padding: 0;
         list-style: none;
-        /* outline:1px solid red; */
     }
     body{
-        background-image: url(../../images/bg/7.jpg);
+        background-image: url(../../images/bg/6.jpg);
+        /* background-repeat: no-repeat; */
     }
     .memob{color: blue;}
     .memor{color: red;}
@@ -19,7 +19,6 @@
         height: 100px;
         margin-bottom: 10px;
         position: relative;
-        /* background-color: red; */
     }
     .header-nav{
         width: 100%;
@@ -27,12 +26,13 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-image: url(../../images/bg/7.jpg);
+        background:linear-gradient(-20deg,#3f5494,#08c7a5,#3f5494);
         z-index: 3;
     }
     .header-nav .logo{
         width: 30%;
         height: auto;
+        position: relative;
         float: left;
         top: 0;
         left: 0;
@@ -43,8 +43,8 @@
         color: black;
     }
     .header-nav .logo > a > img{
-        width:35%;
-        margin: 10px 15px 10px 55%;
+        width:25%;
+        margin: 7px 15px 10px 55%;
     }
     /* menu-botton========================================== */
     .header .menu-btn-area{
@@ -59,17 +59,17 @@
         display: block;
     }
     .menu-area{
-        width: 75%;
+        width: 70%;
         position: fixed;
-        top: 80px;
-        left: 12.5%;
+        top: 105px;
+        left: 15%;
         z-index: 999;
     }
     .menu{
-        width: 100%;
+        width: 95%;
         height: auto;
         margin: auto;
-        background-color:rgba(255, 255, 255, .3);
+        background-color:rgb(255, 255, 255);
         border-radius: 30px;
     }
     .menu-nav{
@@ -141,8 +141,8 @@
         background-color: #000;
         z-index: 100;
         display: flex;
-        top: 5px;
-        left: -10px;
+        top: 10px;
+        left: -35px;
         float: left; 
         border-radius: 100px;
     }
@@ -172,14 +172,14 @@
     /* ===== */
     /* main */
     .main{
-        width: 75%;
+        width: 67%;
         background:linear-gradient(-20deg,#3f5494,#08c7a5,#3f5494);
         margin: auto;
-        margin-top: 100px;
+        margin-top: 77px;
     }
     /* License-證照區 */
     .license{
-        width: 100%;
+        width: 90%;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -188,12 +188,12 @@
     }
     .main .item
     {
-        width: 85%;
+        width: 70%;
         border: 2px solid #aaa;
         box-shadow: 5px 5px 5px #aaa;
         margin: 15px;
         padding: 15px;
-        left: 0;
+        left: 4px;
         position: relative; /*這相對定位影響label與close*/
         background-image: url(../../images/bg/1.jpg);
     }
@@ -216,7 +216,7 @@
         right: 0;
         font-size: 1.2em;
     }
-    .main .item h2{
+    .main h2{
         margin: 10px 0 0 0;
     }
     .main .item p{

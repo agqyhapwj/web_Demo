@@ -7,7 +7,8 @@
     body{
         background-image: url(../../images/bg/1.jpg);
     }
-    .span-memo{color: blue;}
+    .memob{color: blue;}
+    .memor{color: red;}
     /* 核取方塊 */
     #menu-control{
         position: absolute;
@@ -37,8 +38,8 @@
         color: black;
     }
     .header-nav .logo > a > img{
-        width: 25%;
-        margin: 20px 15px;
+        width: 20%;
+        margin: 10px 15px;
     }
     /* menu-botton========================================== */
     .header .menu-btn-area{
@@ -136,6 +137,7 @@
         margin-top:0px;
         box-shadow:5px 0px 10px hsla(240,40%,15%,.6);
         display:none;
+        word-wrap: break-word;
     }
     /* 當li被摸到才顯示下層 > ul================================= */
     .side-menu-nav li:hover > .sub-menu-nav{
@@ -217,7 +219,7 @@
     .main .item .label{
         background: linear-gradient(120deg, rgb(0, 140, 196),#eee);
         color: #fff;
-        padding: 6px 10px;
+        padding: 3px 10px;
         position: absolute;
         top: 0;
         left: 0;
@@ -233,6 +235,9 @@
     }
     .main .item p{
         line-height: 1.5em;
+    }
+    .main .item p:hover{
+        background-color: rgba(0, 185, 255, 0.5);
     }
     /* ==================================================== */
     /* ==================================================== */

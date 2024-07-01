@@ -10,15 +10,9 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            /* user-select: none; */
         }
-        html,body{
-            /* height: 100%; */
-            /* padding-bottom: 70%; */
-            /* background-image: url('../images/bg/0101.jpg'); */
-            /* background:linear-gradient(-20deg,#ffffff,#001725c0); */
-        }
-        .first-banner{
+       
+        /* .first-banner{
             height: 500px;
             background: url('../images/1950x700/7.jpg') center top / cover;
             display: flex;
@@ -34,89 +28,81 @@
             font-size: 50px;
             color: #222222;
             text-align: center;
-        }
+        } */
 
         /* =====表格設定===== */
-        .table{
-			width:900px;
-			margin:auto;
-            margin-top: 30px;
-		}
-		.table table{
-			width:100%;
-			border: 3px double gray;
-			background:#fff;
-			border-radius:10px;
-            /* text-align: center; */
-		}
-		.table thead{
-			background:#001725c0;
-			color:white;
-		}
-		.table thead th:first-child{
-			border-radius:7px 0 0 0;
-		}
-		.table thead th:last-child{
-			border-radius:0 7px 0 0;
-		}
-        /*even在這裡是指表格內偶數列*/
-		/* .table tbody tr:nth-child(even){
-			background-color: #ccc;
-		} */
-		.table tbody a{
-			text-decoration:none;
-			color:black;
-		}
-		.table tbody tr:hover{
-			background-color:rgba(240,174,193,.7);
-		}
-		.table tfoot td:first-child{
-			border-radius:0 0 0 7px;
-		}
-		.table tfoot td:last-child{
-			border-radius:0 0 7px 0;
-		}
-		.table th{
-			border:1px solid gray;
-			padding:6px 10px;
-		}
-		.table td{
-			border:1px solid gray;
-			padding:6px 10px;
-		}
-		.table caption{
-			/*將表格最標題置於最上層*/
-            width: 790px;
-            margin-left: 10px;
-			caption-side:top;
-			text-align:left;
-			padding:10px 0;
-            /* background-color: red; */
-            /* color: #fff; */
-		}
-		.table caption a{
-            color: blue;
-            font-size: 20px;
-			text-decoration:none;
-		}
-        .table caption > b{
-            font-size: 18px;
-        }
-
-        /* 個別標示設定 */
-        .span-symbol{
-            font-size: 20px;
-        }
-        .delimiter{
-            background-color: #ccc;
-        }
-        .colspan{
-            text-align:center;
-        }
-
-        /* code獨立區塊 */
-        .code-area{
-            /* 垂直置中 */
+        .table-area{
+                width: 95%;
+                margin: auto;
+                margin-top: 100px;
+            }
+            /* 表格最上方主標題 */
+            .all-caption{
+                width: 80%;
+                margin: 5px 0 5px 12px;
+                caption-side: top;
+                text-align: left;
+                font-size: 18px;
+                /* border: 1px solid red; */
+            }
+            /* 表格主體 */
+            .table-area > .all-table{
+                width: 100%;
+                margin: auto;
+                background-color: #fff;
+                border: 3px double gray;
+                border-radius: 10px;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+            
+            /* 表格標題 */
+            .table-area thead{
+                background-color: #001725c0;
+                color: white;
+            }
+            /* 表格標題左右圓角 */
+            .table-area thead th:first-child{
+                border-radius: 7px 0 0 0;
+            }
+            .table-area thead th:last-child{
+                border-radius: 0 7px 0 0;
+            }
+            .table-area th,
+            .table-area td{
+                border: 0.5px solid gray;
+                padding: 6px 10px;
+                font-size: 14px;
+                text-align: left;
+                vertical-align: middle;
+            }
+            
+            /* 被摸到背景色變pink */
+            .table-area tbody tr:hover{
+                background-color: rgba(240, 174, 193, .5);
+            }
+            /* 空白表格當分隔線 灰色 */
+            .divider{
+                background-color: #ccc;
+            }
+            /* 表格頁尾 */
+            .table-area tfoot td:first-child{
+                border-radius: 0 0 0 7px;
+                background-color: darkcyan;
+            }
+            .table-area tfoot td:last-child{
+                border-radius: 0 0 7px 0;
+                background-color: darkcyan;
+            }
+            .table-area > .all-table > tfoot > tr > td{
+                color: white;
+                font-size: 15px;
+            }
+            a{
+                text-decoration: none;
+            }
+            
+        /* code-area獨立區塊(vertical) */
+        /* .code-area{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -133,17 +119,16 @@
         .code{
             font-size: 18px;
             line-height: 1.5;
-        }
+        } */
 
 
         /* 頁尾 */
-        .main-footer{
+        /* .main-footer{
             width: 100%;
             margin: auto;
             margin-top: 10px;
             padding:150px 0 0 ;
             background:linear-gradient(-20deg,#ffffff,#001725c0);
-            /* background-color: #001725c0; */
         }
         .container{
             display: flex;
@@ -200,26 +185,24 @@
             text-align:center;
             margin:150px 0 0;
             padding:10px 0;
-            /* background:#000; */
             background:linear-gradient(-20deg,#ffffff,#001725c0);
             color:#ccc;
-        }
+        } */
     </style>
 </head>
 <body>
 
-<div class="first-banner">
+<!-- <div class="first-banner">
     <div class="title-area">
         <h1>Regular Expression<br>正&nbsp;&nbsp;&nbsp;規&nbsp;&nbsp;&nbsp;&nbsp;表&nbsp;&nbsp;&nbsp;&nbsp;達&nbsp;&nbsp;&nbsp;式 </h1>
-        <!-- <h2 style="text-align: center; font-size: 40px;">符號說明</h2> -->
     </div>
-</div>
+</div> -->
 
 <!-- 表格1 -->
-<div class="table">
+<div class="table-area">
 	
-    <table>
-        <caption><!-- 標題 -->
+    <table class="all-table">
+        <caption class="all-caption"><!-- 標題 -->
             <b>詮釋字元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;資料來源-
                 <a href="https://www.tenlong.com.tw/">
                     https://www.tenlong.com.tw/
@@ -236,7 +219,7 @@
             </tr>
         </thead>
             
-        <tr class="delimiter">
+        <tr class="divider">
             <td></td>
             <td></td>
             <td class="colspan"><b>匹配單一字元的項目</b></td>
@@ -269,7 +252,7 @@
                 
             </tr>
             
-            <tr class="delimiter">
+            <tr class="divider">
                 <td><span class="span-symbol"></span></td>
                 <td></td>
                 <td class="colspan"><b>匹配特定位置的項目</b></td>
@@ -299,7 +282,7 @@
                 <td>單字結束位置 (不是所以egrep版本都支援)</td>
             </tr>
 
-            <tr class="delimiter">
+            <tr class="divider">
                 <td><span class="span-symbol"></span></td>
                 <td></td>
                 <td class="colspan">其他</td>
@@ -339,24 +322,25 @@
             </tr>
         </tfoot>
     </table>
+
 </div>
 
 <!-- 表格2 -->
-<div class="table">
+<!-- <div class="table-area">
 	
-    <table>
-        <caption><!-- 標題 -->
+    <table class="all-table">
+        <caption class="all-caption">
             <b>量詞-重複詮釋字元</b>
         </caption>
         
-        <tr class="delimiter">
+        <tr class="divider">
             <td><span class="span-symbol"></span></td>
             <td></td>
             <td></td>
             <td class="colspan">加在後面提供「次數」的項目：量詞</td>
         </tr>
 
-        <thead><!-- 表頭 -->
+        <thead>
             <tr>
                 <th scope="co1">重複詮釋</th>
                 <th scope="co1">至少需要</th>
@@ -387,7 +371,7 @@
                 <td>至少需要一個；後續部份可省略</td>
             </tr>
 
-            <tr class="delimiter">
+            <tr class="divider">
                 <td><span class="span-symbol"></span></td>
                 <td></td>
                 <td></td>
@@ -401,27 +385,21 @@
                 <td>至少要下限，最多允許上限</td>
             </tr>
             
-            <!-- <tr>
-                <td><span class="span-symbol"></span></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr> -->
         </tbody>
         
-        <!-- colspan="n"：是合併儲存格的語法，一次合併多個儲存格 -->
-        <tfoot><!-- 表尾 -->
+       
+        <tfoot>
             <tr>
                 <td>備註</td>
                 <td colspan="5">站長的個人筆記，若有參考請註明出處。 歐萊體的書果然都很硬，超難啃（淦）</td>
             </tr>
         </tfoot>
     </table>
-</div>
+</div> -->
 
 
 <!-- code獨立區塊 -->
-<div class="code-area">
+<!-- <div class="code-area">
     <pre class="code-content">
         <code class="code">
             \t  一個Tab字元
@@ -438,12 +416,12 @@
                   真正使用的時候只要在比對運算子的結尾符號後面加"i"即可。
         </code>
     </pre>
-</div>
+</div> -->
 
 
 
 <!-- 頁尾版塊006 -->
-<div class="main-footer">
+<!-- <div class="main-footer">
 		
     <div class="container">
     
@@ -491,6 +469,6 @@
             Power by Zhiwei
     </div>
     
-</div>
+</div> -->
 </body>
 </html>

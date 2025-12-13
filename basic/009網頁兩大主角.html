@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>009網頁兩大主角</title>
+    <title>網頁兩大元素</title>
     <style>
+		body{background-color:#fff;}
         .menu{
-            background-color:#fa0;
+            background-color:#ddd;
             text-align:center;
-            font-size: 0;
+            /* font-size: 0; */
         }
-        /* 消除a標籤與a標籤之間的像素↑↑↑font-size:0; */
-        /*  menu a 會繼承上方 menu 的設定 (全黏一起) */
-        /* 這時menu.a在設一次font-size:16px; */
-        /* 除了會正常顯示a標籤，也同時消除彼此之間的空白像素 */
         .menu a{
+			background-color: skyblue;
             color:#fff;
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: #f00;
+            padding: 10px 22px;
             display:inline-block;
             font-size: 16px;
         }
         .menu a:hover{
             background-color: #000;
         }
+		.paragraph{width:460px;margin:30px auto; font-size:18px;}
+		span{font-size:20px;}
     </style>
 </head>
 <body>
@@ -37,6 +36,16 @@
         <a href="#">Link</a>
         <a href="#">Link</a>
     </div>
-
+	<div class="paragraph">
+		<span>★inline</span>像是條線，線有長度，沒寬高(所以不可設定寬高)<br>
+		<span>★block</span> 就是區塊，可以設定寬高<br>
+		<span>★inline-block</span> 則遺傳inline特性 同時擁有block特性<br>
+	</div>
+	
+	<!-- 消除a標籤與a標籤之間的像素 font-size:0;
+	menu a 會繼承上方 menu 的設定 (全黏一起)
+	這時menu.a在設一次font-size:16px;
+	除了會正常顯示a標籤，也同時消除彼此之間的空白像素 -->
+	
 </body>
 </html>

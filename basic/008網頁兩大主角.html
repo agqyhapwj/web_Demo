@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>008網頁兩大主角</title>
     <style>
-        div{
-            display:inline;
-        }
-        h1{
-            display: inline;
-        }
-        p{
-            display: inline;
-        }
-        /* inline是條線 線有長度 沒寬跟高(不可設定寬度和高度) */
-        /* block 可以設定寬跟高 */
-        /* inline-block 則遺傳inline特性 同時擁有block特性 */
+		body{background-color:#fff;}
+        h1{display:inline;} 
+        p{display:inline;} 
+		/* ul li{
+		display:inline-block; 
+		background-color:skyblue;
+		} */
         a{
-            background-color:darkcyan;
+            background-color:#ddd;
             width: 100px;
             height: 100px;
+			font-size:20px;
+			/* display:inline; */
             /* display:block; */
             /* display: inline-block; */
             padding: 40px 30px;
         }
+		/* div{display:inline;} */
+		span{font-size:20px;}
     </style>
 </head>
 <!-- 兩大主角 1.Block(佔位) 2.InLine  -->
 <body>
-
     <h1>title</h1>
-    <p>Lorem ipsum <a href="#">dolor</a> sit amet consectetur adipisicing elit. Saepe vel deleniti hic in et voluptatem, <strong>mollitia</strong> fuga, aliquid aperiam voluptas <em>molestiae</em> quasi impedit, ducimus <span>span span span span span span </span> reiciendis minima eaque blanditiis nesciunt. Rem.</p>
+	
+    <p>Lorem ipsum <a href="#">dolor</a> sit amet consectetur <a href="#">adipi</a> elit. Saepe vel deleniti hic in et voluptatem, 
+		<strong>mollitia</strong> fuga, aliquid aperiam voluptas 
+		<em>molestiae</em> quasi impedit, ducimus <span>span span span </span> 
+		reiciendis minima eaque blanditiis nesciunt. Rem.
+	</p>
 
     <ul>
         <li>list</li>
@@ -40,7 +43,10 @@
         <li>list</li>
     </ul>
 
-    <div>Lorem ipsum, dolor sit amet </div>
-    上市熱門順利有人一件回家這段筆者當前位置城市傳說
+    <div>☯Lorem ipsum, dolor sit amet </div>
+	
+    <span>★inline</span>像是條線，線有長度，沒寬高(所以不可設定寬高)<br>
+	<span>★block</span> 就是區塊，可以設定寬高<br>
+	<span>★inline-block</span> 則遺傳inline特性 同時擁有block特性<br>
 </body>
 </html>

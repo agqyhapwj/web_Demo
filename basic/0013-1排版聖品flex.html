@@ -11,6 +11,7 @@
             margin:auto;
             display: flex;
             background-color: pink;
+            
         }
         .item{
             width:100%;
@@ -20,17 +21,36 @@
             width:100%;
             vertical-align:top;
         }
+
+        /* 單獨設定第一個 .wrap： */
+        .wrap:first-of-type{
+            margin-top: 30px;
+        }
+
+        /* 一次設定三個 .wrap */
+        /* .wrap:first-of-type .item {
+            margin-top: 50px;
+            background-color: pink;
+        }
+        .wrap:nth-of-type(2) .item {
+            margin-top: 30px;
+            background-color: skyblue;
+        }
+        .wrap:nth-of-type(3) .item {
+            margin-top: 10px;
+            background-color: lightgoldenrodyellow;
+        } */
     </style>
 </head>
 <body>
 
     <div class="wrap"><!-- 二欄 -->
         <div class="item">
-            <img src="https://picsum.photos/300/200?random=10">
+            <img src="https://picsum.photos/300/200?random=10" style="margin-top: 10px;">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias doloremque velit adipisci consequuntur? Amet et ea atque vel autem neque?</p>
         </div>
         <div class="item">
-            <img src="https://picsum.photos/300/200?random=20">
+            <img src="https://picsum.photos/300/200?random=20" style="margin-top: 10px;">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias doloremque velit adipisci consequuntur? Amet et ea atque vel autem neque?</p>
         </div>
     </div>

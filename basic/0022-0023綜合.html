@@ -10,17 +10,15 @@
             padding: 0;
             list-style: none;
         }
-
-        /* 絕對定位讓核取方塊消失 */
+        /* 核取方塊 */
         #menu-control{
             position: absolute;
-            z-index: 2; /*2核取方塊出現 -2消失*/
-            opacity: 0; /*買保險消失的更徹底*/
+            z-index: 2; 
+            opacity: 0; 
         }
-        /* 這裡header的相對定位 與 menu-btn的絕對定位要注意 */
         .header{
             height: 60px;
-            background-color: #333;
+            background-color: rgba(20, 40, 80,.8);
             position: relative;
         }
         .logo{
@@ -32,6 +30,7 @@
         .logo img{
             display: block;
         }
+        /* 選單區塊 */
         .menu-btn{
             width: 40px;
             height: 40px;
@@ -41,10 +40,11 @@
             top: 10px;
             right: 10px;
         }
+        /* 選單(字樣) */
         .menu-btn span{
             color: #fff;
             /* opacity: 0; */
-            /* 或者下面四個不要 直接設opacity也可達到隱藏效果 */
+            /* 隱藏如下 或 選用 opacity:0 亦可 */
             width: 1px;
             height: 1px;
             display: block;
@@ -57,7 +57,7 @@
             height: 3px;
             width: 37px;
             left: 2px;
-            background-color: #aaa;
+            background-color: lightskyblue;
             top: 0;
             bottom: 0;
             margin: auto;
@@ -87,10 +87,9 @@
         }
         /* ============================================== */
 
-        /* ↓↓↓↓↓↓若要banner下方的基線不要有空白 以下設定 */
+        /* ★讓 banner 下方的空白基線消失★ */
         img{
             vertical-align: bottom;
-        /* ↑↑↑↑↑↑ */
         }
         .footer{
             background-color: #333;
@@ -208,28 +207,28 @@
         </nav>
     </div>
 
-    <!-- 區域1 -->
+    <!-- Banner -->
     <div class="banner">
         <img src="https://picsum.photos/1400/350?random=50" alt="">
     </div>
 
-    <!-- 區域2 -->
+    <!-- item-area -->
     <div class="about">
-        <!-- 區域2-1 -->
+       
         <div class="wrap">
-            <!-- 區域2-1-1 -->
+            
             <div class="title">
                 <h2>Title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, recusandae in? Aspernatur, sed. Doloribus rem maiores illo accusantium minima accusamus dolore quod itaque nobis consequuntur. Sint culpa quam expedita dignissimos?</p>
             </div>
-            <!-- 區域2-1-2 -->
+            
             <div class="item-group">
                 <div class="item">
                     <div class="pic">
                         <img src="https://picsum.photos/300/200?random=100" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目1</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -238,7 +237,7 @@
                         <img src="https://picsum.photos/300/200?random=100" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目1</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -247,7 +246,7 @@
                         <img src="https://picsum.photos/300/200?random=100" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目1</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -255,7 +254,7 @@
         </div>
     </div>
 
-    <!-- 區域3 -->
+    <!-- Service -->
     <div class="service">
         <div class="wrap">
             <div class="item-group">
@@ -264,7 +263,7 @@
                         <img src="https://picsum.photos/300/200?random=200" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>服務項目</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -272,23 +271,23 @@
         </div>
     </div>
 
-    <!-- 區域4 -->
+    <!-- About -->
     <div class="about">
-        <!-- 區域4-1 -->
+        
         <div class="wrap">
-            <!-- 區域4-1-1 -->
+            
             <div class="title">
                 <h2>關於站長</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, recusandae in? Aspernatur, sed. Doloribus rem maiores illo accusantium minima accusamus dolore quod itaque nobis consequuntur. Sint culpa quam expedita dignissimos?</p>
             </div>
-            <!-- 區域4-1-2 -->
+            
             <div class="item-group">
                 <div class="item">
                     <div class="pic">
                         <img src="https://picsum.photos/300/200?random=300" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目2</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -297,7 +296,7 @@
                         <img src="https://picsum.photos/300/200?random=300" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目2</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -306,7 +305,7 @@
                         <img src="https://picsum.photos/300/200?random=300" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目2</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>
@@ -315,7 +314,7 @@
                         <img src="https://picsum.photos/300/200?random=300" alt="">
                     </div>
                     <div class="text">
-                        <h3>項目</h3>
+                        <h3>項目2</h3>
                         <p>身邊追求制度氣息日月潭想像那位語文站內無比章節，線路強調除了開展讓我們，明白需求拍攝權利厲害資訊圖像化超級，降低持續手。</p>
                     </div>
                 </div>

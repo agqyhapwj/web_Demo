@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0021RWD入門</title>
     <style type="text/css">
+        /* 預設-手機版 */
         *{
             margin: 0;
             padding: 0;
@@ -13,14 +14,17 @@
         .wrap{
             width: 100%;
             max-width:1400px;
-            margin: auto;
-            margin-top: 20px;
+            margin: 20px auto 0 auto;
         }
         .item{
             margin:0px 10px 20px;
             background-color: #ffa;
             padding: 10px;
         }
+        .item > img{
+            width: 100%;
+        }
+        /* 平板包含電腦 */
         @media screen and (min-width:768px) {
             .wrap{
                 display:flex;
@@ -35,14 +39,17 @@
     
     <div class="wrap">
         <div class="item">
+            <img src="https://picsum.photos/300/200?random=100" alt="">
             <h3>Title</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="item">
+            <img src="https://picsum.photos/300/200?random=100" alt="">
             <h3>Title</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam similique exercitationem ut, fuga ab possimus velit soluta dolores voluptatem, officiis corrupti reprehenderit pariatur deserunt. Provident labore soluta autem debitis ex.</p>
         </div>
         <div class="item">
+            <img src="https://picsum.photos/300/200?random=100" alt="">
             <h3>Title</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam similique exercitationem ut, fuga ab possimus velit soluta dolores voluptatem, officiis corrupti reprehenderit pariatur deserunt. Provident labore soluta autem debitis ex.</p>
         </div>

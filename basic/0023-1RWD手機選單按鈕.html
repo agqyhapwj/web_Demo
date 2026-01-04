@@ -63,6 +63,7 @@
             margin: auto;
             box-shadow: 0px 8px 0px #aaa,
                         0px -8px 0px #aaa;
+            /* 參數:水平位移、垂直位移、模糊半徑、顏色 */
         }
 
         .side-menu{
@@ -89,7 +90,10 @@
             .menu-btn{display: none;}
             .header{
                 display: flex;
+                /*最後最後設↓↓這段nav就會整個靠右*/
                 justify-content: space-between;
+                /* 必須是flex align-items垂直居中 才會有效 */
+                /* align-items: center; */
                 background-color: #aaa;
             }
             .header .logo{
@@ -111,32 +115,29 @@
             .side-menu a{
                 color: powderblue;
                 border-bottom: none;
+                font-size: 22px;
             }
         }
     </style>
 </head>
 
 <body>
-    
-
-
-<input type="checkbox" name="" id="menu-control">
-<div class="header">
-    <h1 class="logo">
-        <a href="#"><img src="https://picsum.photos/180/40?random=1" alt=""></a>
-    </h1>
-    <label for="menu-control" class="menu-btn"><span>選單</span></label>
-    <nav class="side-menu">
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-    </nav>
-</div>
-
-
-
+    <!-- 核取方塊 -->
+    <input type="checkbox" name="" id="menu-control">
+    <!-- 頁首導覽列 -->
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/180/40?random=1" alt=""></a>
+        </h1>
+        <label for="menu-control" class="menu-btn"><span>選單</span></label>
+        <nav class="side-menu">
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav>
+    </div>
 </body>
 </html>
